@@ -32,12 +32,12 @@ namespace DoAnCNTT
             this.Show();
         }
 
-        private void btThoat_Click(object sender, EventArgs e)
+        private void FDangNhap_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void FDangNhap_FormClosed(object sender, FormClosedEventArgs e)
+        private void thoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
