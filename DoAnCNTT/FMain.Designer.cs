@@ -32,7 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Taikhoan = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kỷSưToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,7 +89,7 @@
             // 
             this.Taikhoan.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.quảnLýTàiKhoảnToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem});
+            this.dangXuatToolStripMenuItem});
             this.Taikhoan.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.Taikhoan.Image = ((System.Drawing.Image)(resources.GetObject("Taikhoan.Image")));
             this.Taikhoan.Name = "Taikhoan";
@@ -103,12 +103,13 @@
             this.quảnLýTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.quảnLýTàiKhoảnToolStripMenuItem.Text = "Quản lý tài khoản";
             // 
-            // đăngXuấtToolStripMenuItem
+            // dangXuatToolStripMenuItem
             // 
-            this.đăngXuấtToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("đăngXuấtToolStripMenuItem.Image")));
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.dangXuatToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("dangXuatToolStripMenuItem.Image")));
+            this.dangXuatToolStripMenuItem.Name = "dangXuatToolStripMenuItem";
+            this.dangXuatToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
+            this.dangXuatToolStripMenuItem.Text = "Đăng xuất";
+            this.dangXuatToolStripMenuItem.Click += new System.EventHandler(this.dangXuatToolStripMenuItem_Click);
             // 
             // quảnLýToolStripMenuItem
             // 
@@ -217,7 +218,7 @@
             this.Xuatexcel.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.Xuatexcel.Image = ((System.Drawing.Image)(resources.GetObject("Xuatexcel.Image")));
             this.Xuatexcel.Name = "Xuatexcel";
-            this.Xuatexcel.Size = new System.Drawing.Size(180, 24);
+            this.Xuatexcel.Size = new System.Drawing.Size(109, 24);
             this.Xuatexcel.Text = "Excel";
             // 
             // Xuattext
@@ -225,7 +226,7 @@
             this.Xuattext.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Xuattext.Image = ((System.Drawing.Image)(resources.GetObject("Xuattext.Image")));
             this.Xuattext.Name = "Xuattext";
-            this.Xuattext.Size = new System.Drawing.Size(180, 24);
+            this.Xuattext.Size = new System.Drawing.Size(109, 24);
             this.Xuattext.Text = "Text";
             // 
             // toolStripLabel3
@@ -451,6 +452,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FMain";
             this.Text = "FMain";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FMain_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FMain_FormClosed);
             this.Load += new System.EventHandler(this.FMain_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -469,7 +472,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Taikhoan;
         private System.Windows.Forms.ToolStripMenuItem quảnLýTàiKhoảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dangXuatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kỷSưToolStripMenuItem;

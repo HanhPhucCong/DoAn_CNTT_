@@ -22,9 +22,22 @@ namespace DoAnCNTT
             FMain form = new FMain();
             form.Show();
             this.Hide();
+            form.Logout += Form_Logout;
+        }
+
+        private void Form_Logout(object sender, EventArgs e)
+        {
+            (sender as FMain).isExit = false;
+            (sender as FMain).Hide();
+            this.Show();
         }
 
         private void btThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void FDangNhap_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }

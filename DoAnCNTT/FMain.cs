@@ -12,6 +12,8 @@ namespace DoAnCNTT
 {
     public partial class FMain : Form
     {
+        public bool isExit = true;
+        public event EventHandler Logout;
         public FMain()
         {
             InitializeComponent();
@@ -22,5 +24,23 @@ namespace DoAnCNTT
 
         }
 
+        private void FMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(isExit)
+                Application.Exit();
+        }
+
+        private void FMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(isExit)
+                if(MessageBox.Show("Bạn Muốn Thoát ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                    Application.Exit(); ;
+                     
+        }
+
+        private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Logout(this, new EventArgs());
+        }
     }
 }

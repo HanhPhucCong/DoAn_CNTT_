@@ -119,6 +119,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FDangNhap";
             this.Text = "Fdangnhap";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FDangNhap_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
