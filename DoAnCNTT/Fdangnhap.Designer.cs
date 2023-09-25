@@ -1,6 +1,6 @@
 ﻿namespace DoAnCNTT
 {
-    partial class Fdangnhap
+    partial class FDangNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,8 @@
             this.tMatKhau = new System.Windows.Forms.TextBox();
             this.tTaiKhoan = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btDangNhap = new System.Windows.Forms.Button();
+            this.btThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -83,39 +83,41 @@
             this.checkBox1.Text = "Hiển thị mật khẩu";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btDangNhap
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(56, 233);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 39);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDangNhap.Location = new System.Drawing.Point(56, 233);
+            this.btDangNhap.Name = "btDangNhap";
+            this.btDangNhap.Size = new System.Drawing.Size(161, 39);
+            this.btDangNhap.TabIndex = 8;
+            this.btDangNhap.Text = "Đăng nhập";
+            this.btDangNhap.UseVisualStyleBackColor = true;
+            this.btDangNhap.Click += new System.EventHandler(this.btDangNhap_Click);
             // 
-            // button2
+            // btThoat
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(385, 233);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 39);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThoat.Location = new System.Drawing.Point(385, 233);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(161, 39);
+            this.btThoat.TabIndex = 9;
+            this.btThoat.Text = "Thoát";
+            this.btThoat.UseVisualStyleBackColor = true;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
-            // Fdangnhap
+            // FDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 296);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btThoat);
+            this.Controls.Add(this.btDangNhap);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.tTaiKhoan);
             this.Controls.Add(this.tMatKhau);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Fdangnhap";
+            this.Name = "FDangNhap";
             this.Text = "Fdangnhap";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,7 +131,7 @@
         private System.Windows.Forms.TextBox tMatKhau;
         private System.Windows.Forms.TextBox tTaiKhoan;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btDangNhap;
+        private System.Windows.Forms.Button btThoat;
     }
 }

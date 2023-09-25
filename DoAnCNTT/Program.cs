@@ -16,7 +16,7 @@ namespace DoAnCNTT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Fdangnhap());
+            Application.Run(new FDangNhap());
         }
     }
 }
