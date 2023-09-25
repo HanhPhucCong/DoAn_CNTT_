@@ -1,0 +1,17 @@
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.csproj.AssemblyReference.cache
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.csproj.SuggestedBindingRedirects.cache
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.Fdangnhap.resources
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FMain.resources
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FQLKySu.resources
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FQLNhanVien.resources
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FSua.resources
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThem.resources
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FXoa.resources
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.Properties.Resources.resources
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.csproj.GenerateResource.cache
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\bin\Debug\DoAnCNTT.exe.config
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\bin\Debug\DoAnCNTT.exe
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\bin\Debug\DoAnCNTT.pdb
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.exe
+D:\Documents\GitHub\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.pdb

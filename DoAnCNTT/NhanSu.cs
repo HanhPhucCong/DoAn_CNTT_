@@ -39,7 +39,7 @@ namespace DoAnCNTT
             trinhdo = "";
             chucvu = "";
         }
-        public NhanSu(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Sodienthoai, string Trinhdo, string Chucvu, string Congviec, string Thuocbophan)
+        public NhanSu(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Sodienthoai, string Trinhdo, string Chucvu, string Congviec)
         {
             this.manhansu = Manhansu;
             this.hoten = Hoten;
@@ -50,7 +50,6 @@ namespace DoAnCNTT
             this.trinhdo = Trinhdo;
             this.chucvu = Chucvu;
             this.congviec = Congviec;
-            this.thuocbophan = Thuocbophan;
         }  
     }
 }
