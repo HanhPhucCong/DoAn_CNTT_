@@ -452,7 +452,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FMain";
             this.Text = "FMain";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FMain_FormClosed);
             this.Load += new System.EventHandler(this.FMain_Load);
             this.menuStrip1.ResumeLayout(false);
