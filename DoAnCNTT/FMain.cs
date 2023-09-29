@@ -21,9 +21,22 @@ namespace DoAnCNTT
 
         private void FMain_Load(object sender, EventArgs e)
         {
-
+            PhanLoai();
         }
-
+        void PhanLoai()
+        {
+            if (Const.loai == false)
+            {
+                Them.Enabled = false;
+                Xoa.Enabled = false;
+                Sua.Enabled = false;
+                quảnLýToolStripMenuItem.Enabled = false;
+                quảnLýTàiKhoảnToolStripMenuItem.Enabled = false;
+                toolStripLabel1.Enabled = false;
+                lbxoa.Enabled = false;
+                toolStripLabel2.Enabled = false;
+            }
+        }
         private void FMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (isExit)
@@ -34,6 +47,12 @@ namespace DoAnCNTT
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Logout(this, new EventArgs());
+        }
+
+        private void Them_Click(object sender, EventArgs e)
+        {
+            FThem form = new FThem();
+            form.Show();
         }
     }
 }

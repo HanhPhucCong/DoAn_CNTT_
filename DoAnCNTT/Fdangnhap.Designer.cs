@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDangNhap));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tMatKhau = new System.Windows.Forms.TextBox();
-            this.tTaiKhoan = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.btDangNhap = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.thoat = new System.Windows.Forms.Label();
+            this.tMatKhau = new System.Windows.Forms.TextBox();
+            this.tTaiKhoan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -64,44 +64,25 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Mật khẩu";
             // 
-            // tMatKhau
-            // 
-            this.tMatKhau.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.tMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tMatKhau.Location = new System.Drawing.Point(195, 410);
-            this.tMatKhau.Multiline = true;
-            this.tMatKhau.Name = "tMatKhau";
-            this.tMatKhau.Size = new System.Drawing.Size(393, 41);
-            this.tMatKhau.TabIndex = 5;
-            // 
-            // tTaiKhoan
-            // 
-            this.tTaiKhoan.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.tTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tTaiKhoan.Location = new System.Drawing.Point(195, 332);
-            this.tTaiKhoan.Multiline = true;
-            this.tTaiKhoan.Name = "tTaiKhoan";
-            this.tTaiKhoan.Size = new System.Drawing.Size(393, 40);
-            this.tTaiKhoan.TabIndex = 6;
-            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.checkBox1.Location = new System.Drawing.Point(436, 470);
+            this.checkBox1.Location = new System.Drawing.Point(433, 470);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(152, 24);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Hiển thị mật khẩu";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // btDangNhap
             // 
             this.btDangNhap.BackColor = System.Drawing.Color.Blue;
             this.btDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangNhap.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btDangNhap.Location = new System.Drawing.Point(183, 527);
+            this.btDangNhap.Location = new System.Drawing.Point(195, 499);
             this.btDangNhap.Name = "btDangNhap";
             this.btDangNhap.Size = new System.Drawing.Size(218, 45);
             this.btDangNhap.TabIndex = 8;
@@ -141,12 +122,33 @@
             this.thoat.AutoSize = true;
             this.thoat.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.thoat.ForeColor = System.Drawing.Color.Blue;
-            this.thoat.Location = new System.Drawing.Point(256, 575);
+            this.thoat.Location = new System.Drawing.Point(269, 565);
             this.thoat.Name = "thoat";
             this.thoat.Size = new System.Drawing.Size(63, 25);
             this.thoat.TabIndex = 13;
             this.thoat.Text = "Thoát";
             this.thoat.Click += new System.EventHandler(this.thoat_Click);
+            // 
+            // tMatKhau
+            // 
+            this.tMatKhau.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.tMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tMatKhau.Location = new System.Drawing.Point(195, 410);
+            this.tMatKhau.Name = "tMatKhau";
+            this.tMatKhau.Size = new System.Drawing.Size(393, 35);
+            this.tMatKhau.TabIndex = 5;
+            this.tMatKhau.Text = "28122003";
+            this.tMatKhau.UseSystemPasswordChar = true;
+            // 
+            // tTaiKhoan
+            // 
+            this.tTaiKhoan.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.tTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tTaiKhoan.Location = new System.Drawing.Point(195, 332);
+            this.tTaiKhoan.Name = "tTaiKhoan";
+            this.tTaiKhoan.Size = new System.Drawing.Size(393, 35);
+            this.tTaiKhoan.TabIndex = 6;
+            this.tTaiKhoan.Text = "hanhphucong";
             // 
             // FDangNhap
             // 
@@ -179,13 +181,13 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tMatKhau;
-        private System.Windows.Forms.TextBox tTaiKhoan;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btDangNhap;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label thoat;
+        private System.Windows.Forms.TextBox tMatKhau;
+        private System.Windows.Forms.TextBox tTaiKhoan;
     }
 }
