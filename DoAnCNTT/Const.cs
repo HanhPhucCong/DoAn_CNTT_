@@ -8,6 +8,6 @@ namespace DoAnCNTT
 {
     public class Const
     {
-        public static bool loai;
+        public static string loai;
     }
 }

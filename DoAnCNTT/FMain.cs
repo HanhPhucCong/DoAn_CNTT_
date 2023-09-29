@@ -25,7 +25,7 @@ namespace DoAnCNTT
         }
         void PhanLoai()
         {
-            if (Const.loai == false)
+            if (Const.loai == "Nhan vien" || Const.loai == "Ky su")
             {
                 Them.Enabled = false;
                 Xoa.Enabled = false;
@@ -53,6 +53,13 @@ namespace DoAnCNTT
         {
             FThem form = new FThem();
             form.Show();
+        }
+
+        private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FTaiKhoan form = new FTaiKhoan();
+            form.Show();
+            this.Hide();
         }
     }
 }

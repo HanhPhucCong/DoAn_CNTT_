@@ -10,13 +10,13 @@ namespace DoAnCNTT
     {
         private string name;
         private string pass;
-        private bool loai;
+        private string loai;
 
         public string Name { get => name; set => name = value; }
         public string Pass { get => pass; set => pass = value; }
-        public bool Loai { get => loai; set => loai = value; }
+        public string Loai { get => loai; set => loai = value; }
 
-        public User(string Name, string Pass, bool Loai)
+        public User(string Name, string Pass, string Loai)
         {
             this.name = Name;
             this.pass = Pass;

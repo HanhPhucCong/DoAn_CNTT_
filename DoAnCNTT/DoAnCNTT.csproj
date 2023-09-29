@@ -77,6 +77,12 @@
     <Compile Include="FSua.Designer.cs">
       <DependentUpon>FSua.cs</DependentUpon>
     </Compile>
+    <Compile Include="FTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FTaiKhoan.Designer.cs">
+      <DependentUpon>FTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FSua.resx">
       <DependentUpon>FSua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FTaiKhoan.resx">
+      <DependentUpon>FTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThem.resx">
       <DependentUpon>FThem.cs</DependentUpon>

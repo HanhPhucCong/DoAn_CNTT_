@@ -24,8 +24,9 @@ namespace DoAnCNTT
         private Listuser ()
         {
             listAccount = new List<User> ();
-            listAccout.Add(new User("hanhphucong", "28122003", true));
-            listAccout.Add(new User("hanhphucong1", "28122003", false));
+            listAccout.Add(new User("hanhphucong", "28122003", "Quan ly"));
+            listAccout.Add(new User("hanhphucong1", "28122003", "Ky su"));
+            listAccout.Add(new User("hanhphucong2", "28122003", "Nhan vien"));
         }
     }
 }
