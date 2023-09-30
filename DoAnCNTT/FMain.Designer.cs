@@ -68,6 +68,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.phòngBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -116,7 +117,8 @@
             // 
             this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nhânViênToolStripMenuItem,
-            this.kỷSưToolStripMenuItem});
+            this.kỷSưToolStripMenuItem,
+            this.phòngBanToolStripMenuItem});
             this.quảnLýToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 14F);
             this.quảnLýToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("quảnLýToolStripMenuItem.Image")));
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
@@ -126,13 +128,13 @@
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.nhânViênToolStripMenuItem.Text = "Nhân Viên";
             // 
             // kỷSưToolStripMenuItem
             // 
             this.kỷSưToolStripMenuItem.Name = "kỷSưToolStripMenuItem";
-            this.kỷSưToolStripMenuItem.Size = new System.Drawing.Size(157, 26);
+            this.kỷSưToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.kỷSưToolStripMenuItem.Text = "Kỷ Sư";
             // 
             // toolStrip1
@@ -442,6 +444,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(1212, 440);
             this.dataGridView1.TabIndex = 4;
             // 
+            // phòngBanToolStripMenuItem
+            // 
+            this.phòngBanToolStripMenuItem.Name = "phòngBanToolStripMenuItem";
+            this.phòngBanToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.phòngBanToolStripMenuItem.Text = "Phòng Ban";
+            // 
             // FMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,5 +517,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button ButtonTimkiem;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ToolStripMenuItem phòngBanToolStripMenuItem;
     }
 }

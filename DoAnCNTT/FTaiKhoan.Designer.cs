@@ -94,6 +94,7 @@
             this.them.TabIndex = 4;
             this.them.Text = "Thêm";
             this.them.UseVisualStyleBackColor = true;
+            this.them.Click += new System.EventHandler(this.them_Click);
             // 
             // sua
             // 
@@ -104,6 +105,7 @@
             this.sua.TabIndex = 5;
             this.sua.Text = "Sửa";
             this.sua.UseVisualStyleBackColor = true;
+            this.sua.Click += new System.EventHandler(this.sua_Click);
             // 
             // xoa
             // 
@@ -114,6 +116,7 @@
             this.xoa.TabIndex = 6;
             this.xoa.Text = "Xóa";
             this.xoa.UseVisualStyleBackColor = true;
+            this.xoa.Click += new System.EventHandler(this.xoa_Click);
             // 
             // thoat
             // 
@@ -124,10 +127,11 @@
             this.thoat.TabIndex = 7;
             this.thoat.Text = "Thoát";
             this.thoat.UseVisualStyleBackColor = true;
+            this.thoat.Click += new System.EventHandler(this.thoat_Click);
             // 
             // tentaikhoan
             // 
-            this.tentaikhoan.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tentaikhoan.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tentaikhoan.Location = new System.Drawing.Point(155, 49);
             this.tentaikhoan.Multiline = true;
             this.tentaikhoan.Name = "tentaikhoan";
@@ -136,7 +140,7 @@
             // 
             // matkhau
             // 
-            this.matkhau.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matkhau.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matkhau.Location = new System.Drawing.Point(155, 141);
             this.matkhau.Multiline = true;
             this.matkhau.Name = "matkhau";
@@ -150,9 +154,9 @@
             this.loaitaikhoan.Font = new System.Drawing.Font("Times New Roman", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loaitaikhoan.FormattingEnabled = true;
             this.loaitaikhoan.Items.AddRange(new object[] {
-            "Quản lý",
-            "Kỹ sư",
-            "Nhân viên"});
+            "Quan ly",
+            "Nhan vien",
+            "Ky su"});
             this.loaitaikhoan.Location = new System.Drawing.Point(155, 228);
             this.loaitaikhoan.Name = "loaitaikhoan";
             this.loaitaikhoan.Size = new System.Drawing.Size(258, 37);
@@ -176,6 +180,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "FTaiKhoan";
             this.Text = "FTaiKhoan";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FTaiKhoan_FormClosed);
             this.Load += new System.EventHandler(this.FTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
