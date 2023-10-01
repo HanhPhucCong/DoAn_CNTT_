@@ -33,3 +33,4 @@ C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.csproj.CoreCompileI
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.exe
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.pdb
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FTaiKhoan.resources
+C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FPhong.resources
