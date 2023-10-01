@@ -33,7 +33,7 @@
             this.xoa = new System.Windows.Forms.Button();
             this.sua = new System.Windows.Forms.Button();
             this.thoat = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tenphong = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.listBoxPhong = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
@@ -47,6 +47,7 @@
             this.them.TabIndex = 1;
             this.them.Text = "Thêm";
             this.them.UseVisualStyleBackColor = true;
+            this.them.Click += new System.EventHandler(this.them_Click);
             // 
             // xoa
             // 
@@ -57,6 +58,7 @@
             this.xoa.TabIndex = 2;
             this.xoa.Text = "Xóa";
             this.xoa.UseVisualStyleBackColor = true;
+            this.xoa.Click += new System.EventHandler(this.xoa_Click);
             // 
             // sua
             // 
@@ -67,6 +69,7 @@
             this.sua.TabIndex = 3;
             this.sua.Text = "Sửa";
             this.sua.UseVisualStyleBackColor = true;
+            this.sua.Click += new System.EventHandler(this.sua_Click);
             // 
             // thoat
             // 
@@ -77,14 +80,15 @@
             this.thoat.TabIndex = 4;
             this.thoat.Text = "Thoát";
             this.thoat.UseVisualStyleBackColor = true;
+            this.thoat.Click += new System.EventHandler(this.thoat_Click);
             // 
-            // textBox1
+            // tenphong
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 35);
-            this.textBox1.TabIndex = 5;
+            this.tenphong.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tenphong.Location = new System.Drawing.Point(22, 36);
+            this.tenphong.Name = "tenphong";
+            this.tenphong.Size = new System.Drawing.Size(312, 35);
+            this.tenphong.TabIndex = 5;
             // 
             // contextMenuStrip1
             // 
@@ -93,11 +97,14 @@
             // 
             // listBoxPhong
             // 
+            this.listBoxPhong.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxPhong.FormattingEnabled = true;
-            this.listBoxPhong.Location = new System.Drawing.Point(361, 15);
+            this.listBoxPhong.ItemHeight = 23;
+            this.listBoxPhong.Location = new System.Drawing.Point(361, 36);
             this.listBoxPhong.Name = "listBoxPhong";
-            this.listBoxPhong.Size = new System.Drawing.Size(362, 277);
+            this.listBoxPhong.Size = new System.Drawing.Size(362, 257);
             this.listBoxPhong.TabIndex = 7;
+            this.listBoxPhong.SelectedIndexChanged += new System.EventHandler(this.listBoxPhong_SelectedIndexChanged);
             // 
             // FPhong
             // 
@@ -105,7 +112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 305);
             this.Controls.Add(this.listBoxPhong);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tenphong);
             this.Controls.Add(this.thoat);
             this.Controls.Add(this.sua);
             this.Controls.Add(this.xoa);
@@ -123,7 +130,7 @@
         private System.Windows.Forms.Button xoa;
         private System.Windows.Forms.Button sua;
         private System.Windows.Forms.Button thoat;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tenphong;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ListBox listBoxPhong;
     }

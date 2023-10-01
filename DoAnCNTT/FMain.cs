@@ -61,5 +61,11 @@ namespace DoAnCNTT
             form.Show();
             this.Hide();
         }
+
+        private void phòngBanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FPhong form = new FPhong();
+            form.ShowDialog();
+        }
     }
 }
