@@ -17,10 +17,10 @@ namespace DoAnCNTT
             nganhdaotao = "";
             bophan = "";
         }
-        public KySu(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu, string Nganhdaotao, string Bophan) : base()
+        public KySu(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu, string Nganhdaotao, string Bophan) : base(Manhansu, Hoten, Ngaysinh, Gioitinh, Diachi, Trinhdo, Chucvu)
         {
-            this.Nganhdaotao = nganhdaotao;
-            this.Bophan = bophan;
+            this.nganhdaotao = Nganhdaotao;
+            this.bophan = Bophan;
         }
     }
 }

@@ -29,6 +29,8 @@ namespace DoAnCNTT
             listnhansu.Add(new NhanSu("NV1", "Hanh Phuc Cong 2", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Nhan vien"));
             listnhansu.Add(new NhanSu("KS1", "Hanh Phuc Cong 3", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Ky su"));
             listnhansu.Add(new NhanSu("KS2", "Hanh Phuc Cong 7", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Ky su"));
+            listnhansu.Add(new NhanSu("CN2", "Hanh Phuc Cong 11", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Cong nhan"));
+
         }
     }
 }

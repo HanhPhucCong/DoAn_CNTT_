@@ -17,7 +17,7 @@ namespace DoAnCNTT
             congviec = "";
             phong = "";
         }
-        public NhanVien(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu, string Congviec, string Phong) : base()
+        public NhanVien(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu, string Congviec, string Phong) : base(Manhansu, Hoten, Ngaysinh, Gioitinh, Diachi, Trinhdo, Chucvu)
         {
             this.congviec = Congviec;
             this.phong = Phong;

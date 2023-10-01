@@ -20,7 +20,7 @@ namespace DoAnCNTT
             to = "";
             nhom = "";
         }
-        public CongNhan(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu, string Bac, string To, string Nhom) : base()
+        public CongNhan(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu, string Bac, string To, string Nhom) : base(Manhansu, Hoten, Ngaysinh, Gioitinh, Diachi, Trinhdo, Chucvu)
         {
             this.bac = Bac;
             this.to = To;
