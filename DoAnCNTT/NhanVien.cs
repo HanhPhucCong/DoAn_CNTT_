@@ -8,12 +8,10 @@ namespace DoAnCNTT
 {
     public class NhanVien : NhanSu
     {
-        private string thuocbac;
-        private string thuocto;
-        private string thuocnhom;
-        public string Thuocbac { get => thuocbac; set => thuocbac = value; }
-        public string Thuocto { get => thuocto; set => thuocto = value; }
-        public string Thuocnhom { get => thuocnhom; set => thuocnhom = value; }
+        private string congviec;
+        private string phong;
+        public string Phong { get => phong; set => phong = value; }
+        public string Congviec { get => congviec; set => congviec = value; }
         public NhanVien() { }
     }
 }

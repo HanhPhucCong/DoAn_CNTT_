@@ -25,7 +25,7 @@ namespace DoAnCNTT
         }
         void PhanLoai()
         {
-            if (Const.loai == "Nhan vien" || Const.loai == "Ky su")
+            if (Const.loai != "Quan ly")
             {
                 Them.Enabled = false;
                 Xoa.Enabled = false;

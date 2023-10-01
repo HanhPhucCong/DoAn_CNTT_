@@ -13,7 +13,7 @@ namespace DoAnCNTT
     public partial class FTaiKhoan : Form
     {
         int index = -1;
-        List<string> listAccout = new List<string>() { "Quan ly", "Nhan Vien", " Ky su" };
+        List<string> listAccout = new List<string>() { "Quan ly", "Nhan Vien", " Ky su", "Cong nhan" };
         public FTaiKhoan()
         {
             InitializeComponent();
@@ -37,6 +37,9 @@ namespace DoAnCNTT
                     break;
                 case "Nhan vien":
                     loaitaikhoan.Text = "Nhan vien";
+                    break;
+                case "Cong nhan":
+                    loaitaikhoan.Text = "Cong nhan";
                     break;
             }
         }
@@ -92,6 +95,9 @@ namespace DoAnCNTT
                     break;
                 case "Nhan vien":
                     loaiTK = "Nhan vien";
+                    break;
+                case "Cong nhan":
+                    loaiTK = "Cong nhan";
                     break;
             }
             return loaiTK;

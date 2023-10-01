@@ -156,7 +156,8 @@
             this.loaitaikhoan.Items.AddRange(new object[] {
             "Quan ly",
             "Nhan vien",
-            "Ky su"});
+            "Ky su",
+            "Cong nhan"});
             this.loaitaikhoan.Location = new System.Drawing.Point(155, 228);
             this.loaitaikhoan.Name = "loaitaikhoan";
             this.loaitaikhoan.Size = new System.Drawing.Size(258, 37);

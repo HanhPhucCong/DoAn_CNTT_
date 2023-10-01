@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CongNhan.cs" />
     <Compile Include="Const.cs" />
     <Compile Include="FDangNhap.cs">
       <SubType>Form</SubType>

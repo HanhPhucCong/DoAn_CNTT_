@@ -8,8 +8,10 @@ namespace DoAnCNTT
 {
     public  class KySu : NhanSu
     {
-        private string thuocbophan;
-        public string Thuocbophan { get => thuocbophan; set => thuocbophan = value; }
+        private string nganhdaotao;
+        private string bophan;
+        public string Nganhdaotao { get => nganhdaotao; set => nganhdaotao = value; }
+        public string Bophan { get => bophan; set => bophan = value; }
         public KySu() { }
     }
 }

@@ -8,8 +8,6 @@ namespace DoAnCNTT
 {
     public class QuanLy : NhanSu
     {
-        private string thuocbophan;
-        public string Thuocbophan { get => thuocbophan; set => thuocbophan = value; }
         public QuanLy() { }
     }
 }

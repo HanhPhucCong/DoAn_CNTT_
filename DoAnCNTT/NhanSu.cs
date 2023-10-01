@@ -14,10 +14,9 @@ namespace DoAnCNTT
         private DateTime ngaysinh;
         private string gioitinh;
         private string diachi;
-        private string sodienthoai;
         private string trinhdo;
         private string chucvu;
-        private string congviec;
+
 
 
         public string Manhansu { get => manhansu; set => manhansu = value; }
@@ -25,31 +24,27 @@ namespace DoAnCNTT
         public DateTime Ngaysinh { get => ngaysinh; set => ngaysinh = value; }
         public string Gioitinh { get => gioitinh; set => gioitinh = value; }
         public string Diachi { get => diachi; set => diachi = value; }
-        public string Sodienthoai { get => sodienthoai; set => sodienthoai = value; }
         public string Trinhdo { get => trinhdo; set => trinhdo = value; }
         public string Chucvu { get => chucvu; set => chucvu = value; }
-        public string Congviec { get => congviec; set => congviec = value; }
+
 
         public NhanSu ()
         {
             hoten = "";
             gioitinh = "";
             diachi = "";
-            sodienthoai = "";
             trinhdo = "";
             chucvu = "";
         }
-        public NhanSu(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Sodienthoai, string Trinhdo, string Chucvu, string Congviec)
+        public NhanSu(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu)
         {
             this.manhansu = Manhansu;
             this.hoten = Hoten;
             this.ngaysinh = Ngaysinh;
             this.gioitinh = Gioitinh;
             this.diachi = Diachi;
-            this.sodienthoai = Sodienthoai;
             this.trinhdo = Trinhdo;
             this.chucvu = Chucvu;
-            this.congviec = Congviec;
         }  
     }
 }
