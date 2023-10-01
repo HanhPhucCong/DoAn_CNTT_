@@ -22,6 +22,10 @@ namespace DoAnCNTT
         private void FMain_Load(object sender, EventArgs e)
         {
             PhanLoai();
+            foreach(var item in ListNhanSu.Instance.Listnhansu)
+            {
+                dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Chucvu);
+            }
         }
         void PhanLoai()
         {
@@ -66,6 +70,11 @@ namespace DoAnCNTT
         {
             FPhong form = new FPhong();
             form.ShowDialog();
+        }
+
+        private void quảnLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

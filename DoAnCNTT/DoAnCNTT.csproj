@@ -96,6 +96,12 @@
     <Compile Include="FThem.Designer.cs">
       <DependentUpon>FThem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTin.Designer.cs">
+      <DependentUpon>FThongTin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FXoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,7 @@
       <DependentUpon>FXoa.cs</DependentUpon>
     </Compile>
     <Compile Include="KySu.cs" />
+    <Compile Include="ListNhanSu.cs" />
     <Compile Include="Listuser.cs" />
     <Compile Include="NhanSu.cs" />
     <Compile Include="NhanVien.cs" />
@@ -133,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThem.resx">
       <DependentUpon>FThem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTin.resx">
+      <DependentUpon>FThongTin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FXoa.resx">
       <DependentUpon>FXoa.cs</DependentUpon>
