@@ -25,6 +25,7 @@ namespace DoAnCNTT
         {
             listkysu = new List<KySu>();
             listkysu.Add(new KySu("KS1", "Hanh Phuc Cong 3", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Ky su", "Nganh xay dung", "Bo phan thiet ke"));
+            listkysu.Add(new KySu("KS2", "Hanh Phuc Cong 7", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Ky su", "Nganh xay dung 2", "Bo phan thiet ke 1"));
         }
     }
 }

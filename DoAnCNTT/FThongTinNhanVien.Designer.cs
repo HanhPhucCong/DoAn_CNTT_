@@ -28,6 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbPhongBan = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbCongViec = new System.Windows.Forms.TextBox();
+            this.tbMaNhanVien = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbChucVu = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbTrinhDo = new System.Windows.Forms.TextBox();
             this.tbDiaChi = new System.Windows.Forms.TextBox();
@@ -39,19 +49,116 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.tbMaNhanVien = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tbChucVu = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(789, 471);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(164, 51);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Thoát";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tbPhongBan);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.tbCongViec);
+            this.groupBox2.Controls.Add(this.tbMaNhanVien);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.tbChucVu);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(21, 264);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(932, 188);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Thông tin công việc";
+            // 
+            // tbPhongBan
+            // 
+            this.tbPhongBan.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPhongBan.Location = new System.Drawing.Point(643, 106);
+            this.tbPhongBan.Multiline = true;
+            this.tbPhongBan.Name = "tbPhongBan";
+            this.tbPhongBan.ReadOnly = true;
+            this.tbPhongBan.Size = new System.Drawing.Size(276, 44);
+            this.tbPhongBan.TabIndex = 25;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(461, 125);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(163, 25);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "Thuộc phòng ban";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 66);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(130, 25);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Mã nhân viên";
+            // 
+            // tbCongViec
+            // 
+            this.tbCongViec.Location = new System.Drawing.Point(643, 47);
+            this.tbCongViec.Multiline = true;
+            this.tbCongViec.Name = "tbCongViec";
+            this.tbCongViec.ReadOnly = true;
+            this.tbCongViec.Size = new System.Drawing.Size(276, 44);
+            this.tbCongViec.TabIndex = 16;
+            // 
+            // tbMaNhanVien
+            // 
+            this.tbMaNhanVien.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMaNhanVien.Location = new System.Drawing.Point(164, 47);
+            this.tbMaNhanVien.Multiline = true;
+            this.tbMaNhanVien.Name = "tbMaNhanVien";
+            this.tbMaNhanVien.ReadOnly = true;
+            this.tbMaNhanVien.Size = new System.Drawing.Size(276, 44);
+            this.tbMaNhanVien.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(461, 66);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 25);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Công việc";
+            // 
+            // tbChucVu
+            // 
+            this.tbChucVu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbChucVu.Location = new System.Drawing.Point(164, 106);
+            this.tbChucVu.Multiline = true;
+            this.tbChucVu.Name = "tbChucVu";
+            this.tbChucVu.ReadOnly = true;
+            this.tbChucVu.Size = new System.Drawing.Size(276, 44);
+            this.tbChucVu.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 125);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 25);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Chức vụ";
             // 
             // groupBox1
             // 
@@ -66,13 +173,12 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(21, 14);
+            this.groupBox1.Location = new System.Drawing.Point(21, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(932, 223);
-            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tịn cá nhân";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // tbTrinhDo
             // 
@@ -174,113 +280,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ tên";
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(789, 471);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 51);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.tbMaNhanVien);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.tbChucVu);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(21, 264);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(932, 188);
-            this.groupBox2.TabIndex = 17;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thông tin công việc";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(643, 106);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(276, 44);
-            this.textBox11.TabIndex = 25;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(461, 125);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(163, 25);
-            this.label12.TabIndex = 24;
-            this.label12.Text = "Thuộc phòng ban";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(20, 66);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(130, 25);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Mã nhân viên";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(643, 47);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(276, 44);
-            this.textBox8.TabIndex = 16;
-            // 
-            // tbMaNhanVien
-            // 
-            this.tbMaNhanVien.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbMaNhanVien.Location = new System.Drawing.Point(164, 47);
-            this.tbMaNhanVien.Multiline = true;
-            this.tbMaNhanVien.Name = "tbMaNhanVien";
-            this.tbMaNhanVien.ReadOnly = true;
-            this.tbMaNhanVien.Size = new System.Drawing.Size(276, 44);
-            this.tbMaNhanVien.TabIndex = 18;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(461, 66);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 25);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Công việc";
-            // 
-            // tbChucVu
-            // 
-            this.tbChucVu.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbChucVu.Location = new System.Drawing.Point(164, 106);
-            this.tbChucVu.Multiline = true;
-            this.tbChucVu.Name = "tbChucVu";
-            this.tbChucVu.ReadOnly = true;
-            this.tbChucVu.Size = new System.Drawing.Size(276, 44);
-            this.tbChucVu.TabIndex = 17;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 125);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 25);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Chức vụ";
-            // 
             // FThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -291,16 +290,26 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FThongTinNhanVien";
             this.Text = "FThongTinNhanVien";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.FThongTinNhanVien_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox tbPhongBan;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbCongViec;
+        private System.Windows.Forms.TextBox tbMaNhanVien;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbChucVu;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbTrinhDo;
         private System.Windows.Forms.TextBox tbDiaChi;
@@ -312,15 +321,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox tbMaNhanVien;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox tbChucVu;
-        private System.Windows.Forms.Label label7;
     }
 }

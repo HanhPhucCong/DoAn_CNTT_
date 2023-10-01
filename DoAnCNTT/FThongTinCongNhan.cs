@@ -16,5 +16,22 @@ namespace DoAnCNTT
         {
             InitializeComponent();
         }
+        void LoadThongTin()
+        {
+            tbTen.Text = Const.NewCongNhan.Hoten;
+            tbNgaySinh.Text = Const.NewCongNhan.Ngaysinh.ToShortDateString();
+            tbGioiTinh.Text = Const.NewCongNhan.Gioitinh;
+            tbDiaChi.Text = Const.NewCongNhan.Diachi;
+            tbTrinhDo.Text = Const.NewCongNhan.Trinhdo;
+            tbChucVu.Text = Const.NewCongNhan.Chucvu;
+            tbMaNhanVien.Text = Const.NewCongNhan.Manhansu;
+            tbBac.Text = Const.NewCongNhan.Bac;
+            tbTo.Text = Const.NewCongNhan.To;
+            tbNhom.Text = Const.NewCongNhan.Nhom;
+        }
+        private void FThongTinCongNhan_Load(object sender, EventArgs e)
+        {
+            LoadThongTin();
+        }
     }
 }

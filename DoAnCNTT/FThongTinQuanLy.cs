@@ -18,13 +18,13 @@ namespace DoAnCNTT
         }
         void LoadThongTin()
         {
-            tbTen.Text = Const.NewNhanSu.Hoten;
-            tbNgaySinh.Text = Const.NewNhanSu.Ngaysinh.ToShortDateString();
-            tbGioiTinh.Text = Const.NewNhanSu.Gioitinh;
-            tbDiaChi.Text = Const.NewNhanSu.Diachi;
-            tbTrinhDo.Text = Const.NewNhanSu.Trinhdo;
-            tbChucVu.Text = Const.NewNhanSu.Chucvu;
-            tbMaNhanVien.Text = Const.NewNhanSu.Manhansu;
+            tbTen.Text = Const.NewQuanLy.Hoten;
+            tbNgaySinh.Text = Const.NewQuanLy.Ngaysinh.ToShortDateString();
+            tbGioiTinh.Text = Const.NewQuanLy.Gioitinh;
+            tbDiaChi.Text = Const.NewQuanLy.Diachi;
+            tbTrinhDo.Text = Const.NewQuanLy.Trinhdo;
+            tbChucVu.Text = Const.NewQuanLy.Chucvu;
+            tbMaNhanVien.Text = Const.NewQuanLy.Manhansu;
         }
         private void FThongTin_Load(object sender, EventArgs e)
         {

@@ -44,10 +44,10 @@
             this.tbChucVu = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tbMaNhanVien = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.tbBoPhan = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.tbNganhDaoTao = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -223,15 +223,15 @@
             this.tbMaNhanVien.Size = new System.Drawing.Size(276, 44);
             this.tbMaNhanVien.TabIndex = 18;
             // 
-            // textBox7
+            // tbBoPhan
             // 
-            this.textBox7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(643, 47);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(276, 44);
-            this.textBox7.TabIndex = 12;
+            this.tbBoPhan.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBoPhan.Location = new System.Drawing.Point(643, 47);
+            this.tbBoPhan.Multiline = true;
+            this.tbBoPhan.Name = "tbBoPhan";
+            this.tbBoPhan.ReadOnly = true;
+            this.tbBoPhan.Size = new System.Drawing.Size(276, 44);
+            this.tbBoPhan.TabIndex = 12;
             // 
             // label10
             // 
@@ -253,22 +253,22 @@
             this.label12.TabIndex = 24;
             this.label12.Text = "Ngành đào tạo";
             // 
-            // textBox11
+            // tbNganhDaoTao
             // 
-            this.textBox11.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(643, 106);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(276, 44);
-            this.textBox11.TabIndex = 25;
+            this.tbNganhDaoTao.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNganhDaoTao.Location = new System.Drawing.Point(643, 106);
+            this.tbNganhDaoTao.Multiline = true;
+            this.tbNganhDaoTao.Name = "tbNganhDaoTao";
+            this.tbNganhDaoTao.ReadOnly = true;
+            this.tbNganhDaoTao.Size = new System.Drawing.Size(276, 44);
+            this.tbNganhDaoTao.TabIndex = 25;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox11);
+            this.groupBox2.Controls.Add(this.tbNganhDaoTao);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.tbBoPhan);
             this.groupBox2.Controls.Add(this.tbMaNhanVien);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.tbChucVu);
@@ -291,6 +291,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FThongTinKySu";
             this.Text = "FThongTinKySu";
+            this.Load += new System.EventHandler(this.FThongTinKySu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -316,10 +317,10 @@
         private System.Windows.Forms.TextBox tbChucVu;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbMaNhanVien;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox tbBoPhan;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox tbNganhDaoTao;
         private System.Windows.Forms.GroupBox groupBox2;
     }
 }

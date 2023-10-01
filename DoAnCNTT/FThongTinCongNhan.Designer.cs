@@ -41,9 +41,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.tbBac = new System.Windows.Forms.TextBox();
+            this.tbNhom = new System.Windows.Forms.TextBox();
+            this.tbTo = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -187,9 +187,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox13);
-            this.groupBox2.Controls.Add(this.textBox12);
+            this.groupBox2.Controls.Add(this.tbBac);
+            this.groupBox2.Controls.Add(this.tbNhom);
+            this.groupBox2.Controls.Add(this.tbTo);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label10);
@@ -205,35 +205,35 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin công việc";
             // 
-            // textBox5
+            // tbBac
             // 
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(164, 165);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(276, 44);
-            this.textBox5.TabIndex = 30;
+            this.tbBac.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbBac.Location = new System.Drawing.Point(164, 165);
+            this.tbBac.Multiline = true;
+            this.tbBac.Name = "tbBac";
+            this.tbBac.ReadOnly = true;
+            this.tbBac.Size = new System.Drawing.Size(276, 44);
+            this.tbBac.TabIndex = 30;
             // 
-            // textBox13
+            // tbNhom
             // 
-            this.textBox13.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(643, 106);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(276, 44);
-            this.textBox13.TabIndex = 29;
+            this.tbNhom.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNhom.Location = new System.Drawing.Point(643, 106);
+            this.tbNhom.Multiline = true;
+            this.tbNhom.Name = "tbNhom";
+            this.tbNhom.ReadOnly = true;
+            this.tbNhom.Size = new System.Drawing.Size(276, 44);
+            this.tbNhom.TabIndex = 29;
             // 
-            // textBox12
+            // tbTo
             // 
-            this.textBox12.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(643, 47);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(276, 44);
-            this.textBox12.TabIndex = 28;
+            this.tbTo.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTo.Location = new System.Drawing.Point(643, 47);
+            this.tbTo.Multiline = true;
+            this.tbTo.Name = "tbTo";
+            this.tbTo.ReadOnly = true;
+            this.tbTo.Size = new System.Drawing.Size(276, 44);
+            this.tbTo.TabIndex = 28;
             // 
             // label14
             // 
@@ -315,6 +315,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FThongTinCongNhan";
             this.Text = "FThongTinCongNhan";
+            this.Load += new System.EventHandler(this.FThongTinCongNhan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -338,9 +339,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox tbBac;
+        private System.Windows.Forms.TextBox tbNhom;
+        private System.Windows.Forms.TextBox tbTo;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;

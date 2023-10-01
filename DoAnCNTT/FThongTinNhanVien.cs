@@ -16,10 +16,21 @@ namespace DoAnCNTT
         {
             InitializeComponent();
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        void LoadThongTin()
         {
-
+            tbTen.Text = Const.NewNhanVien.Hoten;
+            tbNgaySinh.Text = Const.NewNhanVien.Ngaysinh.ToShortDateString();
+            tbGioiTinh.Text = Const.NewNhanVien.Gioitinh;
+            tbDiaChi.Text = Const.NewNhanVien.Diachi;
+            tbTrinhDo.Text = Const.NewNhanVien.Trinhdo;
+            tbChucVu.Text = Const.NewNhanVien.Chucvu;
+            tbMaNhanVien.Text = Const.NewNhanVien.Manhansu;
+            tbCongViec.Text = Const.NewNhanVien.Congviec;
+            tbPhongBan.Text = Const.NewNhanVien.Phong;
+        }
+        private void FThongTinNhanVien_Load(object sender, EventArgs e)
+        {
+            LoadThongTin();
         }
     }
 }

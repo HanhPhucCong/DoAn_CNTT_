@@ -20,7 +20,7 @@ namespace DoAnCNTT
             }
             set => instance = value;
         }
-        public List<CongNhan> Listkysu { get => listcongnhan; set => listcongnhan = value; }
+        public List<CongNhan> Listcongnhan { get => listcongnhan; set => listcongnhan = value; }
         private ListCongNhan()
         {
             listcongnhan = new List<CongNhan>();
