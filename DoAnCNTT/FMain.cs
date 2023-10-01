@@ -72,38 +72,21 @@ namespace DoAnCNTT
             index = e.RowIndex;
             if (index < 0 || index >= ListNhanSu.Instance.Listnhansu.Count)
                 return;
-            if(ListNhanSu.Instance.Listnhansu[index].Chucvu == "Ky su")
+            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
-                int indexx = -1;
-                for (int i = 0; i < ListKySu.Instance.Listkysu.Count; i++)
-                    if (ListKySu.Instance.Listkysu[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
-                        indexx = i;
-                Const.NewKySu = new KySu();
-                Const.NewKySu.Manhansu = ListKySu.Instance.Listkysu[indexx].Manhansu;
-                Const.NewKySu.Hoten = ListKySu.Instance.Listkysu[indexx].Hoten;
-                Const.NewKySu.Ngaysinh = ListKySu.Instance.Listkysu[indexx].Ngaysinh;
-                Const.NewKySu.Gioitinh = ListKySu.Instance.Listkysu[indexx].Gioitinh;
-                Const.NewKySu.Diachi = ListKySu.Instance.Listkysu[indexx].Diachi;
-                Const.NewKySu.Trinhdo = ListKySu.Instance.Listkysu[indexx].Trinhdo;
-                Const.NewKySu.Chucvu = ListKySu.Instance.Listkysu[indexx].Chucvu;
-                Const.NewKySu.Bophan = ListKySu.Instance.Listkysu[indexx].Bophan;
-                Const.NewKySu.Nganhdaotao = ListKySu.Instance.Listkysu[indexx].Nganhdaotao;
+                case "Quan ly":
+                    GanConstQuanLy(index);
+                    break;
+                case "Ky su":
+                    GanConstKySu(index);
+                    break;
+                case "Nhan vien":
+                    GanConstNhanVien(index);
+                    break;
+                case "Cong nhan":
+                    GanConstCongNhan(index);
+                    break;
             }
-            //switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
-            //{
-            //    case "Quan ly":
-            //        GanConstQuanLy(index);
-            //        break;
-            //    case "Ky su":
-            //        GanConstKySu(index);
-            //        break;
-            //    case "Nhan vien":
-            //        GanConstNhanVien(index);
-            //        break;
-            //    case "Cong nhan":
-            //        GanConstCongNhan(index);
-            //        break;
-            //}
         }
         void GanConstCongNhan(int index)
         {
@@ -111,8 +94,6 @@ namespace DoAnCNTT
             for (int i = 0; i < ListCongNhan.Instance.Listcongnhan.Count; i++)
                 if (ListCongNhan.Instance.Listcongnhan[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
                     indexx = i;
-            if (indexx < 0)
-                return;
             Const.NewCongNhan = new CongNhan();
             Const.NewCongNhan.Manhansu = ListCongNhan.Instance.Listcongnhan[indexx].Manhansu;
             Const.NewCongNhan.Hoten = ListCongNhan.Instance.Listcongnhan[indexx].Hoten;
@@ -127,20 +108,22 @@ namespace DoAnCNTT
         }
         void GanConstKySu(int index)
         {
-            int indexx = 0;
+            Const.NewKySu = new KySu();
+            Const.NewKySu.Manhansu = ListNhanSu.Instance.Listnhansu[index].Manhansu;
+            Const.NewKySu.Hoten = ListNhanSu.Instance.Listnhansu[index].Hoten;
+            Const.NewKySu.Ngaysinh = ListNhanSu.Instance.Listnhansu[index].Ngaysinh;
+            Const.NewKySu.Gioitinh = ListNhanSu.Instance.Listnhansu[index].Gioitinh;
+            Const.NewKySu.Diachi = ListNhanSu.Instance.Listnhansu[index].Diachi;
+            Const.NewKySu.Trinhdo = ListNhanSu.Instance.Listnhansu[index].Trinhdo;
+            Const.NewKySu.Chucvu = ListNhanSu.Instance.Listnhansu[index].Chucvu;
+            Const.NewKySu.Bophan = ListKySu.Instance.Listkysu[1].Bophan;
+            Const.NewKySu.Nganhdaotao = ListKySu.Instance.Listkysu[1].Nganhdaotao;
             for (int i = 0; i < ListKySu.Instance.Listkysu.Count; i++)
                 if (ListKySu.Instance.Listkysu[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
-                    indexx = i;
-            Const.NewKySu = new KySu();
-            Const.NewKySu.Manhansu = ListKySu.Instance.Listkysu[indexx].Manhansu;
-            Const.NewKySu.Hoten = ListKySu.Instance.Listkysu[indexx].Hoten;
-            Const.NewKySu.Ngaysinh = ListKySu.Instance.Listkysu[indexx].Ngaysinh;
-            Const.NewKySu.Gioitinh = ListKySu.Instance.Listkysu[indexx].Gioitinh;
-            Const.NewKySu.Diachi = ListKySu.Instance.Listkysu[indexx].Diachi;
-            Const.NewKySu.Trinhdo = ListKySu.Instance.Listkysu[indexx].Trinhdo;
-            Const.NewKySu.Chucvu = ListKySu.Instance.Listkysu[indexx].Chucvu;
-            Const.NewKySu.Bophan = ListKySu.Instance.Listkysu[indexx].Bophan;
-            Const.NewKySu.Nganhdaotao = ListKySu.Instance.Listkysu[indexx].Nganhdaotao;
+                {
+                    Const.NewKySu.Bophan = ListKySu.Instance.Listkysu[i].Bophan;
+                    Const.NewKySu.Nganhdaotao = ListKySu.Instance.Listkysu[i].Nganhdaotao;
+                }
         }
         void GanConstNhanVien(int index)
         {
