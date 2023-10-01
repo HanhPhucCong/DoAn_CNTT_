@@ -24,7 +24,7 @@ namespace DoAnCNTT
         private ListNhanVien()
         {
             listnhanvien = new List<NhanVien>();
-            listnhanvien.Add(new NhanVien("21110817", "Hanh Phuc Cong", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Nhan vien", "Ke toan", "Phong ke toan"));
+            listnhanvien.Add(new NhanVien("NV1", "Hanh Phuc Cong 2", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Nhan vien", "Ke toan", "Phong ke toan"));
         }
     }
 }

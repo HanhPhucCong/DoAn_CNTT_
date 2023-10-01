@@ -12,7 +12,7 @@ namespace DoAnCNTT
         private string phong;
         public string Phong { get => phong; set => phong = value; }
         public string Congviec { get => congviec; set => congviec = value; }
-        public NhanVien()
+        public NhanVien() : base()
         {
             congviec = "";
             phong = "";

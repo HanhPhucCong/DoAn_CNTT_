@@ -21,5 +21,10 @@ namespace DoAnCNTT
             set => instance = value;
         }
         public List<QuanLy> Listnhansu { get => listquanly; set => listquanly = value; }
+        private ListQuanLy()
+        {
+            listquanly = new List<QuanLy>();
+            listquanly.Add(new QuanLy("21110817", "Hanh Phuc Cong", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Quan ly"));
+        }
     }
 }

@@ -8,6 +8,7 @@ namespace DoAnCNTT
 {
     public class QuanLy : NhanSu
     {
-        public QuanLy() { }
+        public QuanLy():base() { }
+        public QuanLy(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu) : base() { }
     }
 }

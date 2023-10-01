@@ -12,7 +12,7 @@ namespace DoAnCNTT
         private string bophan;
         public string Nganhdaotao { get => nganhdaotao; set => nganhdaotao = value; }
         public string Bophan { get => bophan; set => bophan = value; }
-        public KySu() 
+        public KySu() : base()
         {
             nganhdaotao = "";
             bophan = "";
