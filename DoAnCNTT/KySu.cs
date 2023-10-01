@@ -12,6 +12,15 @@ namespace DoAnCNTT
         private string bophan;
         public string Nganhdaotao { get => nganhdaotao; set => nganhdaotao = value; }
         public string Bophan { get => bophan; set => bophan = value; }
-        public KySu() { }
+        public KySu() 
+        {
+            nganhdaotao = "";
+            bophan = "";
+        }
+        public KySu(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu, string Nganhdaotao, string Bophan) : base()
+        {
+            this.Nganhdaotao = nganhdaotao;
+            this.Bophan = bophan;
+        }
     }
 }

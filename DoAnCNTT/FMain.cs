@@ -12,6 +12,7 @@ namespace DoAnCNTT
 {
     public partial class FMain : Form
     {
+        int index = -1;
         public bool isExit = true;
         public event EventHandler Logout;
         public FMain()
@@ -53,12 +54,6 @@ namespace DoAnCNTT
             Logout(this, new EventArgs());
         }
 
-        private void Them_Click(object sender, EventArgs e)
-        {
-            FThem form = new FThem();
-            form.Show();
-        }
-
         private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FTaiKhoan form = new FTaiKhoan();
@@ -72,9 +67,41 @@ namespace DoAnCNTT
             form.ShowDialog();
         }
 
-        private void quảnLýToolStripMenuItem_Click(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            index = e.RowIndex;
+            if (index < 0 || index >= ListNhanSu.Instance.Listnhansu.Count)
+                return;
+            Const.NewNhanSu = new NhanSu();
+            Const.NewNhanSu.Manhansu = ListNhanSu.Instance.Listnhansu[index].Manhansu;
+            Const.NewNhanSu.Hoten = ListNhanSu.Instance.Listnhansu[index].Hoten;
+            Const.NewNhanSu.Ngaysinh = ListNhanSu.Instance.Listnhansu[index].Ngaysinh;
+            Const.NewNhanSu.Gioitinh = ListNhanSu.Instance.Listnhansu[index].Gioitinh;
+            Const.NewNhanSu.Diachi = ListNhanSu.Instance.Listnhansu[index].Diachi;
+            Const.NewNhanSu.Trinhdo = ListNhanSu.Instance.Listnhansu[index].Trinhdo;
+            Const.NewNhanSu.Chucvu = ListNhanSu.Instance.Listnhansu[index].Chucvu;
+        }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FThongTinQuanLy form = new FThongTinQuanLy();
+            form.ShowDialog();
+        }
+
+        private void toolStripLabel5_Click(object sender, EventArgs e)
+        {
+            FThongTinQuanLy form = new FThongTinQuanLy();
+            form.ShowDialog();
+        }
+        private void Them_Click(object sender, EventArgs e)
+        {
+            FThem form = new FThem();
+            form.ShowDialog();
+        }
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            FThem form = new FThem();
+            form.ShowDialog();
         }
     }
 }

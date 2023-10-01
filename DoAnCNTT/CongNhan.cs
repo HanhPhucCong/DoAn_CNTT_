@@ -14,6 +14,17 @@ namespace DoAnCNTT
         public string Bac { get => bac; set => bac = value; }
         public string To { get => to; set => to = value; }
         public string Nhom { get => nhom; set => nhom = value; }
-        public CongNhan() { }
+        public CongNhan() : base()
+        {
+            bac = "";
+            to = "";
+            nhom = "";
+        }
+        public CongNhan(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu, string Bac, string To, string Nhom) : base()
+        {
+            this.bac = Bac;
+            this.to = To;
+            this.nhom = Nhom;
+        }
     }
 }

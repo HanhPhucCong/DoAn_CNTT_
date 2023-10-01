@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnCNTT
 {
-    public partial class FThongTin : Form
+    public partial class FThongTinCongNhan : Form
     {
-        public FThongTin()
+        public FThongTinCongNhan()
         {
             InitializeComponent();
         }

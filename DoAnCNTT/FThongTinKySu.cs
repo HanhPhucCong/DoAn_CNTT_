@@ -10,21 +10,12 @@ using System.Windows.Forms;
 
 namespace DoAnCNTT
 {
-    public partial class FThem : Form
+    public partial class FThongTinKySu : Form
     {
-        public FThem()
+        public FThongTinKySu()
         {
             InitializeComponent();
         }
 
-        private void FThem_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

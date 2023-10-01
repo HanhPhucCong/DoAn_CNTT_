@@ -96,11 +96,29 @@
     <Compile Include="FThem.Designer.cs">
       <DependentUpon>FThem.cs</DependentUpon>
     </Compile>
-    <Compile Include="FThongTin.cs">
+    <Compile Include="FThongTinCongNhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FThongTin.Designer.cs">
-      <DependentUpon>FThongTin.cs</DependentUpon>
+    <Compile Include="FThongTinCongNhan.Designer.cs">
+      <DependentUpon>FThongTinCongNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongTinKySu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinKySu.Designer.cs">
+      <DependentUpon>FThongTinKySu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongTinNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinNhanVien.Designer.cs">
+      <DependentUpon>FThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThongTinQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThongTinQuanLy.Designer.cs">
+      <DependentUpon>FThongTinQuanLy.cs</DependentUpon>
     </Compile>
     <Compile Include="FXoa.cs">
       <SubType>Form</SubType>
@@ -109,7 +127,11 @@
       <DependentUpon>FXoa.cs</DependentUpon>
     </Compile>
     <Compile Include="KySu.cs" />
+    <Compile Include="ListCongNhan.cs" />
+    <Compile Include="ListKySu.cs" />
     <Compile Include="ListNhanSu.cs" />
+    <Compile Include="ListNhanVien.cs" />
+    <Compile Include="ListQuanLy.cs" />
     <Compile Include="Listuser.cs" />
     <Compile Include="NhanSu.cs" />
     <Compile Include="NhanVien.cs" />
@@ -141,8 +163,17 @@
     <EmbeddedResource Include="FThem.resx">
       <DependentUpon>FThem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FThongTin.resx">
-      <DependentUpon>FThongTin.cs</DependentUpon>
+    <EmbeddedResource Include="FThongTinCongNhan.resx">
+      <DependentUpon>FThongTinCongNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinKySu.resx">
+      <DependentUpon>FThongTinKySu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinNhanVien.resx">
+      <DependentUpon>FThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThongTinQuanLy.resx">
+      <DependentUpon>FThongTinQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FXoa.resx">
       <DependentUpon>FXoa.cs</DependentUpon>

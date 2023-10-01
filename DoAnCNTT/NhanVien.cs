@@ -12,6 +12,15 @@ namespace DoAnCNTT
         private string phong;
         public string Phong { get => phong; set => phong = value; }
         public string Congviec { get => congviec; set => congviec = value; }
-        public NhanVien() { }
+        public NhanVien()
+        {
+            congviec = "";
+            phong = "";
+        }
+        public NhanVien(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu, string Congviec, string Phong) : base()
+        {
+            this.congviec = Congviec;
+            this.phong = Phong;
+        }
     }
 }

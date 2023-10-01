@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace DoAnCNTT
 {
-    public partial class FThem : Form
+    public partial class FThongTinNhanVien : Form
     {
-        public FThem()
+        public FThongTinNhanVien()
         {
             InitializeComponent();
         }
 
-        private void FThem_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
