@@ -160,7 +160,12 @@ namespace DoAnCNTT
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            switch(ListNhanSu.Instance.Listnhansu[index].Chucvu)
+            if (index < 0 || index >= ListNhanSu.Instance.Listnhansu.Count)
+            {
+                MessageBox.Show("Bạn chưa chọn nhân viên để xem.");
+                return;
+            }
+            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
                 case "Quan ly":
                     LoadFormQuanLy();
@@ -199,6 +204,11 @@ namespace DoAnCNTT
 
         private void toolStripLabel5_Click(object sender, EventArgs e)
         {
+            if (index < 0 || index >= ListNhanSu.Instance.Listnhansu.Count)
+            {
+                MessageBox.Show("Bạn chưa chọn nhân viên để xem.");
+                return;
+            }
             switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
                 case "Quan ly":
@@ -235,16 +245,98 @@ namespace DoAnCNTT
 
         private void Xoa_Click(object sender, EventArgs e)
         {
-
+            if (index < 0 || index >= ListNhanSu.Instance.Listnhansu.Count)
+            {
+                MessageBox.Show("Bạn chưa chọn nhân viên để xóa.");
+                return;
+            }
+            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+            {
+                case "Quan ly":
+                    LoadSuaQL();
+                    break;
+                case "Ky su":
+                    LoadSuaKS();
+                    break;
+                case "Nhan vien":
+                    LoadSuaNV();
+                    break;
+                case "Cong nhan":
+                    LoadSuaCN();
+                    break;
+            }
         }
 
         private void lbxoa_Click(object sender, EventArgs e)
         {
-
+            if (index < 0 || index >= ListNhanSu.Instance.Listnhansu.Count)
+            {
+                MessageBox.Show("Bạn chưa chọn nhân viên để xóa.");
+                return;
+            }
+            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+            {
+                case "Quan ly":
+                    XoaQL();
+                    break;
+                case "Ky su":
+                    XoaKS();
+                    break;
+                case "Nhan vien":
+                    XoaNV();
+                    break;
+                case "Cong nhan":
+                    XoaCN();
+                    break;
+            }
         }
-
+        void XoaNV()
+        {
+            int indexx = -1;
+            for (int i = 0; i < ListNhanVien.Instance.Listnhanvien.Count; i++)
+                if (ListNhanVien.Instance.Listnhanvien[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                    indexx = i;
+            ListNhanVien.Instance.Listnhanvien.RemoveAt(indexx);
+            ListNhanSu.Instance.Listnhansu.RemoveAt(index);
+            LoadDanhSach();
+        }
+        void XoaQL()
+        {
+            int indexx = -1;
+            for (int i = 0; i < ListQuanLy.Instance.Listquanly.Count; i++)
+                if (ListQuanLy.Instance.Listquanly[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                    indexx = i;
+            ListQuanLy.Instance.Listquanly.RemoveAt(indexx);
+            ListNhanSu.Instance.Listnhansu.RemoveAt(index);
+            LoadDanhSach();
+        }
+        void XoaCN()
+        {
+            int indexx = -1;
+            for (int i = 0; i < ListCongNhan.Instance.Listcongnhan.Count; i++)
+                if (ListCongNhan.Instance.Listcongnhan[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                    indexx = i;
+            ListCongNhan.Instance.Listcongnhan.RemoveAt(indexx);
+            ListNhanSu.Instance.Listnhansu.RemoveAt(index);
+            LoadDanhSach();
+        }
+        void XoaKS()
+        {
+            int indexx = -1;
+            for (int i = 0; i < ListKySu.Instance.Listkysu.Count; i++)
+                if (ListKySu.Instance.Listkysu[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                    indexx = i;
+            ListKySu.Instance.Listkysu.RemoveAt(indexx);
+            ListNhanSu.Instance.Listnhansu.RemoveAt(index);
+            LoadDanhSach();
+        }
         private void toolStripLabel2_Click(object sender, EventArgs e)
         {
+            if (index < 0 || index >= ListNhanSu.Instance.Listnhansu.Count)
+            {
+                MessageBox.Show("Bạn chưa chọn nhân viên để sửa.");
+                return;
+            }
             switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
                 case "Quan ly":
@@ -339,6 +431,11 @@ namespace DoAnCNTT
         }
         private void Sua_Click(object sender, EventArgs e)
         {
+            if (index < 0 || index >= ListNhanSu.Instance.Listnhansu.Count)
+            {
+                MessageBox.Show("Bạn chưa chọn nhân viên để sửa.");
+                return;
+            }
             switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
                 case "Quan ly":
