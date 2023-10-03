@@ -38,3 +38,7 @@ C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThongTinQuanLy.res
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThongTinCongNhan.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThongTinKySu.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThongTinNhanVien.resources
+C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThemNV.resources
+C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThemQL.resources
+C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThemCN.resources
+C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThemKS.resources

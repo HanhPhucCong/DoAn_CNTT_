@@ -16,15 +16,28 @@ namespace DoAnCNTT
         {
             InitializeComponent();
         }
-
-        private void FThem_Load(object sender, EventArgs e)
+        private void btThemQl_Click(object sender, EventArgs e)
         {
-
+            FThemQL form = new FThemQL();
+            form.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btThemNV_Click(object sender, EventArgs e)
         {
+            FThemNV form = new FThemNV();
+            form.ShowDialog();
+        }
 
+        private void btThemKS_Click(object sender, EventArgs e)
+        {
+            FThemKS form = new FThemKS();
+            form.ShowDialog();
+        }
+
+        private void btThemCN_Click(object sender, EventArgs e)
+        {
+            FThemCN form = new FThemCN();
+            form.ShowDialog();
         }
     }
 }

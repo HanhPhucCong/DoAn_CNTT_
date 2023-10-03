@@ -96,6 +96,30 @@
     <Compile Include="FThem.Designer.cs">
       <DependentUpon>FThem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FThemCN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemCN.Designer.cs">
+      <DependentUpon>FThemCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemKS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemKS.Designer.cs">
+      <DependentUpon>FThemKS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemNV.Designer.cs">
+      <DependentUpon>FThemNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FThemQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FThemQL.Designer.cs">
+      <DependentUpon>FThemQL.cs</DependentUpon>
+    </Compile>
     <Compile Include="FThongTinCongNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +186,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThem.resx">
       <DependentUpon>FThem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemCN.resx">
+      <DependentUpon>FThemCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemKS.resx">
+      <DependentUpon>FThemKS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemNV.resx">
+      <DependentUpon>FThemNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FThemQL.resx">
+      <DependentUpon>FThemQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinCongNhan.resx">
       <DependentUpon>FThongTinCongNhan.cs</DependentUpon>
