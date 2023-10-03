@@ -33,20 +33,47 @@ namespace DoAnCNTT
 
         private void btThemNV_Click(object sender, EventArgs e)
         {
+            Const.NewNhanVien = null;
+            Const.NewNhanSu = null;
             FThemNV form = new FThemNV();
+            form.FormClosed += Form_FormClosed3;
             form.ShowDialog();
+        }
+
+        private void Form_FormClosed3(object sender, FormClosedEventArgs e)
+        {
+            ListNhanVien.Instance.Listnhanvien.Add(Const.NewNhanVien);
+            ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
         }
 
         private void btThemKS_Click(object sender, EventArgs e)
         {
+            Const.NewKySu = null;
+            Const.NewNhanSu = null;
             FThemKS form = new FThemKS();
+            form.FormClosed += Form_FormClosed2;
             form.ShowDialog();
+        }
+
+        private void Form_FormClosed2(object sender, FormClosedEventArgs e)
+        {
+            ListKySu.Instance.Listkysu.Add(Const.NewKySu);
+            ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
         }
 
         private void btThemCN_Click(object sender, EventArgs e)
         {
+            Const.NewCongNhan = null;
+            Const.NewNhanSu = null;
             FThemCN form = new FThemCN();
+            form.FormClosed += Form_FormClosed1;
             form.ShowDialog();
+        }
+
+        private void Form_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            ListCongNhan.Instance.Listcongnhan.Add(Const.NewCongNhan);
+            ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
         }
     }
 }

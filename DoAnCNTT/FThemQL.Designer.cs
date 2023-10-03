@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.tbTrinhDo = new System.Windows.Forms.TextBox();
             this.tbDiaChi = new System.Windows.Forms.TextBox();
             this.tbGioiTinh = new System.Windows.Forms.TextBox();
@@ -38,14 +39,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.thoat = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tbMaNhanVien = new System.Windows.Forms.TextBox();
             this.tbChucVu = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.them = new System.Windows.Forms.Button();
-            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,17 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tịn cá nhân";
+            // 
+            // dtNgaySinh
+            // 
+            this.dtNgaySinh.CalendarFont = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtNgaySinh.Font = new System.Drawing.Font("Times New Roman", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgaySinh.Location = new System.Drawing.Point(164, 94);
+            this.dtNgaySinh.Name = "dtNgaySinh";
+            this.dtNgaySinh.Size = new System.Drawing.Size(276, 43);
+            this.dtNgaySinh.TabIndex = 24;
             // 
             // tbTrinhDo
             // 
@@ -156,16 +167,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Họ tên";
             // 
-            // button2
+            // thoat
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(727, 414);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 51);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.thoat.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thoat.Location = new System.Drawing.Point(727, 414);
+            this.thoat.Name = "thoat";
+            this.thoat.Size = new System.Drawing.Size(164, 51);
+            this.thoat.TabIndex = 18;
+            this.thoat.Text = "Thoát";
+            this.thoat.UseVisualStyleBackColor = true;
+            this.thoat.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
@@ -230,17 +241,6 @@
             this.them.UseVisualStyleBackColor = true;
             this.them.Click += new System.EventHandler(this.them_Click);
             // 
-            // dtNgaySinh
-            // 
-            this.dtNgaySinh.CalendarFont = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgaySinh.CustomFormat = "dd/MM/yyyy";
-            this.dtNgaySinh.Font = new System.Drawing.Font("Times New Roman", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgaySinh.Location = new System.Drawing.Point(164, 94);
-            this.dtNgaySinh.Name = "dtNgaySinh";
-            this.dtNgaySinh.Size = new System.Drawing.Size(276, 43);
-            this.dtNgaySinh.TabIndex = 24;
-            // 
             // FThemQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,7 +248,7 @@
             this.ClientSize = new System.Drawing.Size(911, 471);
             this.Controls.Add(this.them);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.thoat);
             this.Controls.Add(this.groupBox2);
             this.Name = "FThemQL";
             this.Text = "FThemQL";
@@ -272,7 +272,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button thoat;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbMaNhanVien;
