@@ -59,7 +59,7 @@
             // sua
             // 
             this.sua.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sua.Location = new System.Drawing.Point(525, 491);
+            this.sua.Location = new System.Drawing.Point(555, 489);
             this.sua.Name = "sua";
             this.sua.Size = new System.Drawing.Size(164, 51);
             this.sua.TabIndex = 30;
@@ -288,6 +288,7 @@
             this.tbMaNhanVien.Location = new System.Drawing.Point(164, 47);
             this.tbMaNhanVien.Multiline = true;
             this.tbMaNhanVien.Name = "tbMaNhanVien";
+            this.tbMaNhanVien.ReadOnly = true;
             this.tbMaNhanVien.Size = new System.Drawing.Size(276, 44);
             this.tbMaNhanVien.TabIndex = 18;
             // 
@@ -297,6 +298,7 @@
             this.tbChucVu.Location = new System.Drawing.Point(164, 106);
             this.tbChucVu.Multiline = true;
             this.tbChucVu.Name = "tbChucVu";
+            this.tbChucVu.ReadOnly = true;
             this.tbChucVu.Size = new System.Drawing.Size(276, 44);
             this.tbChucVu.TabIndex = 17;
             // 

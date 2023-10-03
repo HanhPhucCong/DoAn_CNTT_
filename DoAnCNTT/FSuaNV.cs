@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,7 +41,18 @@ namespace DoAnCNTT
 
         private void sua_Click(object sender, EventArgs e)
         {
-
+            int indexx = -1;
+            for (int i = 0; i < ListNhanVien.Instance.Listnhanvien.Count; i++)
+                if (ListNhanVien.Instance.Listnhanvien[i].Manhansu == Const.NewNhanVien.Manhansu)
+                    indexx = i;
+            ListNhanVien.Instance.Listnhanvien[indexx].Hoten = tbTen.Text;
+            ListNhanVien.Instance.Listnhanvien[indexx].Ngaysinh = dtNgaySinh.Value;
+            ListNhanVien.Instance.Listnhanvien[indexx].Gioitinh = tbGioiTinh.Text;
+            ListNhanVien.Instance.Listnhanvien[indexx].Diachi = tbDiaChi.Text;
+            ListNhanVien.Instance.Listnhanvien[indexx].Trinhdo = tbTrinhDo.Text;
+            ListNhanVien.Instance.Listnhanvien[indexx].Congviec = tbCongViec.Text;
+            ListNhanVien.Instance.Listnhanvien[indexx].Phong= tbPhongBan.Text;
+            this.Close();
         }
     }
 }
