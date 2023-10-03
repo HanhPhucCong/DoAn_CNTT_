@@ -45,7 +45,6 @@
             this.tbChucVu = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.them = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -231,13 +230,6 @@
             this.them.UseVisualStyleBackColor = true;
             this.them.Click += new System.EventHandler(this.them_Click);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 442);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(170, 23);
-            this.progressBar1.TabIndex = 21;
-            // 
             // dtNgaySinh
             // 
             this.dtNgaySinh.CalendarFont = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -254,7 +246,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 471);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.them);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button2);
@@ -288,7 +279,6 @@
         private System.Windows.Forms.TextBox tbChucVu;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button them;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.DateTimePicker dtNgaySinh;
     }
 }
