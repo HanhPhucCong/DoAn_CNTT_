@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAnCNTT
 {
-    public partial class FSua : Form
+    public partial class FSuaNV : Form
     {
-        public FSua()
+        public FSuaNV()
         {
             InitializeComponent();
         }

@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace DoAnCNTT
 {
-    public partial class FThongTinCongNhan : Form
+    public partial class FSuaCN : Form
     {
-        public FThongTinCongNhan()
+        public FSuaCN()
         {
             InitializeComponent();
+        }
+
+        private void FSuaCN_Load(object sender, EventArgs e)
+        {
+            LoadThongTin();
         }
         void LoadThongTin()
         {
             tbTen.Text = Const.NewCongNhan.Hoten;
-            tbNgaySinh.Text = Const.NewCongNhan.Ngaysinh.ToShortDateString();
+            dtNgaySinh.Text = Const.NewCongNhan.Ngaysinh.ToShortDateString();
             tbGioiTinh.Text = Const.NewCongNhan.Gioitinh;
             tbDiaChi.Text = Const.NewCongNhan.Diachi;
             tbTrinhDo.Text = Const.NewCongNhan.Trinhdo;
@@ -29,12 +34,13 @@ namespace DoAnCNTT
             tbTo.Text = Const.NewCongNhan.To;
             tbNhom.Text = Const.NewCongNhan.Nhom;
         }
-        private void FThongTinCongNhan_Load(object sender, EventArgs e)
+
+        private void sua_Click(object sender, EventArgs e)
         {
-            LoadThongTin();
+
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void thoat_Click(object sender, EventArgs e)
         {
             this.Close();
         }

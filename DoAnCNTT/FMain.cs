@@ -232,5 +232,72 @@ namespace DoAnCNTT
             FThem form = new FThem();
             form.ShowDialog();
         }
+
+        private void Xoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbxoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripLabel2_Click(object sender, EventArgs e)
+        {
+            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+            {
+                case "Quan ly":
+                    LoadSuaQL();
+                    break;
+                case "Ky su":
+                    LoadSuaKS();
+                    break;
+                case "Nhan vien":
+                    LoadSuaNV();
+                    break;
+                case "Cong nhan":
+                    LoadSuaCN();
+                    break;
+            }
+        }
+        void LoadSuaQL()
+        {
+            FSuaQL form = new FSuaQL();
+            form.ShowDialog();
+        }
+        void LoadSuaKS()
+        {
+            FSuaKS form = new FSuaKS();
+            form.ShowDialog();
+        }
+        void LoadSuaNV()
+        {
+            FSuaNV form = new FSuaNV();
+            form.ShowDialog();
+        }
+        void LoadSuaCN()
+        {
+            FSuaCN form = new FSuaCN();
+            form.ShowDialog();
+        }
+        private void Sua_Click(object sender, EventArgs e)
+        {
+            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+            {
+                case "Quan ly":
+                    LoadSuaQL();
+                    break;
+                case "Ky su":
+                    LoadSuaKS();
+                    break;
+                case "Nhan vien":
+                    LoadSuaNV();
+                    break;
+                case "Cong nhan":
+                    LoadSuaCN();
+                    break;
+            }
+        }
     }
 }

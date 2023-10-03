@@ -78,11 +78,29 @@
     <Compile Include="FQLNhanVien.Designer.cs">
       <DependentUpon>FQLNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FSua.cs">
+    <Compile Include="FSuaCN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FSua.Designer.cs">
-      <DependentUpon>FSua.cs</DependentUpon>
+    <Compile Include="FSuaCN.Designer.cs">
+      <DependentUpon>FSuaCN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSuaKS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSuaKS.Designer.cs">
+      <DependentUpon>FSuaKS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSuaNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSuaNV.Designer.cs">
+      <DependentUpon>FSuaNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FSuaQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FSuaQL.Designer.cs">
+      <DependentUpon>FSuaQL.cs</DependentUpon>
     </Compile>
     <Compile Include="FTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -178,8 +196,17 @@
     <EmbeddedResource Include="FQLNhanVien.resx">
       <DependentUpon>FQLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FSua.resx">
-      <DependentUpon>FSua.cs</DependentUpon>
+    <EmbeddedResource Include="FSuaCN.resx">
+      <DependentUpon>FSuaCN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSuaKS.resx">
+      <DependentUpon>FSuaKS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSuaNV.resx">
+      <DependentUpon>FSuaNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FSuaQL.resx">
+      <DependentUpon>FSuaQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FTaiKhoan.resx">
       <DependentUpon>FTaiKhoan.cs</DependentUpon>

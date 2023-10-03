@@ -24,7 +24,6 @@ C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.Fdangnhap.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FMain.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FQLKySu.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FQLNhanVien.resources
-C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FSua.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThem.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FXoa.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.Properties.Resources.resources
@@ -42,3 +41,7 @@ C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThemNV.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThemQL.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThemCN.resources
 C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FThemKS.resources
+C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FSuaCN.resources
+C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FSuaKS.resources
+C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FSuaNV.resources
+C:\Users\DEll\Desktop\DoAn_CNTT_\DoAnCNTT\obj\Debug\DoAnCNTT.FSuaQL.resources
