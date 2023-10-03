@@ -63,6 +63,7 @@
             this.sua.TabIndex = 28;
             this.sua.Text = "Sửa";
             this.sua.UseVisualStyleBackColor = true;
+            this.sua.Click += new System.EventHandler(this.sua_Click);
             // 
             // groupBox1
             // 
@@ -190,6 +191,7 @@
             this.button2.TabIndex = 26;
             this.button2.Text = "Thoát";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
@@ -296,6 +298,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FSuaNV";
             this.Text = "FSuaNV";
+            this.Load += new System.EventHandler(this.FSuaNV_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

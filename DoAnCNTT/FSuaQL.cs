@@ -16,5 +16,29 @@ namespace DoAnCNTT
         {
             InitializeComponent();
         }
+
+        private void sua_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        void LoadThongTin()
+        {
+            tbTen.Text = Const.NewQuanLy.Hoten;
+            dtNgaySinh.Text = Const.NewQuanLy.Ngaysinh.ToShortDateString();
+            tbGioiTinh.Text = Const.NewQuanLy.Gioitinh;
+            tbDiaChi.Text = Const.NewQuanLy.Diachi;
+            tbTrinhDo.Text = Const.NewQuanLy.Trinhdo;
+            tbChucVu.Text = Const.NewQuanLy.Chucvu;
+            tbMaNhanVien.Text = Const.NewQuanLy.Manhansu;
+        }
+        private void FSuaQL_Load(object sender, EventArgs e)
+        {
+            LoadThongTin();
+        }
     }
 }

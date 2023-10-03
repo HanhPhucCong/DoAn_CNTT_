@@ -57,12 +57,13 @@
             // sua
             // 
             this.sua.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sua.Location = new System.Drawing.Point(576, 474);
+            this.sua.Location = new System.Drawing.Point(610, 474);
             this.sua.Name = "sua";
             this.sua.Size = new System.Drawing.Size(164, 51);
             this.sua.TabIndex = 33;
             this.sua.Text = "Sửa";
             this.sua.UseVisualStyleBackColor = true;
+            this.sua.Click += new System.EventHandler(this.sua_Click);
             // 
             // groupBox1
             // 
@@ -190,6 +191,7 @@
             this.button2.TabIndex = 31;
             this.button2.Text = "Thoát";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
@@ -253,6 +255,7 @@
             this.tbMaNhanVien.Location = new System.Drawing.Point(164, 47);
             this.tbMaNhanVien.Multiline = true;
             this.tbMaNhanVien.Name = "tbMaNhanVien";
+            this.tbMaNhanVien.ReadOnly = true;
             this.tbMaNhanVien.Size = new System.Drawing.Size(276, 44);
             this.tbMaNhanVien.TabIndex = 18;
             // 
@@ -272,6 +275,7 @@
             this.tbChucVu.Location = new System.Drawing.Point(164, 106);
             this.tbChucVu.Multiline = true;
             this.tbChucVu.Name = "tbChucVu";
+            this.tbChucVu.ReadOnly = true;
             this.tbChucVu.Size = new System.Drawing.Size(276, 44);
             this.tbChucVu.TabIndex = 17;
             // 
@@ -296,6 +300,7 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "FSuaKS";
             this.Text = "FSuaKySu";
+            this.Load += new System.EventHandler(this.FSuaKS_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

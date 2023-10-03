@@ -39,5 +39,10 @@ namespace DoAnCNTT
         {
             this.Close();
         }
+
+        private void FThemCN_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

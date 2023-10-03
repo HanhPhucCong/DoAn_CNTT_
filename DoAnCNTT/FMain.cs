@@ -261,25 +261,81 @@ namespace DoAnCNTT
                     break;
             }
         }
-        void LoadSuaQL()
-        {
-            FSuaQL form = new FSuaQL();
-            form.ShowDialog();
-        }
         void LoadSuaKS()
         {
             FSuaKS form = new FSuaKS();
+            form.FormClosed += Form_FormClosed1;
             form.ShowDialog();
+        }
+        private void Form_FormClosed1(object sender, FormClosedEventArgs e)
+        {
+            int indexx = -1;
+            for (int i = 0; i < ListKySu.Instance.Listkysu.Count; i++)
+                if (ListKySu.Instance.Listkysu[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                    indexx = i;
+            ListNhanSu.Instance.Listnhansu[index].Hoten = ListKySu.Instance.Listkysu[indexx].Hoten;
+            ListNhanSu.Instance.Listnhansu[index].Ngaysinh = ListKySu.Instance.Listkysu[indexx].Ngaysinh;
+            ListNhanSu.Instance.Listnhansu[index].Diachi = ListKySu.Instance.Listkysu[indexx].Diachi;
+            ListNhanSu.Instance.Listnhansu[index].Gioitinh = ListKySu.Instance.Listkysu[indexx].Gioitinh;
+            ListNhanSu.Instance.Listnhansu[index].Trinhdo = ListKySu.Instance.Listkysu[indexx].Trinhdo;
+            LoadDanhSach();
+        }
+        void LoadSuaQL()
+        {
+            FSuaQL form = new FSuaQL();
+            form.FormClosed += Form_FormClosed2;
+            form.ShowDialog();
+        }
+        private void Form_FormClosed2(object sender, FormClosedEventArgs e)
+        {
+            int indexx = -1;
+            for (int i = 0; i < ListQuanLy.Instance.Listquanly.Count; i++)
+                if (ListQuanLy.Instance.Listquanly[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                    indexx = i;
+            ListNhanSu.Instance.Listnhansu[index].Hoten = ListQuanLy.Instance.Listquanly[indexx].Hoten;
+            ListNhanSu.Instance.Listnhansu[index].Ngaysinh = ListQuanLy.Instance.Listquanly[indexx].Ngaysinh;
+            ListNhanSu.Instance.Listnhansu[index].Diachi = ListQuanLy.Instance.Listquanly[indexx].Diachi;
+            ListNhanSu.Instance.Listnhansu[index].Gioitinh = ListQuanLy.Instance.Listquanly[indexx].Gioitinh;
+            ListNhanSu.Instance.Listnhansu[index].Trinhdo = ListQuanLy.Instance.Listquanly[indexx].Trinhdo;
+            LoadDanhSach();
         }
         void LoadSuaNV()
         {
             FSuaNV form = new FSuaNV();
+            form.FormClosed += Form_FormClosed3;
             form.ShowDialog();
+        }
+        private void Form_FormClosed3(object sender, FormClosedEventArgs e)
+        {
+            int indexx = -1;
+            for (int i = 0; i < ListNhanVien.Instance.Listnhanvien.Count; i++)
+                if (ListNhanVien.Instance.Listnhanvien[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                    indexx = i;
+            ListNhanSu.Instance.Listnhansu[index].Hoten = ListNhanVien.Instance.Listnhanvien[indexx].Hoten;
+            ListNhanSu.Instance.Listnhansu[index].Ngaysinh = ListNhanVien.Instance.Listnhanvien[indexx].Ngaysinh;
+            ListNhanSu.Instance.Listnhansu[index].Diachi = ListNhanVien.Instance.Listnhanvien[indexx].Diachi;
+            ListNhanSu.Instance.Listnhansu[index].Gioitinh = ListNhanVien.Instance.Listnhanvien[indexx].Gioitinh;
+            ListNhanSu.Instance.Listnhansu[index].Trinhdo = ListNhanVien.Instance.Listnhanvien[indexx].Trinhdo;
+            LoadDanhSach();
         }
         void LoadSuaCN()
         {
             FSuaCN form = new FSuaCN();
+            form.FormClosed += Form_FormClosed4;
             form.ShowDialog();
+        }
+        private void Form_FormClosed4(object sender, FormClosedEventArgs e)
+        {
+            int indexx = -1;
+            for (int i = 0; i < ListCongNhan.Instance.Listcongnhan.Count; i++)
+                if (ListCongNhan.Instance.Listcongnhan[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                    indexx = i;
+            ListNhanSu.Instance.Listnhansu[index].Hoten = ListCongNhan.Instance.Listcongnhan[indexx].Hoten;
+            ListNhanSu.Instance.Listnhansu[index].Ngaysinh = ListCongNhan.Instance.Listcongnhan[indexx].Ngaysinh;
+            ListNhanSu.Instance.Listnhansu[index].Diachi = ListCongNhan.Instance.Listcongnhan[indexx].Diachi;
+            ListNhanSu.Instance.Listnhansu[index].Gioitinh = ListCongNhan.Instance.Listcongnhan[indexx].Gioitinh;
+            ListNhanSu.Instance.Listnhansu[index].Trinhdo = ListCongNhan.Instance.Listcongnhan[indexx].Trinhdo;
+            LoadDanhSach();
         }
         private void Sua_Click(object sender, EventArgs e)
         {

@@ -53,12 +53,13 @@
             // sua
             // 
             this.sua.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sua.Location = new System.Drawing.Point(516, 414);
+            this.sua.Location = new System.Drawing.Point(519, 400);
             this.sua.Name = "sua";
             this.sua.Size = new System.Drawing.Size(164, 51);
             this.sua.TabIndex = 24;
             this.sua.Text = "Sửa";
             this.sua.UseVisualStyleBackColor = true;
+            this.sua.Click += new System.EventHandler(this.sua_Click);
             // 
             // groupBox1
             // 
@@ -180,12 +181,13 @@
             // thoat
             // 
             this.thoat.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thoat.Location = new System.Drawing.Point(727, 414);
+            this.thoat.Location = new System.Drawing.Point(727, 400);
             this.thoat.Name = "thoat";
             this.thoat.Size = new System.Drawing.Size(164, 51);
             this.thoat.TabIndex = 22;
             this.thoat.Text = "Thoát";
             this.thoat.UseVisualStyleBackColor = true;
+            this.thoat.Click += new System.EventHandler(this.thoat_Click);
             // 
             // groupBox2
             // 
@@ -194,7 +196,7 @@
             this.groupBox2.Controls.Add(this.tbChucVu);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(12, 265);
+            this.groupBox2.Location = new System.Drawing.Point(12, 251);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(879, 143);
             this.groupBox2.TabIndex = 21;
@@ -243,13 +245,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 474);
+            this.ClientSize = new System.Drawing.Size(903, 461);
             this.Controls.Add(this.sua);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.thoat);
             this.Controls.Add(this.groupBox2);
             this.Name = "FSuaQL";
             this.Text = "FSuaQL";
+            this.Load += new System.EventHandler(this.FSuaQL_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
