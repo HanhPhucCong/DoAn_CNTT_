@@ -18,8 +18,17 @@ namespace DoAnCNTT
         }
         private void btThemQl_Click(object sender, EventArgs e)
         {
+            Const.NewQuanLy = null;
+            Const.NewNhanSu = null;
             FThemQL form = new FThemQL();
+            form.FormClosed += Form_FormClosed;
             form.ShowDialog();
+        }
+
+        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ListQuanLy.Instance.Listquanly.Add(Const.NewQuanLy);
+            ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
         }
 
         private void btThemNV_Click(object sender, EventArgs e)

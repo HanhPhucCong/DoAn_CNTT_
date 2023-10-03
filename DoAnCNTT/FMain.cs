@@ -23,10 +23,13 @@ namespace DoAnCNTT
         private void FMain_Load(object sender, EventArgs e)
         {
             PhanLoai();
-            foreach(var item in ListNhanSu.Instance.Listnhansu)
-            {
+            LoadDanhSach();
+        }
+        void LoadDanhSach()
+        {
+            dataGridView1.Rows.Clear();
+            foreach (var item in ListNhanSu.Instance.Listnhansu)
                 dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Chucvu);
-            }
         }
         void PhanLoai()
         {
@@ -215,8 +218,15 @@ namespace DoAnCNTT
         private void Them_Click(object sender, EventArgs e)
         {
             FThem form = new FThem();
+            form.FormClosed += Form_FormClosed;
             form.ShowDialog();
         }
+
+        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            LoadDanhSach();
+        }
+
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
             FThem form = new FThem();

@@ -19,7 +19,22 @@ namespace DoAnCNTT
 
         private void them_Click(object sender, EventArgs e)
         {
+            string ten = tbTen.Text;
+            DateTime ngaysinh = dtNgaySinh.Value;
+            string gioitinh = tbGioiTinh.Text;
+            string diachi = tbDiaChi.Text;
+            string trinhdo = tbTrinhDo.Text;
+            string manhanvien = tbMaNhanVien.Text;
+            string chucvu = tbChucVu.Text;
 
+            Const.NewQuanLy = new QuanLy(manhanvien, ten, ngaysinh, gioitinh, diachi, trinhdo, chucvu);
+            Const.NewNhanSu = new NhanSu(manhanvien, ten, ngaysinh, gioitinh, diachi, trinhdo, chucvu);
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
