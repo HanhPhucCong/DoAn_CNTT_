@@ -25,9 +25,9 @@ namespace DoAnCNTT
         private void FMain_Load(object sender, EventArgs e)
         {
             PhanLoai();
+            LoadDanhSach();
             tbGioiTinh.DataSource = Const.Listgioitinh;
             tbTrinhDo.DataSource = Const.Listtrinhdo;
-            LoadDanhSach();
         }
         void LoadDanhSach()
         {
@@ -66,12 +66,6 @@ namespace DoAnCNTT
             FTaiKhoan form = new FTaiKhoan();
             form.Show();
             this.Hide();
-        }
-
-        private void phòngBanToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FPhong form = new FPhong();
-            form.ShowDialog();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -228,11 +222,6 @@ namespace DoAnCNTT
                     LoadFormCongNhan();
                     break;
             }
-        }
-
-        private void Form_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            LoadDanhSach();
         }
 
         private void Xoa_Click(object sender, EventArgs e)
@@ -875,35 +864,31 @@ namespace DoAnCNTT
 
         private void ButtonTimkiem_Click(object sender, EventArgs e)
         {
-            List<NhanSu> ListNhanSuTim = TimKiem(ListNhanSu.Instance.Listnhansu, tbMaNhanVien.Text, tbHoTen.Text, tbNgaySinh.Value, tbGioiTinh.Text, tbDiaChi.Text, tbTrinhDo.Text, tbChucVu.Text);
-
+            List<NhanSu> ListNhanSuTim = new List<NhanSu>();
+            foreach (NhanSu ns in ListNhanSu.Instance.Listnhansu)
+            {
+                if ((string.IsNullOrEmpty(tbMaNhanVien.Text) || ns.Manhansu == tbMaNhanVien.Text) &&
+                    (string.IsNullOrEmpty(tbHoTen.Text) || ns.Hoten == tbHoTen.Text) &&
+                    (string.IsNullOrEmpty(tbDiaChi.Text) || ns.Diachi == tbDiaChi.Text) &&
+                    (string.IsNullOrEmpty(tbGioiTinh.Text) || ns.Gioitinh == tbGioiTinh.Text) &&
+                    (string.IsNullOrEmpty(tbTrinhDo.Text) || ns.Trinhdo == tbTrinhDo.Text) &&
+                    (string.IsNullOrEmpty(tbChucVu.Text) || ns.Chucvu == tbChucVu.Text))
+                {
+                    ListNhanSuTim.Add(ns);
+                }
+            }
+            if (ListNhanSuTim.Count > 0)
+                foreach (var item in ListNhanSuTim)
+                {
+                    dataGridView1.Rows.Clear();
+                    dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Chucvu);
+                }
+            else
+                MessageBox.Show("Bạn nhập dữ liệu không đúng hoặc không có nhân sự như thê strong hệ thống", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-        public List<NhanSu> TimKiem(List<NhanSu> danhSachNhanSu, string manhansu, string hoten, DateTime ngaysinh, string gioitinh, string diachi, string trinhdo, string chucvu)
+        private void TBDS_Click(object sender, EventArgs e)
         {
-            var ketqua = danhSachNhanSu;
-
-            if (!string.IsNullOrEmpty(manhansu))
-                ketqua = ketqua.Where(ns => ns.Manhansu.Contains(manhansu)).ToList();
-
-            if (!string.IsNullOrEmpty(hoten))
-                ketqua = ketqua.Where(ns => ns.Hoten.Contains(hoten)).ToList();
-
-            if (ngaysinh != null)
-                ketqua = ketqua.Where(ns => ns.Ngaysinh == ngaysinh).ToList();
-
-            if (!string.IsNullOrEmpty(gioitinh))
-                ketqua = ketqua.Where(ns => ns.Gioitinh.Contains(gioitinh)).ToList();
-
-            if (!string.IsNullOrEmpty(diachi))
-                ketqua = ketqua.Where(ns => ns.Diachi.Contains(diachi)).ToList();
-
-            if (!string.IsNullOrEmpty(trinhdo))
-                ketqua = ketqua.Where(ns => ns.Trinhdo.Contains(trinhdo)).ToList();
-
-            if (!string.IsNullOrEmpty(chucvu))
-                ketqua = ketqua.Where(ns => ns.Chucvu.Contains(chucvu)).ToList();
-
-            return ketqua;
+            LoadDanhSach();
         }
     }
 }
