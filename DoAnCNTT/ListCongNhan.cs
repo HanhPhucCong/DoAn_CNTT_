@@ -24,8 +24,8 @@ namespace DoAnCNTT
         private ListCongNhan()
         {
             listcongnhan = new List<CongNhan>();
-            listcongnhan.Add(new CongNhan("CN1", "Hanh Phuc Cong 1", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Cong nhan", "Bac 2", "To xay dung", "Nhom 2"));
-            listcongnhan.Add(new CongNhan("CN2", "Hanh Phuc Cong 11", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Cong nhan", "Bac 4", "To xay dung", "Nhom 7"));
+            listcongnhan.Add(new CongNhan("CN1", "Hanh Phuc Cong 1", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Công nhân", "Bậc 1", "Tổ xây dựng", "Nhóm 1"));
+            listcongnhan.Add(new CongNhan("CN2", "Hanh Phuc Cong 11", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Công nhân", "Bậc 2", "Tổ xây dựng", "Nhóm 2"));
         }
     }
 }

@@ -38,5 +38,23 @@ namespace DoAnCNTT
         {
             this.Close();
         }
+
+        private void FThemNV_Load(object sender, EventArgs e)
+        {
+            tbGioiTinh.DataSource = Const.Listgioitinh;
+            tbTrinhDo.DataSource = Const.Listtrinhdo;
+            tbCongViec.DataSource = Const.Listcongviet;
+            tbPhongBan.DataSource = Const.Listphong;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

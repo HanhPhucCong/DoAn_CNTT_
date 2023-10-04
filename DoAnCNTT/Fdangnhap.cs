@@ -54,12 +54,14 @@ namespace DoAnCNTT
 
         private void FDangNhap_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Bạn Muốn Thoát ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                Application.Exit(); ;
         }
 
         private void thoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Bạn Muốn Thoát ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                Application.Exit(); ;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

@@ -21,6 +21,11 @@ namespace DoAnCNTT
         private void FSuaCN_Load(object sender, EventArgs e)
         {
             LoadThongTin();
+            tbGioiTinh.DataSource = Const.Listgioitinh;
+            tbTrinhDo.DataSource = Const.Listtrinhdo;
+            tbTo.DataSource = Const.Listto;
+            tbNhom.DataSource = Const.Listnhom;
+            tbBac.DataSource = Const.Listbac;
         }
         void LoadThongTin()
         {

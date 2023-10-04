@@ -38,5 +38,13 @@ namespace DoAnCNTT
         {
             this.Close();
         }
+
+        private void FThemKS_Load(object sender, EventArgs e)
+        {
+            tbGioiTinh.DataSource = Const.Listgioitinh;
+            tbTrinhDo.DataSource = Const.Listtrinhdo;
+            tbBoPhan.DataSource = Const.Listbophan;
+            tbNganhDaoTao.DataSource = Const.Listnganh;
+        }
     }
 }

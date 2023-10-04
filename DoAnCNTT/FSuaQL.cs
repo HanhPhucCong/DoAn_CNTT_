@@ -49,6 +49,8 @@ namespace DoAnCNTT
         private void FSuaQL_Load(object sender, EventArgs e)
         {
             LoadThongTin();
+            tbGioiTinh.DataSource = Const.Listgioitinh;
+            tbTrinhDo.DataSource = Const.Listtrinhdo;
         }
     }
 }

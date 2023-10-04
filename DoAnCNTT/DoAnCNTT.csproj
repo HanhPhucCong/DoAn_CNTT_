@@ -66,18 +66,6 @@
     <Compile Include="FPhong.Designer.cs">
       <DependentUpon>FPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FQLKySu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FQLKySu.Designer.cs">
-      <DependentUpon>FQLKySu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FQLNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FQLNhanVien.Designer.cs">
-      <DependentUpon>FQLNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="FSuaCN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,12 +95,6 @@
     </Compile>
     <Compile Include="FTaiKhoan.Designer.cs">
       <DependentUpon>FTaiKhoan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FThem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FThem.Designer.cs">
-      <DependentUpon>FThem.cs</DependentUpon>
     </Compile>
     <Compile Include="FThemCN.cs">
       <SubType>Form</SubType>
@@ -162,12 +144,6 @@
     <Compile Include="FThongTinQuanLy.Designer.cs">
       <DependentUpon>FThongTinQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="FXoa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FXoa.Designer.cs">
-      <DependentUpon>FXoa.cs</DependentUpon>
-    </Compile>
     <Compile Include="KySu.cs" />
     <Compile Include="ListCongNhan.cs" />
     <Compile Include="ListKySu.cs" />
@@ -190,12 +166,6 @@
     <EmbeddedResource Include="FPhong.resx">
       <DependentUpon>FPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FQLKySu.resx">
-      <DependentUpon>FQLKySu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FQLNhanVien.resx">
-      <DependentUpon>FQLNhanVien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FSuaCN.resx">
       <DependentUpon>FSuaCN.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,9 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FTaiKhoan.resx">
       <DependentUpon>FTaiKhoan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FThem.resx">
-      <DependentUpon>FThem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FThemCN.resx">
       <DependentUpon>FThemCN.cs</DependentUpon>
@@ -237,9 +204,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FThongTinQuanLy.resx">
       <DependentUpon>FThongTinQuanLy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FXoa.resx">
-      <DependentUpon>FXoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -32,6 +32,10 @@ namespace DoAnCNTT
         private void FSuaNV_Load(object sender, EventArgs e)
         {
             LoadThongTin();
+            tbGioiTinh.DataSource = Const.Listgioitinh;
+            tbTrinhDo.DataSource = Const.Listtrinhdo;
+            tbCongViec.DataSource = Const.Listcongviet;
+            tbPhongBan.DataSource = Const.Listphong;
         }
 
         private void button2_Click(object sender, EventArgs e)

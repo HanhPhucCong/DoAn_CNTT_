@@ -42,6 +42,10 @@ namespace DoAnCNTT
         private void FSuaKS_Load(object sender, EventArgs e)
         {
             LoadThongTin();
+            tbGioiTinh.DataSource = Const.Listgioitinh;
+            tbTrinhDo.DataSource = Const.Listtrinhdo;
+            tbBoPhan.DataSource = Const.Listbophan;
+            tbNganhDaoTao.DataSource = Const.Listnganh;
         }
         void LoadThongTin()
         {

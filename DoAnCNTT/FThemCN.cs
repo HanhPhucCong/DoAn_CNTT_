@@ -42,7 +42,11 @@ namespace DoAnCNTT
 
         private void FThemCN_Load(object sender, EventArgs e)
         {
-
+            tbGioiTinh.DataSource = Const.Listgioitinh;
+            tbTrinhDo.DataSource = Const.Listtrinhdo;
+            tbTo.DataSource = Const.Listto;
+            tbNhom.DataSource = Const.Listnhom;
+            tbBac.DataSource = Const.Listbac;
         }
     }
 }

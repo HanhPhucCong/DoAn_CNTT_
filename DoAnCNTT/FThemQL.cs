@@ -37,5 +37,11 @@ namespace DoAnCNTT
         {
             this.Close();
         }
+
+        private void FThemQL_Load(object sender, EventArgs e)
+        {
+            tbGioiTinh.DataSource = Const.Listgioitinh;
+            tbTrinhDo.DataSource = Const.Listtrinhdo;
+        }
     }
 }

@@ -35,7 +35,7 @@ namespace DoAnCNTT
         {
             if (Const.loai != "Quan ly")
             {
-                Them.Enabled = false;
+                toolStripDropDownButton2.Enabled = false;
                 Xoa.Enabled = false;
                 Sua.Enabled = false;
                 quảnLýToolStripMenuItem.Enabled = false;
@@ -77,16 +77,16 @@ namespace DoAnCNTT
                 return;
             switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
-                case "Quan ly":
+                case "Quản lý":
                     GanConstQuanLy(index);
                     break;
-                case "Ky su":
+                case "Kỹ sư":
                     GanConstKySu(index);
                     break;
-                case "Nhan vien":
+                case "Nhân viên":
                     GanConstNhanVien(index);
                     break;
-                case "Cong nhan":
+                case "Công nhân":
                     GanConstCongNhan(index);
                     break;
             }
@@ -167,16 +167,16 @@ namespace DoAnCNTT
             }
             switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
-                case "Quan ly":
+                case "Quản lý":
                     LoadFormQuanLy();
                     break;
-                case "Ky su":
+                case "Kỹ sư":
                     LoadFormKySu();
                     break;
-                case "Nhan vien":
+                case "Nhân viên":
                     LoadFormNhanVien();
                     break;
-                case "Cong nhan":
+                case "Công nhân":
                     LoadFormCongNhan();
                     break;
             }
@@ -211,36 +211,24 @@ namespace DoAnCNTT
             }
             switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
-                case "Quan ly":
+                case "Quản lý":
                     LoadFormQuanLy();
                     break;
-                case "Ky su":
+                case "Kỹ sư":
                     LoadFormKySu();
                     break;
-                case "Nhan vien":
+                case "Nhân viên":
                     LoadFormNhanVien();
                     break;
-                case "Cong nhan":
+                case "Công nhân":
                     LoadFormCongNhan();
                     break;
             }
-        }
-        private void Them_Click(object sender, EventArgs e)
-        {
-            FThem form = new FThem();
-            form.FormClosed += Form_FormClosed;
-            form.ShowDialog();
         }
 
         private void Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             LoadDanhSach();
-        }
-
-        private void toolStripLabel1_Click(object sender, EventArgs e)
-        {
-            FThem form = new FThem();
-            form.ShowDialog();
         }
 
         private void Xoa_Click(object sender, EventArgs e)
@@ -252,16 +240,16 @@ namespace DoAnCNTT
             }
             switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
-                case "Quan ly":
+                case "Quản lý":
                     LoadSuaQL();
                     break;
-                case "Ky su":
+                case "Kỹ sư":
                     LoadSuaKS();
                     break;
-                case "Nhan vien":
+                case "Nhân viên":
                     LoadSuaNV();
                     break;
-                case "Cong nhan":
+                case "Công nhân":
                     LoadSuaCN();
                     break;
             }
@@ -276,16 +264,16 @@ namespace DoAnCNTT
             }
             switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
-                case "Quan ly":
+                case "Quản lý":
                     XoaQL();
                     break;
-                case "Ky su":
+                case "Kỹ sư":
                     XoaKS();
                     break;
-                case "Nhan vien":
+                case "Nhân viên":
                     XoaNV();
                     break;
-                case "Cong nhan":
+                case "Công nhân":
                     XoaCN();
                     break;
             }
@@ -339,16 +327,16 @@ namespace DoAnCNTT
             }
             switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
-                case "Quan ly":
+                case "Quản lý":
                     LoadSuaQL();
                     break;
-                case "Ky su":
+                case "Kỹ sư":
                     LoadSuaKS();
                     break;
-                case "Nhan vien":
+                case "Nhân viên":
                     LoadSuaNV();
                     break;
-                case "Cong nhan":
+                case "Công nhân":
                     LoadSuaCN();
                     break;
             }
@@ -438,18 +426,94 @@ namespace DoAnCNTT
             }
             switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
             {
-                case "Quan ly":
+                case "Quản lý":
                     LoadSuaQL();
                     break;
-                case "Ky su":
+                case "Kỹ sư":
                     LoadSuaKS();
                     break;
-                case "Nhan vien":
+                case "Nhân viên":
                     LoadSuaNV();
                     break;
-                case "Cong nhan":
+                case "Công nhân":
                     LoadSuaCN();
                     break;
+            }
+        }
+
+        private void thêmQuảnLýToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Const.NewQuanLy = null;
+            Const.NewNhanSu = null;
+            FThemQL form = new FThemQL();
+            form.FormClosed += Form_FormClosed5;
+            form.ShowDialog();
+        }
+
+        private void Form_FormClosed5(object sender, FormClosedEventArgs e)
+        {
+            if(Const.NewQuanLy != null)
+            {
+                ListQuanLy.Instance.Listquanly.Add(Const.NewQuanLy);
+                ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
+                LoadDanhSach();
+            }
+        }
+
+        private void thêmNhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Const.NewNhanVien = null;
+            Const.NewNhanSu = null;
+            FThemNV form = new FThemNV();
+            form.FormClosed += Form_FormClosed6;
+            form.ShowDialog();
+        }
+
+        private void Form_FormClosed6(object sender, FormClosedEventArgs e)
+        {
+            if(Const.NewNhanVien != null)
+            {
+                ListNhanVien.Instance.Listnhanvien.Add(Const.NewNhanVien);
+                ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
+                LoadDanhSach();
+            }
+        }
+
+        private void thêmKỹSưToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Const.NewKySu = null;
+            Const.NewNhanSu = null;
+            FThemKS form = new FThemKS();
+            form.FormClosed += Form_FormClosed7;
+            form.ShowDialog();
+        }
+
+        private void Form_FormClosed7(object sender, FormClosedEventArgs e)
+        {
+            if (Const.NewKySu != null)
+            {
+                ListKySu.Instance.Listkysu.Add(Const.NewKySu);
+                ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
+                LoadDanhSach();
+            }   
+        }
+
+        private void thêmCôngNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Const.NewCongNhan = null;
+            Const.NewNhanSu = null;
+            FThemCN form = new FThemCN();
+            form.FormClosed += Form_FormClosed8;
+            form.ShowDialog();
+        }
+
+        private void Form_FormClosed8(object sender, FormClosedEventArgs e)
+        {
+            if(Const.NewCongNhan != null)
+            {
+                ListCongNhan.Instance.Listcongnhan.Add(Const.NewCongNhan);
+                ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
+                LoadDanhSach();
             }
         }
     }
