@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace DoAnCNTT
 {
@@ -23,6 +25,8 @@ namespace DoAnCNTT
         private void FMain_Load(object sender, EventArgs e)
         {
             PhanLoai();
+            tbGioiTinh.DataSource = Const.Listgioitinh;
+            tbTrinhDo.DataSource = Const.Listtrinhdo;
             LoadDanhSach();
         }
         void LoadDanhSach()
@@ -452,7 +456,7 @@ namespace DoAnCNTT
 
         private void Form_FormClosed5(object sender, FormClosedEventArgs e)
         {
-            if(Const.NewQuanLy != null)
+            if (Const.NewQuanLy != null)
             {
                 ListQuanLy.Instance.Listquanly.Add(Const.NewQuanLy);
                 ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
@@ -471,7 +475,7 @@ namespace DoAnCNTT
 
         private void Form_FormClosed6(object sender, FormClosedEventArgs e)
         {
-            if(Const.NewNhanVien != null)
+            if (Const.NewNhanVien != null)
             {
                 ListNhanVien.Instance.Listnhanvien.Add(Const.NewNhanVien);
                 ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
@@ -495,7 +499,7 @@ namespace DoAnCNTT
                 ListKySu.Instance.Listkysu.Add(Const.NewKySu);
                 ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
                 LoadDanhSach();
-            }   
+            }
         }
 
         private void thêmCôngNhânToolStripMenuItem_Click(object sender, EventArgs e)
@@ -509,12 +513,397 @@ namespace DoAnCNTT
 
         private void Form_FormClosed8(object sender, FormClosedEventArgs e)
         {
-            if(Const.NewCongNhan != null)
+            if (Const.NewCongNhan != null)
             {
                 ListCongNhan.Instance.Listcongnhan.Add(Const.NewCongNhan);
                 ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
                 LoadDanhSach();
             }
+        }
+        public void ExportToExcel(DataTable dataTable)
+        {
+            Microsoft.Office.Interop.Excel.Application oExcel = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbooks oBooks;
+            Microsoft.Office.Interop.Excel.Sheets oSheets;
+            Microsoft.Office.Interop.Excel.Workbook oBook;
+            Microsoft.Office.Interop.Excel.Worksheet oSheet;
+
+            oExcel.Visible = true;
+            oExcel.DisplayAlerts = false;
+            oExcel.Application.SheetsInNewWorkbook = 1;
+            oBooks = oExcel.Workbooks;
+            oBook = (Microsoft.Office.Interop.Excel.Workbook)(oExcel.Workbooks.Add(Type.Missing));
+            oSheets = oBook.Worksheets;
+            oSheet = (Microsoft.Office.Interop.Excel.Worksheet)oSheets.get_Item(1);
+            oSheet.Name = "Danh sách";
+
+            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "G1");
+            head.MergeCells = true;
+            head.Value2 = "Danh sách";
+            head.Font.Bold = true;
+            head.Font.Name = "Times New Roman";
+            head.Font.Size = "24";
+            head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
+            cl1.Value2 = "Mã nhân viên";
+            cl1.ColumnWidth = 12.0;
+
+            Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
+            cl2.Value2 = "Họ và tên";
+            cl2.ColumnWidth = 25.0;
+
+            Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
+            cl3.Value2 = "Ngày sinh";
+            cl3.ColumnWidth = 12.0;
+
+            Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
+            cl4.Value2 = "Giới tính";
+            cl4.ColumnWidth = 15.0;
+
+            Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E3", "E3");
+            cl5.Value2 = "Địa chỉ";
+            cl5.ColumnWidth = 25.0;
+
+            Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F3", "F3");
+            cl6.Value2 = "Trình độ";
+            cl6.ColumnWidth = 12.0;
+
+            Microsoft.Office.Interop.Excel.Range cl7 = oSheet.get_Range("G3", "G3");
+            cl7.Value2 = "Chức vụ";
+            cl7.ColumnWidth = 18.0;
+
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "G3");
+            rowHead.Font.Bold = true;
+            rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+            rowHead.Interior.ColorIndex = 6;
+            rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+
+            object[,] arr = new object[dataTable.Rows.Count, dataTable.Columns.Count];
+            for (int row = 0; row < dataTable.Rows.Count; row++)
+            {
+                DataRow dataRow = dataTable.Rows[row];
+                for (int col = 0; col < dataTable.Columns.Count; col++)
+                    arr[row, col] = dataRow[col];
+            }
+
+            int rowStart = 4;
+            int colStart = 1;
+            int rowEnd = rowStart + dataTable.Rows.Count - 2;
+            int colEnd = dataTable.Columns.Count;
+
+            Microsoft.Office.Interop.Excel.Range c1 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowStart, colStart];
+            Microsoft.Office.Interop.Excel.Range c2 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowEnd, colEnd];
+            Microsoft.Office.Interop.Excel.Range range = oSheet.get_Range(c1, c2);
+
+            range.Value2 = arr;
+
+            range.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+            oSheet.get_Range(c1, c2).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+        }
+
+        private void xuatfilebang_Click(object sender, EventArgs e)
+        {
+            DataTable dataTable = new DataTable();
+
+            DataColumn col1 = new DataColumn("Mã nhân viên");
+            DataColumn col2 = new DataColumn("Họ và tên");
+            DataColumn col3 = new DataColumn("Ngày sinh");
+            DataColumn col4 = new DataColumn("Giới tính");
+            DataColumn col5 = new DataColumn("Địa chỉ");
+            DataColumn col6 = new DataColumn("Trình độ");
+            DataColumn col7 = new DataColumn("Chức vụ");
+
+            dataTable.Columns.Add(col1);
+            dataTable.Columns.Add(col2);
+            dataTable.Columns.Add(col3);
+            dataTable.Columns.Add(col4);
+            dataTable.Columns.Add(col5);
+            dataTable.Columns.Add(col6);
+            dataTable.Columns.Add(col7);
+
+            foreach (DataGridViewRow dataGridViewRow in dataGridView1.Rows)
+            {
+                DataRow dataRow = dataTable.NewRow();
+                dataRow[0] = dataGridViewRow.Cells[0].Value;
+                dataRow[1] = dataGridViewRow.Cells[1].Value;
+                dataRow[2] = dataGridViewRow.Cells[2].Value;
+                dataRow[3] = dataGridViewRow.Cells[3].Value;
+                dataRow[4] = dataGridViewRow.Cells[4].Value;
+                dataRow[5] = dataGridViewRow.Cells[5].Value;
+                dataRow[6] = dataGridViewRow.Cells[6].Value;
+
+                dataTable.Rows.Add(dataRow);
+            }
+            ExportToExcel(dataTable);
+        }
+        private void côngNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportToExcelCN(ListCongNhan.Instance.Listcongnhan);
+        }
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportToExcelNV(ListNhanVien.Instance.Listnhanvien);
+        }
+        private void kỷSưToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportToExcelKS(ListKySu.Instance.Listkysu);
+        }
+        private void quảnLýToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ExportToExcelQL(ListQuanLy.Instance.Listquanly);
+        }
+        private void Xuatexcel_Click(object sender, EventArgs e)
+        {
+            DataTable dataTable = new DataTable();
+
+            DataColumn col1 = new DataColumn("Mã nhân viên");
+            DataColumn col2 = new DataColumn("Họ và tên");
+            DataColumn col3 = new DataColumn("Ngày sinh");
+            DataColumn col4 = new DataColumn("Giới tính");
+            DataColumn col5 = new DataColumn("Địa chỉ");
+            DataColumn col6 = new DataColumn("Trình độ");
+            DataColumn col7 = new DataColumn("Chức vụ");
+
+            dataTable.Columns.Add(col1);
+            dataTable.Columns.Add(col2);
+            dataTable.Columns.Add(col3);
+            dataTable.Columns.Add(col4);
+            dataTable.Columns.Add(col5);
+            dataTable.Columns.Add(col6);
+            dataTable.Columns.Add(col7);
+
+            foreach (DataGridViewRow dataGridViewRow in dataGridView1.Rows)
+            {
+                DataRow dataRow = dataTable.NewRow();
+                dataRow[0] = dataGridViewRow.Cells[0].Value;
+                dataRow[1] = dataGridViewRow.Cells[1].Value;
+                dataRow[2] = dataGridViewRow.Cells[2].Value;
+                dataRow[3] = dataGridViewRow.Cells[3].Value;
+                dataRow[4] = dataGridViewRow.Cells[4].Value;
+                dataRow[5] = dataGridViewRow.Cells[5].Value;
+                dataRow[6] = dataGridViewRow.Cells[6].Value;
+
+                dataTable.Rows.Add(dataRow);
+            }
+            ExportToExcel(dataTable);
+        }
+        public void ExportToExcelCN(List<CongNhan> danhSachCongNhan)
+        {
+            Excel.Application excelApp = new Excel.Application();
+
+            if (excelApp != null)
+            {
+                Excel.Workbook excelWorkbook = excelApp.Workbooks.Add();
+                Excel.Worksheet excelWorksheet = (Excel.Worksheet)excelWorkbook.Sheets[1];
+
+
+                excelWorksheet.Cells[1, 1] = "Mã nhân sự";
+                excelWorksheet.Cells[1, 2] = "Họ tên";
+                excelWorksheet.Cells[1, 3] = "Ngày sinh";
+                excelWorksheet.Cells[1, 4] = "Giới tính";
+                excelWorksheet.Cells[1, 5] = "Địa chỉ";
+                excelWorksheet.Cells[1, 6] = "Trình độ";
+                excelWorksheet.Cells[1, 7] = "Chức vụ";
+                excelWorksheet.Cells[1, 8] = "Bậc";
+                excelWorksheet.Cells[1, 9] = "Tổ";
+                excelWorksheet.Cells[1, 10] = "Nhóm";
+
+                ((Excel.Range)excelWorksheet.Columns[1]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[2]).ColumnWidth = 25;
+                ((Excel.Range)excelWorksheet.Columns[3]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[4]).ColumnWidth = 15;
+                ((Excel.Range)excelWorksheet.Columns[5]).ColumnWidth = 25;
+                ((Excel.Range)excelWorksheet.Columns[6]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[7]).ColumnWidth = 18;
+                ((Excel.Range)excelWorksheet.Columns[8]).ColumnWidth = 10;
+                ((Excel.Range)excelWorksheet.Columns[9]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[10]).ColumnWidth = 10;
+                for (int i = 0; i < danhSachCongNhan.Count; i++)
+                {
+                    CongNhan cn = danhSachCongNhan[i];
+                    excelWorksheet.Cells[i + 2, 1] = cn.Manhansu;
+                    excelWorksheet.Cells[i + 2, 2] = cn.Hoten;
+                    excelWorksheet.Cells[i + 2, 3] = cn.Ngaysinh.ToString("dd/MM/yyyy");
+                    excelWorksheet.Cells[i + 2, 4] = cn.Gioitinh;
+                    excelWorksheet.Cells[i + 2, 5] = cn.Diachi;
+                    ((Excel.Range)excelWorksheet.Cells[i + 2, 6]).NumberFormat = "@";
+                    excelWorksheet.Cells[i + 2, 6] = cn.Trinhdo.ToString();
+                    excelWorksheet.Cells[i + 2, 7] = cn.Chucvu;
+                    excelWorksheet.Cells[i + 2, 8] = cn.Bac;
+                    excelWorksheet.Cells[i + 2, 9] = cn.To;
+                    excelWorksheet.Cells[i + 2, 10] = cn.Nhom;
+                }
+                excelApp.Visible = true;
+            }
+        }
+        public void ExportToExcelNV(List<NhanVien> danhSachNhanVien)
+        {
+            Excel.Application excelApp = new Excel.Application();
+
+            if (excelApp != null)
+            {
+                Excel.Workbook excelWorkbook = excelApp.Workbooks.Add();
+                Excel.Worksheet excelWorksheet = (Excel.Worksheet)excelWorkbook.Sheets[1];
+
+
+                excelWorksheet.Cells[1, 1] = "Mã nhân sự";
+                excelWorksheet.Cells[1, 2] = "Họ tên";
+                excelWorksheet.Cells[1, 3] = "Ngày sinh";
+                excelWorksheet.Cells[1, 4] = "Giới tính";
+                excelWorksheet.Cells[1, 5] = "Địa chỉ";
+                excelWorksheet.Cells[1, 6] = "Trình độ";
+                excelWorksheet.Cells[1, 7] = "Chức vụ";
+                excelWorksheet.Cells[1, 8] = "Công việc";
+                excelWorksheet.Cells[1, 9] = "Phòng";
+
+                ((Excel.Range)excelWorksheet.Columns[1]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[2]).ColumnWidth = 25;
+                ((Excel.Range)excelWorksheet.Columns[3]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[4]).ColumnWidth = 15;
+                ((Excel.Range)excelWorksheet.Columns[5]).ColumnWidth = 25;
+                ((Excel.Range)excelWorksheet.Columns[6]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[7]).ColumnWidth = 18;
+                ((Excel.Range)excelWorksheet.Columns[8]).ColumnWidth = 18;
+                ((Excel.Range)excelWorksheet.Columns[9]).ColumnWidth = 18;
+                for (int i = 0; i < danhSachNhanVien.Count; i++)
+                {
+                    NhanVien nv = danhSachNhanVien[i];
+                    excelWorksheet.Cells[i + 2, 1] = nv.Manhansu;
+                    excelWorksheet.Cells[i + 2, 2] = nv.Hoten;
+                    excelWorksheet.Cells[i + 2, 3] = nv.Ngaysinh.ToString("dd/MM/yyyy");
+                    excelWorksheet.Cells[i + 2, 4] = nv.Gioitinh;
+                    excelWorksheet.Cells[i + 2, 5] = nv.Diachi;
+                    ((Excel.Range)excelWorksheet.Cells[i + 2, 6]).NumberFormat = "@";
+                    excelWorksheet.Cells[i + 2, 6] = nv.Trinhdo.ToString();
+                    excelWorksheet.Cells[i + 2, 7] = nv.Chucvu;
+                    excelWorksheet.Cells[i + 2, 8] = nv.Congviec;
+                    excelWorksheet.Cells[i + 2, 9] = nv.Phong;
+                }
+                excelApp.Visible = true;
+            }
+        }
+        public void ExportToExcelKS(List<KySu> danhSachKySu)
+        {
+            Excel.Application excelApp = new Excel.Application();
+
+            if (excelApp != null)
+            {
+                Excel.Workbook excelWorkbook = excelApp.Workbooks.Add();
+                Excel.Worksheet excelWorksheet = (Excel.Worksheet)excelWorkbook.Sheets[1];
+
+
+                excelWorksheet.Cells[1, 1] = "Mã nhân sự";
+                excelWorksheet.Cells[1, 2] = "Họ tên";
+                excelWorksheet.Cells[1, 3] = "Ngày sinh";
+                excelWorksheet.Cells[1, 4] = "Giới tính";
+                excelWorksheet.Cells[1, 5] = "Địa chỉ";
+                excelWorksheet.Cells[1, 6] = "Trình độ";
+                excelWorksheet.Cells[1, 7] = "Chức vụ";
+                excelWorksheet.Cells[1, 8] = "Ngành đào tạo";
+                excelWorksheet.Cells[1, 9] = "Bộ phận";
+
+                ((Excel.Range)excelWorksheet.Columns[1]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[2]).ColumnWidth = 25;
+                ((Excel.Range)excelWorksheet.Columns[3]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[4]).ColumnWidth = 15;
+                ((Excel.Range)excelWorksheet.Columns[5]).ColumnWidth = 25;
+                ((Excel.Range)excelWorksheet.Columns[6]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[7]).ColumnWidth = 18;
+                ((Excel.Range)excelWorksheet.Columns[8]).ColumnWidth = 18;
+                ((Excel.Range)excelWorksheet.Columns[9]).ColumnWidth = 18;
+                for (int i = 0; i < danhSachKySu.Count; i++)
+                {
+                    KySu ks = danhSachKySu[i];
+                    excelWorksheet.Cells[i + 2, 1] = ks.Manhansu;
+                    excelWorksheet.Cells[i + 2, 2] = ks.Hoten;
+                    excelWorksheet.Cells[i + 2, 3] = ks.Ngaysinh.ToString("dd/MM/yyyy");
+                    excelWorksheet.Cells[i + 2, 4] = ks.Gioitinh;
+                    excelWorksheet.Cells[i + 2, 5] = ks.Diachi;
+                    ((Excel.Range)excelWorksheet.Cells[i + 2, 6]).NumberFormat = "@";
+                    excelWorksheet.Cells[i + 2, 6] = ks.Trinhdo.ToString();
+                    excelWorksheet.Cells[i + 2, 7] = ks.Chucvu;
+                    excelWorksheet.Cells[i + 2, 8] = ks.Nganhdaotao;
+                    excelWorksheet.Cells[i + 2, 9] = ks.Bophan;
+                }
+                excelApp.Visible = true;
+            }
+        }
+        public void ExportToExcelQL(List<QuanLy> danhSachQuanLy)
+        {
+            Excel.Application excelApp = new Excel.Application();
+
+            if (excelApp != null)
+            {
+                Excel.Workbook excelWorkbook = excelApp.Workbooks.Add();
+                Excel.Worksheet excelWorksheet = (Excel.Worksheet)excelWorkbook.Sheets[1];
+
+
+                excelWorksheet.Cells[1, 1] = "Mã nhân sự";
+                excelWorksheet.Cells[1, 2] = "Họ tên";
+                excelWorksheet.Cells[1, 3] = "Ngày sinh";
+                excelWorksheet.Cells[1, 4] = "Giới tính";
+                excelWorksheet.Cells[1, 5] = "Địa chỉ";
+                excelWorksheet.Cells[1, 6] = "Trình độ";
+                excelWorksheet.Cells[1, 7] = "Chức vụ";
+
+
+                ((Excel.Range)excelWorksheet.Columns[1]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[2]).ColumnWidth = 25;
+                ((Excel.Range)excelWorksheet.Columns[3]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[4]).ColumnWidth = 15;
+                ((Excel.Range)excelWorksheet.Columns[5]).ColumnWidth = 25;
+                ((Excel.Range)excelWorksheet.Columns[6]).ColumnWidth = 12;
+                ((Excel.Range)excelWorksheet.Columns[7]).ColumnWidth = 18;
+                ;
+                for (int i = 0; i < danhSachQuanLy.Count; i++)
+                {
+                    QuanLy ql = danhSachQuanLy[i];
+                    excelWorksheet.Cells[i + 2, 1] = ql.Manhansu;
+                    excelWorksheet.Cells[i + 2, 2] = ql.Hoten;
+                    excelWorksheet.Cells[i + 2, 3] = ql.Ngaysinh.ToString("dd/MM/yyyy");
+                    excelWorksheet.Cells[i + 2, 4] = ql.Gioitinh;
+                    excelWorksheet.Cells[i + 2, 5] = ql.Diachi;
+                    ((Excel.Range)excelWorksheet.Cells[i + 2, 6]).NumberFormat = "@";
+                    excelWorksheet.Cells[i + 2, 6] = ql.Trinhdo.ToString();
+                    excelWorksheet.Cells[i + 2, 7] = ql.Chucvu;
+                }
+                excelApp.Visible = true;
+            }
+        }
+
+        private void ButtonTimkiem_Click(object sender, EventArgs e)
+        {
+            List<NhanSu> ListNhanSuTim = TimKiem(ListNhanSu.Instance.Listnhansu, tbMaNhanVien.Text, tbHoTen.Text, tbNgaySinh.Value, tbGioiTinh.Text, tbDiaChi.Text, tbTrinhDo.Text, tbChucVu.Text);
+
+        }
+        public List<NhanSu> TimKiem(List<NhanSu> danhSachNhanSu, string manhansu, string hoten, DateTime ngaysinh, string gioitinh, string diachi, string trinhdo, string chucvu)
+        {
+            var ketqua = danhSachNhanSu;
+
+            if (!string.IsNullOrEmpty(manhansu))
+                ketqua = ketqua.Where(ns => ns.Manhansu.Contains(manhansu)).ToList();
+
+            if (!string.IsNullOrEmpty(hoten))
+                ketqua = ketqua.Where(ns => ns.Hoten.Contains(hoten)).ToList();
+
+            if (ngaysinh != null)
+                ketqua = ketqua.Where(ns => ns.Ngaysinh == ngaysinh).ToList();
+
+            if (!string.IsNullOrEmpty(gioitinh))
+                ketqua = ketqua.Where(ns => ns.Gioitinh.Contains(gioitinh)).ToList();
+
+            if (!string.IsNullOrEmpty(diachi))
+                ketqua = ketqua.Where(ns => ns.Diachi.Contains(diachi)).ToList();
+
+            if (!string.IsNullOrEmpty(trinhdo))
+                ketqua = ketqua.Where(ns => ns.Trinhdo.Contains(trinhdo)).ToList();
+
+            if (!string.IsNullOrEmpty(chucvu))
+                ketqua = ketqua.Where(ns => ns.Chucvu.Contains(chucvu)).ToList();
+
+            return ketqua;
         }
     }
 }
