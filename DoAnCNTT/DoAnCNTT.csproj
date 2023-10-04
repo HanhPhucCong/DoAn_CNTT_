@@ -65,12 +65,6 @@
     <Compile Include="FMain.Designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FPhong.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FPhong.Designer.cs">
-      <DependentUpon>FPhong.cs</DependentUpon>
-    </Compile>
     <Compile Include="FSuaCN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,9 +161,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FPhong.resx">
-      <DependentUpon>FPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FSuaCN.resx">
       <DependentUpon>FSuaCN.cs</DependentUpon>

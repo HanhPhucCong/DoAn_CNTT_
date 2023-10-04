@@ -32,7 +32,6 @@ namespace DoAnCNTT
             ListNhanVien.Instance.Listnhanvien = Const.DocDanhSachNhanVien();
             ListQuanLy.Instance.Listquanly = Const.DocDanhSachQuanLy();
             ListCongNhan.Instance.Listcongnhan = Const.DocDanhSachCongNhan();
-
             PhanLoai();
             LoadDanhSach();
             tbGioiTinh.DataSource = Const.Listgioitinh;
@@ -880,19 +879,16 @@ namespace DoAnCNTT
 
         private void ButtonTimkiem_Click(object sender, EventArgs e)
         {
+            toolStripButton1.Enabled = toolStripLabel5.Enabled = lbxoa.Enabled = Xoa.Enabled = Sua.Enabled = toolStripLabel2.Enabled = false;
             List<NhanSu> ListNhanSuTim = new List<NhanSu>();
             foreach (NhanSu ns in ListNhanSu.Instance.Listnhansu)
-            {
                 if ((string.IsNullOrEmpty(tbMaNhanVien.Text) || ns.Manhansu == tbMaNhanVien.Text) &&
                     (string.IsNullOrEmpty(tbHoTen.Text) || ns.Hoten == tbHoTen.Text) &&
                     (string.IsNullOrEmpty(tbDiaChi.Text) || ns.Diachi == tbDiaChi.Text) &&
                     (string.IsNullOrEmpty(tbGioiTinh.Text) || ns.Gioitinh == tbGioiTinh.Text) &&
                     (string.IsNullOrEmpty(tbTrinhDo.Text) || ns.Trinhdo == tbTrinhDo.Text) &&
                     (string.IsNullOrEmpty(tbChucVu.Text) || ns.Chucvu == tbChucVu.Text))
-                {
                     ListNhanSuTim.Add(ns);
-                }
-            }
             if (ListNhanSuTim.Count > 0)
                 foreach (var item in ListNhanSuTim)
                 {
@@ -900,10 +896,11 @@ namespace DoAnCNTT
                     dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Chucvu);
                 }
             else
-                MessageBox.Show("Bạn nhập dữ liệu không đúng hoặc không có nhân sự như thê strong hệ thống", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn nhập dữ liệu không đúng hoặc không có nhân sự có thông tin như thê strong hệ thống", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         private void TBDS_Click(object sender, EventArgs e)
         {
+            toolStripButton1.Enabled = toolStripLabel5.Enabled = lbxoa.Enabled = Xoa.Enabled = Sua.Enabled = toolStripLabel2.Enabled = true;
             LoadDanhSach();
         }
     }

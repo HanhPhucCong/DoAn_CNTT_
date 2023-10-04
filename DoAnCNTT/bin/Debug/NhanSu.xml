@@ -36,13 +36,4 @@
     <Trinhdo>12/12</Trinhdo>
     <Chucvu>Kỹ sư</Chucvu>
   </NhanSu>
-  <NhanSu>
-    <Manhansu>KS2</Manhansu>
-    <Hoten>Hanh Phuc Cong 7</Hoten>
-    <Ngaysinh>2003-12-28T00:00:00</Ngaysinh>
-    <Gioitinh>Nam</Gioitinh>
-    <Diachi>Ho Chi Minh</Diachi>
-    <Trinhdo>12/12</Trinhdo>
-    <Chucvu>Kỹ sư</Chucvu>
-  </NhanSu>
 </ArrayOfNhanSu>

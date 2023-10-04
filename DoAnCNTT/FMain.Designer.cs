@@ -34,7 +34,6 @@
             this.quảnLýTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.phòngBanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kỷSưToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.côngNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,11 +58,15 @@
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TBDS = new System.Windows.Forms.Button();
+            this.tbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.tbTrinhDo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.ButtonTimkiem = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbChucVu = new System.Windows.Forms.TextBox();
             this.tbDiaChi = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tbMaNhanVien = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tbHoTen = new System.Windows.Forms.TextBox();
@@ -77,10 +80,6 @@
             this.Coltrinhdo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colcongviec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tbTrinhDo = new System.Windows.Forms.ComboBox();
-            this.tbGioiTinh = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -128,7 +127,6 @@
             // quảnLýToolStripMenuItem
             // 
             this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.phòngBanToolStripMenuItem,
             this.nhânViênToolStripMenuItem,
             this.kỷSưToolStripMenuItem,
             this.côngNhânToolStripMenuItem,
@@ -139,37 +137,31 @@
             this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(96, 25);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
-            // phòngBanToolStripMenuItem
-            // 
-            this.phòngBanToolStripMenuItem.Name = "phòngBanToolStripMenuItem";
-            this.phòngBanToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
-            this.phòngBanToolStripMenuItem.Text = "Phòng Ban";
-            // 
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.nhânViênToolStripMenuItem.Text = "Nhân Viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // kỷSưToolStripMenuItem
             // 
             this.kỷSưToolStripMenuItem.Name = "kỷSưToolStripMenuItem";
-            this.kỷSưToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.kỷSưToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.kỷSưToolStripMenuItem.Text = "Kỹ Sư";
             this.kỷSưToolStripMenuItem.Click += new System.EventHandler(this.kỷSưToolStripMenuItem_Click);
             // 
             // côngNhânToolStripMenuItem
             // 
             this.côngNhânToolStripMenuItem.Name = "côngNhânToolStripMenuItem";
-            this.côngNhânToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
+            this.côngNhânToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.côngNhânToolStripMenuItem.Text = "Công Nhân";
             this.côngNhânToolStripMenuItem.Click += new System.EventHandler(this.côngNhânToolStripMenuItem_Click);
             // 
             // quảnLýToolStripMenuItem1
             // 
             this.quảnLýToolStripMenuItem1.Name = "quảnLýToolStripMenuItem1";
-            this.quảnLýToolStripMenuItem1.Size = new System.Drawing.Size(165, 26);
+            this.quảnLýToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.quảnLýToolStripMenuItem1.Text = "Quản lý";
             this.quảnLýToolStripMenuItem1.Click += new System.EventHandler(this.quảnLýToolStripMenuItem1_Click);
             // 
@@ -379,6 +371,24 @@
             this.TBDS.UseVisualStyleBackColor = true;
             this.TBDS.Click += new System.EventHandler(this.TBDS_Click);
             // 
+            // tbGioiTinh
+            // 
+            this.tbGioiTinh.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbGioiTinh.FormattingEnabled = true;
+            this.tbGioiTinh.Location = new System.Drawing.Point(155, 123);
+            this.tbGioiTinh.Name = "tbGioiTinh";
+            this.tbGioiTinh.Size = new System.Drawing.Size(233, 29);
+            this.tbGioiTinh.TabIndex = 31;
+            // 
+            // tbTrinhDo
+            // 
+            this.tbTrinhDo.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTrinhDo.FormattingEnabled = true;
+            this.tbTrinhDo.Location = new System.Drawing.Point(535, 72);
+            this.tbTrinhDo.Name = "tbTrinhDo";
+            this.tbTrinhDo.Size = new System.Drawing.Size(233, 29);
+            this.tbTrinhDo.TabIndex = 30;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -399,6 +409,16 @@
             this.ButtonTimkiem.Text = "Tìm kiếm";
             this.ButtonTimkiem.UseVisualStyleBackColor = true;
             this.ButtonTimkiem.Click += new System.EventHandler(this.ButtonTimkiem_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(415, 74);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 27);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Trình độ";
             // 
             // label6
             // 
@@ -425,6 +445,16 @@
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(233, 35);
             this.tbDiaChi.TabIndex = 24;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 125);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 27);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "Giới tính ";
             // 
             // tbMaNhanVien
             // 
@@ -539,44 +569,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Danh sách nhân sự công ty";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(415, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 27);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "Trình độ";
-            // 
-            // tbTrinhDo
-            // 
-            this.tbTrinhDo.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTrinhDo.FormattingEnabled = true;
-            this.tbTrinhDo.Location = new System.Drawing.Point(535, 72);
-            this.tbTrinhDo.Name = "tbTrinhDo";
-            this.tbTrinhDo.Size = new System.Drawing.Size(233, 29);
-            this.tbTrinhDo.TabIndex = 30;
-            // 
-            // tbGioiTinh
-            // 
-            this.tbGioiTinh.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbGioiTinh.FormattingEnabled = true;
-            this.tbGioiTinh.Location = new System.Drawing.Point(155, 123);
-            this.tbGioiTinh.Name = "tbGioiTinh";
-            this.tbGioiTinh.Size = new System.Drawing.Size(233, 29);
-            this.tbGioiTinh.TabIndex = 31;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 125);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 27);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "Giới tính ";
-            // 
             // FMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -631,7 +623,6 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kỷSưToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem phòngBanToolStripMenuItem;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbChucVu;
