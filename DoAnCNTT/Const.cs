@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace DoAnCNTT
 {
@@ -28,5 +30,105 @@ namespace DoAnCNTT
 
         public static List<string> Listbophan = new List<string>() { "Bộ phận xây dựng", "Bộ phận thiết kế", "Bộp phận công nghệ thông tin", "Bộp phận quản lý" };
         public static List<string> Listnganh = new List<string>() { "Ngành thiết kế", "Ngành công nghệ thông tin", "Ngành xây dựng", "Ngành kinh doanh" };
+
+        public static void LuuDanhSachNhanSu(List<NhanSu> danhSachNhanSu)
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<NhanSu>));
+            TextWriter txtWriter = new StreamWriter(@"NhanSu.xml");
+
+            xs.Serialize(txtWriter, danhSachNhanSu);
+
+            txtWriter.Close();
+        }
+        public static List<NhanSu> DocDanhSachNhanSu()
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<NhanSu>));
+            StreamReader reader = new StreamReader(@"NhanSu.xml");
+
+            List<NhanSu> danhSachNhanSu = (List<NhanSu>)xs.Deserialize(reader);
+            reader.Close();
+
+            return danhSachNhanSu;
+        }
+        public static void LuuDanhSachKySu(List<KySu> danhSachKySu)
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<KySu>));
+            TextWriter txtWriter = new StreamWriter(@"KySu.xml");
+
+            xs.Serialize(txtWriter, danhSachKySu);
+
+            txtWriter.Close();
+        }
+
+        public static List<KySu> DocDanhSachKySu()
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<KySu>));
+            StreamReader reader = new StreamReader(@"KySu.xml");
+
+            List<KySu> danhSachKySu = (List<KySu>)xs.Deserialize(reader);
+            reader.Close();
+
+            return danhSachKySu;
+        }
+        public static void LuuDanhSachCongNhan(List<CongNhan> danhSachCongNhan)
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<CongNhan>));
+            TextWriter txtWriter = new StreamWriter(@"CongNhan.xml");
+
+            xs.Serialize(txtWriter, danhSachCongNhan);
+
+            txtWriter.Close();
+        }
+
+        public static List<CongNhan> DocDanhSachCongNhan()
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<CongNhan>));
+            StreamReader reader = new StreamReader(@"CongNhan.xml");
+
+            List<CongNhan> danhSachCongNhan = (List<CongNhan>)xs.Deserialize(reader);
+            reader.Close();
+
+            return danhSachCongNhan;
+        }
+        public static void LuuDanhSachQuanLy(List<QuanLy> danhSachQuanLy)
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<QuanLy>));
+            TextWriter txtWriter = new StreamWriter(@"QuanLy.xml");
+
+            xs.Serialize(txtWriter, danhSachQuanLy);
+
+            txtWriter.Close();
+        }
+
+        public static List<QuanLy> DocDanhSachQuanLy()
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<QuanLy>));
+            StreamReader reader = new StreamReader(@"QuanLy.xml");
+
+            List<QuanLy> danhSachQuanLy = (List<QuanLy>)xs.Deserialize(reader);
+            reader.Close();
+
+            return danhSachQuanLy;
+        }
+        public static void LuuDanhSachNhanVien(List<NhanVien> danhSachNhanVien)
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<NhanVien>));
+            TextWriter txtWriter = new StreamWriter(@"NhanVien.xml");
+
+            xs.Serialize(txtWriter, danhSachNhanVien);
+
+            txtWriter.Close();
+        }
+
+        public static List<NhanVien> DocDanhSachNhanVien()
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<NhanVien>));
+            StreamReader reader = new StreamReader(@"NhanVien.xml");
+
+            List<NhanVien> danhSachNhanVien = (List<NhanVien>)xs.Deserialize(reader);
+            reader.Close();
+
+            return danhSachNhanVien;
+        }
     }
 }

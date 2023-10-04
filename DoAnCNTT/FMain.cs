@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 using Excel = Microsoft.Office.Interop.Excel;
 
 namespace DoAnCNTT
@@ -17,6 +18,8 @@ namespace DoAnCNTT
         int index = -1;
         public bool isExit = true;
         public event EventHandler Logout;
+
+
         public FMain()
         {
             InitializeComponent();
@@ -24,6 +27,12 @@ namespace DoAnCNTT
 
         private void FMain_Load(object sender, EventArgs e)
         {
+            ListNhanSu.Instance.Listnhansu = Const.DocDanhSachNhanSu();
+            ListKySu.Instance.Listkysu = Const.DocDanhSachKySu();
+            ListNhanVien.Instance.Listnhanvien = Const.DocDanhSachNhanVien();
+            ListQuanLy.Instance.Listquanly = Const.DocDanhSachQuanLy();
+            ListCongNhan.Instance.Listcongnhan = Const.DocDanhSachCongNhan();
+
             PhanLoai();
             LoadDanhSach();
             tbGioiTinh.DataSource = Const.Listgioitinh;
@@ -31,6 +40,11 @@ namespace DoAnCNTT
         }
         void LoadDanhSach()
         {
+            Const.LuuDanhSachNhanSu(ListNhanSu.Instance.Listnhansu);
+            Const.LuuDanhSachKySu(ListKySu.Instance.Listkysu);
+            Const.LuuDanhSachNhanVien(ListNhanVien.Instance.Listnhanvien);
+            Const.LuuDanhSachCongNhan(ListCongNhan.Instance.Listcongnhan);
+            Const.LuuDanhSachQuanLy(ListQuanLy.Instance.Listquanly);
             dataGridView1.Rows.Clear();
             foreach (var item in ListNhanSu.Instance.Listnhansu)
                 dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Chucvu);
@@ -53,7 +67,7 @@ namespace DoAnCNTT
         {
             if (isExit)
                 if (MessageBox.Show("Bạn Muốn Thoát ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                    Application.Exit(); ;
+                    Application.Exit();
         }
 
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
@@ -231,21 +245,22 @@ namespace DoAnCNTT
                 MessageBox.Show("Bạn chưa chọn nhân viên để xóa.");
                 return;
             }
-            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
-            {
-                case "Quản lý":
-                    LoadSuaQL();
-                    break;
-                case "Kỹ sư":
-                    LoadSuaKS();
-                    break;
-                case "Nhân viên":
-                    LoadSuaNV();
-                    break;
-                case "Công nhân":
-                    LoadSuaCN();
-                    break;
-            }
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này ?", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+                {
+                    case "Quản lý":
+                        XoaQL();
+                        break;
+                    case "Kỹ sư":
+                        XoaKS();
+                        break;
+                    case "Nhân viên":
+                        XoaNV();
+                        break;
+                    case "Công nhân":
+                        XoaCN();
+                        break;
+                }
         }
 
         private void lbxoa_Click(object sender, EventArgs e)
@@ -255,21 +270,22 @@ namespace DoAnCNTT
                 MessageBox.Show("Bạn chưa chọn nhân viên để xóa.");
                 return;
             }
-            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
-            {
-                case "Quản lý":
-                    XoaQL();
-                    break;
-                case "Kỹ sư":
-                    XoaKS();
-                    break;
-                case "Nhân viên":
-                    XoaNV();
-                    break;
-                case "Công nhân":
-                    XoaCN();
-                    break;
-            }
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này ?", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) 
+                switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+                {
+                    case "Quản lý":
+                        XoaQL();
+                        break;
+                    case "Kỹ sư":
+                        XoaKS();
+                        break;
+                    case "Nhân viên":
+                        XoaNV();
+                        break;
+                    case "Công nhân":
+                        XoaCN();
+                        break;
+                }
         }
         void XoaNV()
         {

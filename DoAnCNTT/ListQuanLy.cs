@@ -24,7 +24,7 @@ namespace DoAnCNTT
         private ListQuanLy()
         {
             listquanly = new List<QuanLy>();
-            listquanly.Add(new QuanLy("QL1", "Hanh Phuc Cong", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Quản lý"));
+            //listquanly.Add(new QuanLy("QL1", "Hanh Phuc Cong", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Quản lý"));
         }
     }
 }

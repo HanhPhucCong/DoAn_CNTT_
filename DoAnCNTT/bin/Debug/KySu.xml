@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfKySu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KySu>
+    <Manhansu>KS1</Manhansu>
+    <Hoten>Hanh Phuc Cong 3</Hoten>
+    <Ngaysinh>2003-12-28T00:00:00</Ngaysinh>
+    <Gioitinh>Nam</Gioitinh>
+    <Diachi>Ho Chi Minh</Diachi>
+    <Trinhdo>12/12</Trinhdo>
+    <Chucvu>Kỹ sư</Chucvu>
+    <Nganhdaotao>Ngành xây dựng</Nganhdaotao>
+    <Bophan>Thiết kế</Bophan>
+  </KySu>
+  <KySu>
+    <Manhansu>KS2</Manhansu>
+    <Hoten>Hanh Phuc Cong 7</Hoten>
+    <Ngaysinh>2003-12-28T00:00:00</Ngaysinh>
+    <Gioitinh>Nam</Gioitinh>
+    <Diachi>Ho Chi Minh</Diachi>
+    <Trinhdo>12/12</Trinhdo>
+    <Chucvu>Kỹ sư</Chucvu>
+    <Nganhdaotao>Ngành xây dựng</Nganhdaotao>
+    <Bophan>Thiết kế</Bophan>
+  </KySu>
+</ArrayOfKySu>

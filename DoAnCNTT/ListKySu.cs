@@ -24,8 +24,8 @@ namespace DoAnCNTT
         private ListKySu()
         {
             listkysu = new List<KySu>();
-            listkysu.Add(new KySu("KS1", "Hanh Phuc Cong 3", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Kỹ sư", "Ngành xây dựng", "Thiết kế"));
-            listkysu.Add(new KySu("KS2", "Hanh Phuc Cong 7", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Kỹ sư", "Ngành xây dựng", "Thiết kế"));
+            //listkysu.Add(new KySu("KS1", "Hanh Phuc Cong 3", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Kỹ sư", "Ngành xây dựng", "Thiết kế"));
+            //listkysu.Add(new KySu("KS2", "Hanh Phuc Cong 7", new DateTime(2003, 12, 28), "Nam", "Ho Chi Minh", "12/12", "Kỹ sư", "Ngành xây dựng", "Thiết kế"));
         }
     }
 }
