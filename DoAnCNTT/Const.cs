@@ -15,6 +15,7 @@ namespace DoAnCNTT
         public static QuanLy NewQuanLy = null;
         public static CongNhan NewCongNhan = null;
         public static KySu NewKySu = null;
+        public static User NewUser = null;
         public static string loai;
 
         public static List<string> Listgioitinh = new List<string>() { "Nam", "Nư", "Giới tính thứ 3", "Không xác định" };
@@ -30,6 +31,26 @@ namespace DoAnCNTT
 
         public static List<string> Listbophan = new List<string>() { "Bộ phận xây dựng", "Bộ phận thiết kế", "Bộp phận công nghệ thông tin", "Bộp phận quản lý" };
         public static List<string> Listnganh = new List<string>() { "Ngành thiết kế", "Ngành công nghệ thông tin", "Ngành xây dựng", "Ngành kinh doanh" };
+
+        public static void LuuDanhSachNguoiDung(List<User> danhSachNguoiDung)
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<User>));
+            TextWriter txtWriter = new StreamWriter(@"NguoiDung.xml");
+
+            xs.Serialize(txtWriter, danhSachNguoiDung);
+
+            txtWriter.Close();
+        }
+        public static List<User> DocDanhSachNguoiDung()
+        {
+            XmlSerializer xs = new XmlSerializer(typeof(List<User>));
+            StreamReader reader = new StreamReader(@"NguoiDung.xml");
+
+            List<User> danhSachNguoiDung = (List<User>)xs.Deserialize(reader);
+            reader.Close();
+
+            return danhSachNguoiDung;
+        }
 
         public static void LuuDanhSachNhanSu(List<NhanSu> danhSachNhanSu)
         {

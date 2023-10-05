@@ -64,11 +64,15 @@ namespace DoAnCNTT
         }
         private void FMain_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (isExit)
-                if (MessageBox.Show("Bạn Muốn Thoát ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                    Application.Exit();
+            if(isExit)
+                Application.Exit();
         }
-
+        private void FMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(isExit)
+                if (MessageBox.Show("Bạn Muốn Thoát ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) != DialogResult.OK)
+                    e.Cancel = true;
+        }
         private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Logout(this, new EventArgs());
@@ -78,7 +82,6 @@ namespace DoAnCNTT
         {
             FTaiKhoan form = new FTaiKhoan();
             form.Show();
-            this.Hide();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

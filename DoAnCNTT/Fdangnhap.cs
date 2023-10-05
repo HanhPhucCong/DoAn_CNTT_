@@ -22,6 +22,7 @@ namespace DoAnCNTT
                 if (userName == Listuser.Instance.listAccout[i].Name && passWard == Listuser.Instance.listAccout[i].Pass)
                 {
                     Const.loai = Listuser.Instance.listAccout[i].Loai;
+                    Const.NewUser = Listuser.Instance.listAccout[i];
                     return true;
                 }
             return false;
@@ -48,20 +49,18 @@ namespace DoAnCNTT
         private void Form_Logout(object sender, EventArgs e)
         {
             (sender as FMain).isExit = false;
-            (sender as FMain).Hide();
+            (sender as FMain).Close();
             this.Show();
         }
 
         private void FDangNhap_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (MessageBox.Show("Bạn Muốn Thoát ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                Application.Exit(); ;
+            Application.Exit();
         }
 
         private void thoat_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn Muốn Thoát ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                Application.Exit(); ;
+            Application.Exit();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -70,6 +69,12 @@ namespace DoAnCNTT
                 tMatKhau.UseSystemPasswordChar = false;
             if (!checkBox1.Checked)
                 tMatKhau.UseSystemPasswordChar = true;
+        }
+
+        private void FDangNhap_Load(object sender, EventArgs e)
+        {
+            Const.NewUser = null;
+            Listuser.Instance.listAccout = Const.DocDanhSachNguoiDung();
         }
     }
 }

@@ -140,28 +140,28 @@
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.nhânViênToolStripMenuItem.Text = "Nhân Viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // kỷSưToolStripMenuItem
             // 
             this.kỷSưToolStripMenuItem.Name = "kỷSưToolStripMenuItem";
-            this.kỷSưToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.kỷSưToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.kỷSưToolStripMenuItem.Text = "Kỹ Sư";
             this.kỷSưToolStripMenuItem.Click += new System.EventHandler(this.kỷSưToolStripMenuItem_Click);
             // 
             // côngNhânToolStripMenuItem
             // 
             this.côngNhânToolStripMenuItem.Name = "côngNhânToolStripMenuItem";
-            this.côngNhânToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.côngNhânToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.côngNhânToolStripMenuItem.Text = "Công Nhân";
             this.côngNhânToolStripMenuItem.Click += new System.EventHandler(this.côngNhânToolStripMenuItem_Click);
             // 
             // quảnLýToolStripMenuItem1
             // 
             this.quảnLýToolStripMenuItem1.Name = "quảnLýToolStripMenuItem1";
-            this.quảnLýToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.quảnLýToolStripMenuItem1.Size = new System.Drawing.Size(165, 26);
             this.quảnLýToolStripMenuItem1.Text = "Quản lý";
             this.quảnLýToolStripMenuItem1.Click += new System.EventHandler(this.quảnLýToolStripMenuItem1_Click);
             // 
@@ -582,6 +582,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FMain";
             this.Text = "FMain";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FMain_FormClosed);
             this.Load += new System.EventHandler(this.FMain_Load);
             this.menuStrip1.ResumeLayout(false);

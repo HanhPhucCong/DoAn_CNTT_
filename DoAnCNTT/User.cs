@@ -16,6 +16,12 @@ namespace DoAnCNTT
         public string Pass { get => pass; set => pass = value; }
         public string Loai { get => loai; set => loai = value; }
 
+        public User ()
+        {
+            name = "";
+            pass = "";
+            loai = "";
+        }
         public User(string Name, string Pass, string Loai)
         {
             this.name = Name;

@@ -42,11 +42,16 @@ namespace DoAnCNTT
                     loaitaikhoan.Text = "Cong nhan";
                     break;
             }
+            if (Const.NewUser == Listuser.Instance.listAccout[index])
+                xoa.Enabled = loaitaikhoan.Enabled = false;
+            else
+                xoa.Enabled = loaitaikhoan.Enabled = true;
         }
         void loadDanhSach()
         {
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = Listuser.Instance.listAccout;
+            Const.LuuDanhSachNguoiDung(Listuser.Instance.listAccout);
             dataGridView1.Refresh();
         }
         private void FTaiKhoan_Load(object sender, EventArgs e)
@@ -127,24 +132,18 @@ namespace DoAnCNTT
                 MessageBox.Show("Vui lòng chọn một User trước khi sử dụng.", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                 return;
             }
-            if(loaitaikhoan.Text == "Quan ly")
-            {
-                MessageBox.Show("Bạn không thêr xóa tài khoản của  Quản lý khác.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
             Listuser.Instance.listAccout.RemoveAt(index);
             loadDanhSach();
         }
 
         private void thoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void FTaiKhoan_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (MessageBox.Show("Bạn Muốn Thoát ?", "Cảnh Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                Application.Exit(); ;
+            this.Hide();
         }
     }
 }
