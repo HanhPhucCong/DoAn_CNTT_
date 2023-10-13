@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCongNhan xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CongNhan>
+    <Manhansu>CN1</Manhansu>
+    <Hoten>Hanh Phuc Cong 1</Hoten>
+    <Ngaysinh>2003-12-28T00:00:00</Ngaysinh>
+    <Gioitinh>Nam</Gioitinh>
+    <Diachi>Ho Chi Minh</Diachi>
+    <Trinhdo>12/12</Trinhdo>
+    <Chucvu>Công nhân</Chucvu>
+    <Bac>Bậc 1</Bac>
+    <To>Tổ xây dựng</To>
+    <Nhom>Nhóm 1</Nhom>
+  </CongNhan>
+</ArrayOfCongNhan>
