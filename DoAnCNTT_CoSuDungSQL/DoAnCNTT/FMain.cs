@@ -39,16 +39,16 @@ namespace DoAnCNTT
         }
         void LoadDanhSach()
         {
-            Const.XoaNhanSu();
-            Const.LuuNhanSu();
-            Const.XoaNhanVien();
-            Const.LuuNhanVien();
-            Const.XoaQuanLy();
-            Const.LuuQuanLy();
-            Const.XoaKySu();
-            Const.LuuKySu();
-            Const.XoaCongNhan();
-            Const.LuuCongNhan();
+            //Const.XoaNhanSu();
+            //Const.LuuNhanSu();
+            //Const.XoaNhanVien();
+            //Const.LuuNhanVien();
+            //Const.XoaQuanLy();
+            //Const.LuuQuanLy();
+            //Const.XoaKySu();
+            //Const.LuuKySu();
+            //Const.XoaCongNhan();
+            //Const.LuuCongNhan();
             dataGridView1.Rows.Clear();
             foreach (var item in ListNhanSu.Instance.Listnhansu)
                 dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Loainhansu);
@@ -300,6 +300,8 @@ namespace DoAnCNTT
             for (int i = 0; i < ListNhanVien.Instance.Listnhanvien.Count; i++)
                 if (ListNhanVien.Instance.Listnhanvien[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
                     indexx = i;
+            Const.XoaNhanVien(ListNhanVien.Instance.Listnhanvien[indexx].Manhansu);
+            Const.XoaNhanSu(ListNhanSu.Instance.Listnhansu[index].Manhansu);
             ListNhanVien.Instance.Listnhanvien.RemoveAt(indexx);
             ListNhanSu.Instance.Listnhansu.RemoveAt(index);
             LoadDanhSach();
@@ -310,6 +312,8 @@ namespace DoAnCNTT
             for (int i = 0; i < ListQuanLy.Instance.Listquanly.Count; i++)
                 if (ListQuanLy.Instance.Listquanly[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
                     indexx = i;
+            Const.XoaNhanSu(ListNhanSu.Instance.Listnhansu[index].Manhansu);
+            Const.XoaQuanLy(ListQuanLy.Instance.Listquanly[indexx].Manhansu);
             ListQuanLy.Instance.Listquanly.RemoveAt(indexx);
             ListNhanSu.Instance.Listnhansu.RemoveAt(index);
             LoadDanhSach();
@@ -320,6 +324,8 @@ namespace DoAnCNTT
             for (int i = 0; i < ListCongNhan.Instance.Listcongnhan.Count; i++)
                 if (ListCongNhan.Instance.Listcongnhan[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
                     indexx = i;
+            Const.XoaCongNhan(ListCongNhan.Instance.Listcongnhan[indexx].Manhansu);
+            Const.XoaNhanSu(ListNhanSu.Instance.Listnhansu[index].Manhansu);
             ListCongNhan.Instance.Listcongnhan.RemoveAt(indexx);
             ListNhanSu.Instance.Listnhansu.RemoveAt(index);
             LoadDanhSach();
@@ -330,6 +336,8 @@ namespace DoAnCNTT
             for (int i = 0; i < ListKySu.Instance.Listkysu.Count; i++)
                 if (ListKySu.Instance.Listkysu[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
                     indexx = i;
+            Const.XoaKySu(ListKySu.Instance.Listkysu[indexx].Manhansu);
+            Const.XoaNhanSu(ListNhanSu.Instance.Listnhansu[index].Manhansu);
             ListKySu.Instance.Listkysu.RemoveAt(indexx);
             ListNhanSu.Instance.Listnhansu.RemoveAt(index);
             LoadDanhSach();
@@ -366,14 +374,20 @@ namespace DoAnCNTT
         private void Form_FormClosed1(object sender, FormClosedEventArgs e)
         {
             int indexx = -1;
-            for (int i = 0; i < ListKySu.Instance.Listkysu.Count; i++)
+            int i;
+            for (i = 0; i < ListKySu.Instance.Listkysu.Count; i++)
                 if (ListKySu.Instance.Listkysu[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                {
                     indexx = i;
+                    break;
+                }
             ListNhanSu.Instance.Listnhansu[index].Hoten = ListKySu.Instance.Listkysu[indexx].Hoten;
             ListNhanSu.Instance.Listnhansu[index].Ngaysinh = ListKySu.Instance.Listkysu[indexx].Ngaysinh;
             ListNhanSu.Instance.Listnhansu[index].Diachi = ListKySu.Instance.Listkysu[indexx].Diachi;
             ListNhanSu.Instance.Listnhansu[index].Gioitinh = ListKySu.Instance.Listkysu[indexx].Gioitinh;
             ListNhanSu.Instance.Listnhansu[index].Trinhdo = ListKySu.Instance.Listkysu[indexx].Trinhdo;
+            Const.CapNhatNhanSu(ListNhanSu.Instance.Listnhansu[index]);
+            Const.CapNhatKySu(ListKySu.Instance.Listkysu[i]);
             LoadDanhSach();
         }
         void LoadSuaQL()
@@ -385,14 +399,20 @@ namespace DoAnCNTT
         private void Form_FormClosed2(object sender, FormClosedEventArgs e)
         {
             int indexx = -1;
-            for (int i = 0; i < ListQuanLy.Instance.Listquanly.Count; i++)
+            int i;
+            for (i = 0; i < ListQuanLy.Instance.Listquanly.Count; i++)
                 if (ListQuanLy.Instance.Listquanly[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                {
                     indexx = i;
+                    break;
+                }            
             ListNhanSu.Instance.Listnhansu[index].Hoten = ListQuanLy.Instance.Listquanly[indexx].Hoten;
             ListNhanSu.Instance.Listnhansu[index].Ngaysinh = ListQuanLy.Instance.Listquanly[indexx].Ngaysinh;
             ListNhanSu.Instance.Listnhansu[index].Diachi = ListQuanLy.Instance.Listquanly[indexx].Diachi;
             ListNhanSu.Instance.Listnhansu[index].Gioitinh = ListQuanLy.Instance.Listquanly[indexx].Gioitinh;
             ListNhanSu.Instance.Listnhansu[index].Trinhdo = ListQuanLy.Instance.Listquanly[indexx].Trinhdo;
+            Const.CapNhatQuanLy(ListQuanLy.Instance.Listquanly[i]);
+            Const.CapNhatNhanSu(ListNhanSu.Instance.Listnhansu[index]);
             LoadDanhSach();
         }
         void LoadSuaNV()
@@ -404,14 +424,21 @@ namespace DoAnCNTT
         private void Form_FormClosed3(object sender, FormClosedEventArgs e)
         {
             int indexx = -1;
-            for (int i = 0; i < ListNhanVien.Instance.Listnhanvien.Count; i++)
+            int i;
+            for (i = 0; i < ListNhanVien.Instance.Listnhanvien.Count; i++)
                 if (ListNhanVien.Instance.Listnhanvien[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                {
                     indexx = i;
+                    break;
+                }
+                    
             ListNhanSu.Instance.Listnhansu[index].Hoten = ListNhanVien.Instance.Listnhanvien[indexx].Hoten;
             ListNhanSu.Instance.Listnhansu[index].Ngaysinh = ListNhanVien.Instance.Listnhanvien[indexx].Ngaysinh;
             ListNhanSu.Instance.Listnhansu[index].Diachi = ListNhanVien.Instance.Listnhanvien[indexx].Diachi;
             ListNhanSu.Instance.Listnhansu[index].Gioitinh = ListNhanVien.Instance.Listnhanvien[indexx].Gioitinh;
             ListNhanSu.Instance.Listnhansu[index].Trinhdo = ListNhanVien.Instance.Listnhanvien[indexx].Trinhdo;
+            Const.CapNhatNhanVien(ListNhanVien.Instance.Listnhanvien[i]);
+            Const.CapNhatNhanSu(ListNhanSu.Instance.Listnhansu[index]);
             LoadDanhSach();
         }
         void LoadSuaCN()
@@ -423,14 +450,20 @@ namespace DoAnCNTT
         private void Form_FormClosed4(object sender, FormClosedEventArgs e)
         {
             int indexx = -1;
-            for (int i = 0; i < ListCongNhan.Instance.Listcongnhan.Count; i++)
+            int i;
+            for (i = 0; i < ListCongNhan.Instance.Listcongnhan.Count; i++)
                 if (ListCongNhan.Instance.Listcongnhan[i].Manhansu == ListNhanSu.Instance.Listnhansu[index].Manhansu)
+                {
                     indexx = i;
+                    break;
+                }
             ListNhanSu.Instance.Listnhansu[index].Hoten = ListCongNhan.Instance.Listcongnhan[indexx].Hoten;
             ListNhanSu.Instance.Listnhansu[index].Ngaysinh = ListCongNhan.Instance.Listcongnhan[indexx].Ngaysinh;
             ListNhanSu.Instance.Listnhansu[index].Diachi = ListCongNhan.Instance.Listcongnhan[indexx].Diachi;
             ListNhanSu.Instance.Listnhansu[index].Gioitinh = ListCongNhan.Instance.Listcongnhan[indexx].Gioitinh;
             ListNhanSu.Instance.Listnhansu[index].Trinhdo = ListCongNhan.Instance.Listcongnhan[indexx].Trinhdo;
+            Const.CapNhatNhanSu(ListNhanSu.Instance.Listnhansu[index]);
+            Const.CapNhatCongNhan(ListCongNhan.Instance.Listcongnhan[i]);
             LoadDanhSach();
         }
         private void Sua_Click(object sender, EventArgs e)
@@ -470,8 +503,18 @@ namespace DoAnCNTT
         {
             if (Const.NewQuanLy != null)
             {
+                for (int i = 0; i < ListNhanSu.Instance.Listnhansu.Count; i++)
+                {
+                    if (ListNhanSu.Instance.Listnhansu[i].Manhansu == Const.NewQuanLy.Manhansu)
+                    {
+                        MessageBox.Show("Mã nhân sự bạn nhập đã tồn tại vui lòng xem lại.");
+                        return;
+                    }
+                }
                 ListQuanLy.Instance.Listquanly.Add(Const.NewQuanLy);
                 ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
+                Const.ThemQuanLy(Const.NewQuanLy);
+                Const.ThemNhanSu(Const.NewNhanSu);
                 LoadDanhSach();
             }
         }
@@ -489,8 +532,18 @@ namespace DoAnCNTT
         {
             if (Const.NewNhanVien != null)
             {
+                for (int i = 0; i < ListNhanSu.Instance.Listnhansu.Count; i++)
+                {
+                    if (ListNhanSu.Instance.Listnhansu[i].Manhansu == Const.NewNhanVien.Manhansu)
+                    {
+                        MessageBox.Show("Mã nhân sự bạn nhập đã tồn tại vui lòng xem lại.");
+                        return;
+                    }
+                }
                 ListNhanVien.Instance.Listnhanvien.Add(Const.NewNhanVien);
                 ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
+                Const.ThemNhanSu(Const.NewNhanSu);
+                Const.ThemNhanVien(Const.NewNhanVien);
                 LoadDanhSach();
             }
         }
@@ -508,8 +561,18 @@ namespace DoAnCNTT
         {
             if (Const.NewKySu != null)
             {
+                for (int i = 0; i < ListNhanSu.Instance.Listnhansu.Count; i++)
+                {
+                    if (ListNhanSu.Instance.Listnhansu[i].Manhansu == Const.NewKySu.Manhansu)
+                    {
+                        MessageBox.Show("Mã nhân sự bạn nhập đã tồn tại vui lòng xem lại.");
+                        return;
+                    }
+                }
                 ListKySu.Instance.Listkysu.Add(Const.NewKySu);
                 ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
+                Const.ThemKySu(Const.NewKySu);
+                Const.ThemNhanSu(Const.NewNhanSu);
                 LoadDanhSach();
             }
         }
@@ -527,8 +590,18 @@ namespace DoAnCNTT
         {
             if (Const.NewCongNhan != null)
             {
+                for (int i = 0; i < ListNhanSu.Instance.Listnhansu.Count; i++)
+                {
+                    if (ListNhanSu.Instance.Listnhansu[i].Manhansu == Const.NewCongNhan.Manhansu)
+                    {
+                        MessageBox.Show("Mã nhân sự bạn nhập đã tồn tại vui lòng xem lại.");
+                        return;
+                    }
+                }
                 ListCongNhan.Instance.Listcongnhan.Add(Const.NewCongNhan);
                 ListNhanSu.Instance.Listnhansu.Add(Const.NewNhanSu);
+                Const.ThemNhanSu(Const.NewNhanSu);
+                Const.ThemCongNhan(Const.NewCongNhan);
                 LoadDanhSach();
             }
         }

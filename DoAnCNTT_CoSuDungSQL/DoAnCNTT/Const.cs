@@ -130,6 +130,73 @@ namespace DoAnCNTT
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
+        public static void ThemNhanSu(NhanSu nhanSuMoi)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "INSERT INTO NhanSu (manhansu, hoten, ngaysinh, gioitinh, diachi, trinhdo, chucvu) VALUES (@manhansu, @hoten, @ngaysinh, @gioitinh, @diachi, @trinhdo, @chucvu)";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", nhanSuMoi.Manhansu);
+                    cmd.Parameters.AddWithValue("@hoten", nhanSuMoi.Hoten);
+                    cmd.Parameters.AddWithValue("@ngaysinh", nhanSuMoi.Ngaysinh);
+                    cmd.Parameters.AddWithValue("@gioitinh", nhanSuMoi.Gioitinh);
+                    cmd.Parameters.AddWithValue("@diachi", nhanSuMoi.Diachi);
+                    cmd.Parameters.AddWithValue("@trinhdo", nhanSuMoi.Trinhdo);
+                    cmd.Parameters.AddWithValue("@chucvu", nhanSuMoi.Loainhansu);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+        public static void CapNhatNhanSu(NhanSu nhanSuCapNhat)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "UPDATE NhanSu SET hoten = @hoten, ngaysinh = @ngaysinh, gioitinh = @gioitinh, diachi = @diachi, trinhdo = @trinhdo, chucvu = @chucvu WHERE manhansu = @manhansu";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", nhanSuCapNhat.Manhansu);
+                    cmd.Parameters.AddWithValue("@hoten", nhanSuCapNhat.Hoten);
+                    cmd.Parameters.AddWithValue("@ngaysinh", nhanSuCapNhat.Ngaysinh);
+                    cmd.Parameters.AddWithValue("@gioitinh", nhanSuCapNhat.Gioitinh);
+                    cmd.Parameters.AddWithValue("@diachi", nhanSuCapNhat.Diachi);
+                    cmd.Parameters.AddWithValue("@trinhdo", nhanSuCapNhat.Trinhdo);
+                    cmd.Parameters.AddWithValue("@chucvu", nhanSuCapNhat.Loainhansu);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+        public static void XoaNhanSu(string maNhanSu)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "DELETE FROM NhanSu WHERE manhansu = @manhansu";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", maNhanSu);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+
         public static void DocNhanVien()
         {
             try
@@ -212,6 +279,77 @@ namespace DoAnCNTT
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
+        public static void ThemNhanVien(NhanVien nhanVienMoi)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "INSERT INTO NhanVien (manhansu, hoten, ngaysinh, gioitinh, diachi, trinhdo, chucvu, congviec, phong) VALUES (@manhansu, @hoten, @ngaysinh, @gioitinh, @diachi, @trinhdo, @chucvu, @congviec, @phong)";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", nhanVienMoi.Manhansu);
+                    cmd.Parameters.AddWithValue("@hoten", nhanVienMoi.Hoten);
+                    cmd.Parameters.AddWithValue("@ngaysinh", nhanVienMoi.Ngaysinh);
+                    cmd.Parameters.AddWithValue("@gioitinh", nhanVienMoi.Gioitinh);
+                    cmd.Parameters.AddWithValue("@diachi", nhanVienMoi.Diachi);
+                    cmd.Parameters.AddWithValue("@trinhdo", nhanVienMoi.Trinhdo);
+                    cmd.Parameters.AddWithValue("@chucvu", nhanVienMoi.Loainhansu);
+                    cmd.Parameters.AddWithValue("@congviec", nhanVienMoi.Congviec);
+                    cmd.Parameters.AddWithValue("@phong", nhanVienMoi.Phong);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+        public static void CapNhatNhanVien(NhanVien nhanVienCapNhat)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "UPDATE NhanVien SET hoten = @hoten, ngaysinh = @ngaysinh, gioitinh = @gioitinh, diachi = @diachi, trinhdo = @trinhdo, chucvu = @chucvu, congviec = @congviec, phong = @phong WHERE manhansu = @manhansu";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", nhanVienCapNhat.Manhansu);
+                    cmd.Parameters.AddWithValue("@hoten", nhanVienCapNhat.Hoten);
+                    cmd.Parameters.AddWithValue("@ngaysinh", nhanVienCapNhat.Ngaysinh);
+                    cmd.Parameters.AddWithValue("@gioitinh", nhanVienCapNhat.Gioitinh);
+                    cmd.Parameters.AddWithValue("@diachi", nhanVienCapNhat.Diachi);
+                    cmd.Parameters.AddWithValue("@trinhdo", nhanVienCapNhat.Trinhdo);
+                    cmd.Parameters.AddWithValue("@chucvu", nhanVienCapNhat.Loainhansu);
+                    cmd.Parameters.AddWithValue("@congviec", nhanVienCapNhat.Congviec);
+                    cmd.Parameters.AddWithValue("@phong", nhanVienCapNhat.Phong);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+        public static void XoaNhanVien(string maNhanSu)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "DELETE FROM NhanVien WHERE manhansu = @manhansu";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", maNhanSu);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+
         public static void DocKySu()
         {
             try
@@ -294,6 +432,77 @@ namespace DoAnCNTT
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
+        public static void ThemKySu(KySu kySuMoi)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "INSERT INTO KySu (manhansu, hoten, ngaysinh, gioitinh, diachi, trinhdo, chucvu, nganhdaotao, bophan) VALUES (@manhansu, @hoten, @ngaysinh, @gioitinh, @diachi, @trinhdo, @chucvu, @nganhdaotao, @bophan)";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", kySuMoi.Manhansu);
+                    cmd.Parameters.AddWithValue("@hoten", kySuMoi.Hoten);
+                    cmd.Parameters.AddWithValue("@ngaysinh", kySuMoi.Ngaysinh);
+                    cmd.Parameters.AddWithValue("@gioitinh", kySuMoi.Gioitinh);
+                    cmd.Parameters.AddWithValue("@diachi", kySuMoi.Diachi);
+                    cmd.Parameters.AddWithValue("@trinhdo", kySuMoi.Trinhdo);
+                    cmd.Parameters.AddWithValue("@chucvu", kySuMoi.Loainhansu);
+                    cmd.Parameters.AddWithValue("@nganhdaotao", kySuMoi.Nganhdaotao);
+                    cmd.Parameters.AddWithValue("@bophan", kySuMoi.Bophan);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+        public static void CapNhatKySu(KySu kySuCapNhat)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "UPDATE KySu SET hoten = @hoten, ngaysinh = @ngaysinh, gioitinh = @gioitinh, diachi = @diachi, trinhdo = @trinhdo, chucvu = @chucvu, nganhdaotao = @nganhdaotao, bophan = @bophan WHERE manhansu = @manhansu";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", kySuCapNhat.Manhansu);
+                    cmd.Parameters.AddWithValue("@hoten", kySuCapNhat.Hoten);
+                    cmd.Parameters.AddWithValue("@ngaysinh", kySuCapNhat.Ngaysinh);
+                    cmd.Parameters.AddWithValue("@gioitinh", kySuCapNhat.Gioitinh);
+                    cmd.Parameters.AddWithValue("@diachi", kySuCapNhat.Diachi);
+                    cmd.Parameters.AddWithValue("@trinhdo", kySuCapNhat.Trinhdo);
+                    cmd.Parameters.AddWithValue("@chucvu", kySuCapNhat.Loainhansu);
+                    cmd.Parameters.AddWithValue("@nganhdaotao", kySuCapNhat.Nganhdaotao);
+                    cmd.Parameters.AddWithValue("@bophan", kySuCapNhat.Bophan);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+        public static void XoaKySu(string maNhanSu)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "DELETE FROM KySu WHERE manhansu = @manhansu";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", maNhanSu);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+
         public static void DocCongNhan()
         {
             try
@@ -378,6 +587,79 @@ namespace DoAnCNTT
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
+        public static void ThemCongNhan(CongNhan congNhanMoi)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "INSERT INTO CongNhan (manhansu, hoten, ngaysinh, gioitinh, diachi, trinhdo, chucvu, bac, loaito, nhom) VALUES (@manhansu, @hoten, @ngaysinh, @gioitinh, @diachi, @trinhdo, @chucvu, @bac, @to, @nhom)";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", congNhanMoi.Manhansu);
+                    cmd.Parameters.AddWithValue("@hoten", congNhanMoi.Hoten);
+                    cmd.Parameters.AddWithValue("@ngaysinh", congNhanMoi.Ngaysinh);
+                    cmd.Parameters.AddWithValue("@gioitinh", congNhanMoi.Gioitinh);
+                    cmd.Parameters.AddWithValue("@diachi", congNhanMoi.Diachi);
+                    cmd.Parameters.AddWithValue("@trinhdo", congNhanMoi.Trinhdo);
+                    cmd.Parameters.AddWithValue("@chucvu", congNhanMoi.Loainhansu);
+                    cmd.Parameters.AddWithValue("@bac", congNhanMoi.Bac);
+                    cmd.Parameters.AddWithValue("@to", congNhanMoi.To);
+                    cmd.Parameters.AddWithValue("@nhom", congNhanMoi.Nhom);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+        public static void CapNhatCongNhan(CongNhan congNhanCapNhat)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "UPDATE CongNhan SET hoten = @hoten, ngaysinh = @ngaysinh, gioitinh = @gioitinh, diachi = @diachi, trinhdo = @trinhdo, chucvu = @chucvu, bac = @bac, loaito = @to, nhom = @nhom WHERE manhansu = @manhansu";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", congNhanCapNhat.Manhansu);
+                    cmd.Parameters.AddWithValue("@hoten", congNhanCapNhat.Hoten);
+                    cmd.Parameters.AddWithValue("@ngaysinh", congNhanCapNhat.Ngaysinh);
+                    cmd.Parameters.AddWithValue("@gioitinh", congNhanCapNhat.Gioitinh);
+                    cmd.Parameters.AddWithValue("@diachi", congNhanCapNhat.Diachi);
+                    cmd.Parameters.AddWithValue("@trinhdo", congNhanCapNhat.Trinhdo);
+                    cmd.Parameters.AddWithValue("@chucvu", congNhanCapNhat.Loainhansu);
+                    cmd.Parameters.AddWithValue("@bac", congNhanCapNhat.Bac);
+                    cmd.Parameters.AddWithValue("@to", congNhanCapNhat.To);
+                    cmd.Parameters.AddWithValue("@nhom", congNhanCapNhat.Nhom);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+        public static void XoaCongNhan(string maNhanSu)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "DELETE FROM CongNhan WHERE manhansu = @manhansu";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", maNhanSu);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+
         public static void DocQuanLy()
         {
             try
@@ -456,7 +738,71 @@ namespace DoAnCNTT
                 Console.WriteLine("An error occurred: " + ex.Message);
             }
         }
-
-
+        public static void ThemQuanLy(QuanLy quanLyMoi)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "INSERT INTO QuanLy (manhansu, hoten, ngaysinh, gioitinh, diachi, trinhdo, chucvu) VALUES (@manhansu, @hoten, @ngaysinh, @gioitinh, @diachi, @trinhdo, @chucvu)";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", quanLyMoi.Manhansu);
+                    cmd.Parameters.AddWithValue("@hoten", quanLyMoi.Hoten);
+                    cmd.Parameters.AddWithValue("@ngaysinh", quanLyMoi.Ngaysinh);
+                    cmd.Parameters.AddWithValue("@gioitinh", quanLyMoi.Gioitinh);
+                    cmd.Parameters.AddWithValue("@diachi", quanLyMoi.Diachi);
+                    cmd.Parameters.AddWithValue("@trinhdo", quanLyMoi.Trinhdo);
+                    cmd.Parameters.AddWithValue("@chucvu", quanLyMoi.Loainhansu);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+        public static void CapNhatQuanLy(QuanLy quanLyCapNhat)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "UPDATE QuanLy SET hoten = @hoten, ngaysinh = @ngaysinh, gioitinh = @gioitinh, diachi = @diachi, trinhdo = @trinhdo, chucvu = @chucvu WHERE manhansu = @manhansu";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", quanLyCapNhat.Manhansu);
+                    cmd.Parameters.AddWithValue("@hoten", quanLyCapNhat.Hoten);
+                    cmd.Parameters.AddWithValue("@ngaysinh", quanLyCapNhat.Ngaysinh);
+                    cmd.Parameters.AddWithValue("@gioitinh", quanLyCapNhat.Gioitinh);
+                    cmd.Parameters.AddWithValue("@diachi", quanLyCapNhat.Diachi);
+                    cmd.Parameters.AddWithValue("@trinhdo", quanLyCapNhat.Trinhdo);
+                    cmd.Parameters.AddWithValue("@chucvu", quanLyCapNhat.Loainhansu);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
+        public static void XoaQuanLy(string maNhanSu)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.connStr))
+                {
+                    conn.Open();
+                    string sqlStr = "DELETE FROM QuanLy WHERE manhansu = @manhansu";
+                    SqlCommand cmd = new SqlCommand(sqlStr, conn);
+                    cmd.Parameters.AddWithValue("@manhansu", maNhanSu);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+        }
     }
 }

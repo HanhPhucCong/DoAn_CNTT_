@@ -143,7 +143,6 @@
     <Compile Include="FThongTinQuanLy.Designer.cs">
       <DependentUpon>FThongTinQuanLy.cs</DependentUpon>
     </Compile>
-    <Compile Include="KNSQL.cs" />
     <Compile Include="KySu.cs" />
     <Compile Include="ListCongNhan.cs" />
     <Compile Include="ListKySu.cs" />
