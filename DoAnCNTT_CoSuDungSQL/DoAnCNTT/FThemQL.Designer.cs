@@ -65,7 +65,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(879, 233);
+            this.groupBox1.Size = new System.Drawing.Size(887, 233);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tịn cá nhân";
@@ -83,7 +83,7 @@
             // 
             this.tbTrinhDo.Font = new System.Drawing.Font("Times New Roman", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTrinhDo.FormattingEnabled = true;
-            this.tbTrinhDo.Location = new System.Drawing.Point(570, 94);
+            this.tbTrinhDo.Location = new System.Drawing.Point(591, 94);
             this.tbTrinhDo.Name = "tbTrinhDo";
             this.tbTrinhDo.Size = new System.Drawing.Size(276, 43);
             this.tbTrinhDo.TabIndex = 29;
@@ -102,7 +102,7 @@
             // tbDiaChi
             // 
             this.tbDiaChi.Font = new System.Drawing.Font("Times New Roman", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDiaChi.Location = new System.Drawing.Point(570, 25);
+            this.tbDiaChi.Location = new System.Drawing.Point(591, 25);
             this.tbDiaChi.Multiline = true;
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(276, 44);
@@ -214,7 +214,7 @@
             // tbChucVu
             // 
             this.tbChucVu.Font = new System.Drawing.Font("Times New Roman", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbChucVu.Location = new System.Drawing.Point(562, 25);
+            this.tbChucVu.Location = new System.Drawing.Point(583, 27);
             this.tbChucVu.Multiline = true;
             this.tbChucVu.Name = "tbChucVu";
             this.tbChucVu.ReadOnly = true;
@@ -226,11 +226,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(440, 44);
+            this.label7.Location = new System.Drawing.Point(440, 35);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 27);
+            this.label7.Size = new System.Drawing.Size(137, 27);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Chức vụ";
+            this.label7.Text = "Loại nhân sự";
             // 
             // them
             // 

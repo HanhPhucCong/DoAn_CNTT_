@@ -31,7 +31,7 @@ namespace DoAnCNTT
                                 Gioitinh = reader.GetString(3),
                                 Diachi = reader.GetString(4),
                                 Trinhdo = reader.GetString(5),
-                                Chucvu = reader.GetString(6)
+                                Loainhansu = reader.GetString(6)
                             };
                             ListNhanSu.Instance.Listnhansu.Add(nhanSu);
                         }
@@ -61,7 +61,7 @@ namespace DoAnCNTT
                         cmd.Parameters.AddWithValue("@gioitinh", nhanSu.Gioitinh);
                         cmd.Parameters.AddWithValue("@diachi", nhanSu.Diachi);
                         cmd.Parameters.AddWithValue("@trinhdo", nhanSu.Trinhdo);
-                        cmd.Parameters.AddWithValue("@chucvu", nhanSu.Chucvu);
+                        cmd.Parameters.AddWithValue("@chucvu", nhanSu.Loainhansu);
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -109,7 +109,7 @@ namespace DoAnCNTT
                                 Gioitinh = reader.GetString(3),
                                 Diachi = reader.GetString(4),
                                 Trinhdo = reader.GetString(5),
-                                Chucvu = reader.GetString(6),
+                                Loainhansu = reader.GetString(6),
                                 Congviec = reader.GetString(7),
                                 Phong = reader.GetString(8)
                             };
@@ -141,7 +141,7 @@ namespace DoAnCNTT
                         cmd.Parameters.AddWithValue("@gioitinh", nhanvien.Gioitinh);
                         cmd.Parameters.AddWithValue("@diachi", nhanvien.Diachi);
                         cmd.Parameters.AddWithValue("@trinhdo", nhanvien.Trinhdo);
-                        cmd.Parameters.AddWithValue("@chucvu", nhanvien.Chucvu);
+                        cmd.Parameters.AddWithValue("@chucvu", nhanvien.Loainhansu);
                         cmd.Parameters.AddWithValue("@congviec", nhanvien.Congviec);
                         cmd.Parameters.AddWithValue("@phong", nhanvien.Phong);
                         cmd.ExecuteNonQuery();
@@ -191,7 +191,7 @@ namespace DoAnCNTT
                                 Gioitinh = reader.GetString(3),
                                 Diachi = reader.GetString(4),
                                 Trinhdo = reader.GetString(5),
-                                Chucvu = reader.GetString(6),
+                                Loainhansu = reader.GetString(6),
                                 Nganhdaotao = reader.GetString(7),
                                 Bophan = reader.GetString(8)
                             };
@@ -223,7 +223,7 @@ namespace DoAnCNTT
                         cmd.Parameters.AddWithValue("@gioitinh", kysu.Gioitinh);
                         cmd.Parameters.AddWithValue("@diachi", kysu.Diachi);
                         cmd.Parameters.AddWithValue("@trinhdo", kysu.Trinhdo);
-                        cmd.Parameters.AddWithValue("@chucvu", kysu.Chucvu);
+                        cmd.Parameters.AddWithValue("@chucvu", kysu.Loainhansu);
                         cmd.Parameters.AddWithValue("@nganhdaotao", kysu.Nganhdaotao);
                         cmd.Parameters.AddWithValue("@bophan", kysu.Bophan);
                         cmd.ExecuteNonQuery();
@@ -273,7 +273,7 @@ namespace DoAnCNTT
                                 Gioitinh = reader.GetString(3),
                                 Diachi = reader.GetString(4),
                                 Trinhdo = reader.GetString(5),
-                                Chucvu = reader.GetString(6),
+                                Loainhansu = reader.GetString(6),
                                 Bac = reader.GetString(7),
                                 To = reader.GetString(8),
                                 Nhom = reader.GetString(9)
@@ -306,7 +306,7 @@ namespace DoAnCNTT
                         cmd.Parameters.AddWithValue("@gioitinh", congnhan.Gioitinh);
                         cmd.Parameters.AddWithValue("@diachi", congnhan.Diachi);
                         cmd.Parameters.AddWithValue("@trinhdo", congnhan.Trinhdo);
-                        cmd.Parameters.AddWithValue("@chucvu", congnhan.Chucvu);
+                        cmd.Parameters.AddWithValue("@chucvu", congnhan.Loainhansu);
                         cmd.Parameters.AddWithValue("@bac", congnhan.Bac);
                         cmd.Parameters.AddWithValue("@to", congnhan.To);
                         cmd.Parameters.AddWithValue("@nhom", congnhan.Nhom);
@@ -357,7 +357,7 @@ namespace DoAnCNTT
                                 Gioitinh = reader.GetString(3),
                                 Diachi = reader.GetString(4),
                                 Trinhdo = reader.GetString(5),
-                                Chucvu = reader.GetString(6)
+                                Loainhansu = reader.GetString(6)
                             };
                             ListQuanLy.Instance.Listquanly.Add(quanly);
                         }
@@ -387,7 +387,7 @@ namespace DoAnCNTT
                         cmd.Parameters.AddWithValue("@gioitinh", quanly.Gioitinh);
                         cmd.Parameters.AddWithValue("@diachi", quanly.Diachi);
                         cmd.Parameters.AddWithValue("@trinhdo", quanly.Trinhdo);
-                        cmd.Parameters.AddWithValue("@chucvu", quanly.Chucvu);
+                        cmd.Parameters.AddWithValue("@chucvu", quanly.Loainhansu);
                         cmd.ExecuteNonQuery();
                     }
                 }

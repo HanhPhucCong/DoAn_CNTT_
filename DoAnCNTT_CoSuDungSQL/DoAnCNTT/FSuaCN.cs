@@ -34,7 +34,7 @@ namespace DoAnCNTT
             tbGioiTinh.Text = Const.NewCongNhan.Gioitinh;
             tbDiaChi.Text = Const.NewCongNhan.Diachi;
             tbTrinhDo.Text = Const.NewCongNhan.Trinhdo;
-            tbChucVu.Text = Const.NewCongNhan.Chucvu;
+            tbChucVu.Text = Const.NewCongNhan.Loainhansu;
             tbMaNhanVien.Text = Const.NewCongNhan.Manhansu;
             tbBac.Text = Const.NewCongNhan.Bac;
             tbTo.Text = Const.NewCongNhan.To;

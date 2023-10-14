@@ -54,7 +54,7 @@ namespace DoAnCNTT
             tbGioiTinh.Text = Const.NewKySu.Gioitinh;
             tbDiaChi.Text = Const.NewKySu.Diachi;
             tbTrinhDo.Text = Const.NewKySu.Trinhdo;
-            tbChucVu.Text = Const.NewKySu.Chucvu;
+            tbChucVu.Text = Const.NewKySu.Loainhansu;
             tbMaNhanVien.Text = Const.NewKySu.Manhansu;
             tbBoPhan.Text = Const.NewKySu.Bophan;
             tbNganhDaoTao.Text = Const.NewKySu.Nganhdaotao;

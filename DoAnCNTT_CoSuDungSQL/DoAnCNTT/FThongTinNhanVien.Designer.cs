@@ -158,9 +158,9 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(20, 125);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 25);
+            this.label7.Size = new System.Drawing.Size(124, 25);
             this.label7.TabIndex = 12;
-            this.label7.Text = "Chức vụ";
+            this.label7.Text = "Loại nhân sự";
             // 
             // groupBox1
             // 

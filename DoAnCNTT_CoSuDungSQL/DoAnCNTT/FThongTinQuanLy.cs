@@ -23,7 +23,7 @@ namespace DoAnCNTT
             tbGioiTinh.Text = Const.NewQuanLy.Gioitinh;
             tbDiaChi.Text = Const.NewQuanLy.Diachi;
             tbTrinhDo.Text = Const.NewQuanLy.Trinhdo;
-            tbChucVu.Text = Const.NewQuanLy.Chucvu;
+            tbChucVu.Text = Const.NewQuanLy.Loainhansu;
             tbMaNhanVien.Text = Const.NewQuanLy.Manhansu;
         }
         private void FThongTin_Load(object sender, EventArgs e)

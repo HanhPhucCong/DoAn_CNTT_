@@ -51,7 +51,7 @@ namespace DoAnCNTT
             Const.LuuCongNhan();
             dataGridView1.Rows.Clear();
             foreach (var item in ListNhanSu.Instance.Listnhansu)
-                dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Chucvu);
+                dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Loainhansu);
         }
         void PhanLoai()
         {
@@ -94,7 +94,7 @@ namespace DoAnCNTT
             index = e.RowIndex;
             if (index < 0 || index >= ListNhanSu.Instance.Listnhansu.Count)
                 return;
-            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+            switch (ListNhanSu.Instance.Listnhansu[index].Loainhansu)
             {
                 case "Quản lý":
                     GanConstQuanLy(index);
@@ -123,7 +123,7 @@ namespace DoAnCNTT
             Const.NewCongNhan.Gioitinh = ListCongNhan.Instance.Listcongnhan[indexx].Gioitinh;
             Const.NewCongNhan.Diachi = ListCongNhan.Instance.Listcongnhan[indexx].Diachi;
             Const.NewCongNhan.Trinhdo = ListCongNhan.Instance.Listcongnhan[indexx].Trinhdo;
-            Const.NewCongNhan.Chucvu = ListCongNhan.Instance.Listcongnhan[indexx].Chucvu;
+            Const.NewCongNhan.Loainhansu = ListCongNhan.Instance.Listcongnhan[indexx].Loainhansu;
             Const.NewCongNhan.Bac = ListCongNhan.Instance.Listcongnhan[indexx].Bac;
             Const.NewCongNhan.To = ListCongNhan.Instance.Listcongnhan[indexx].To;
             Const.NewCongNhan.Nhom = ListCongNhan.Instance.Listcongnhan[indexx].Nhom;
@@ -141,7 +141,7 @@ namespace DoAnCNTT
             Const.NewKySu.Gioitinh = ListKySu.Instance.Listkysu[indexx].Gioitinh;
             Const.NewKySu.Diachi = ListKySu.Instance.Listkysu[indexx].Diachi;
             Const.NewKySu.Trinhdo = ListKySu.Instance.Listkysu[indexx].Trinhdo;
-            Const.NewKySu.Chucvu = ListKySu.Instance.Listkysu[indexx].Chucvu;
+            Const.NewKySu.Loainhansu = ListKySu.Instance.Listkysu[indexx].Loainhansu;
             Const.NewKySu.Bophan = ListKySu.Instance.Listkysu[indexx].Bophan;
             Const.NewKySu.Nganhdaotao = ListKySu.Instance.Listkysu[indexx].Nganhdaotao;
         }
@@ -158,7 +158,7 @@ namespace DoAnCNTT
             Const.NewNhanVien.Gioitinh = ListNhanVien.Instance.Listnhanvien[indexx].Gioitinh;
             Const.NewNhanVien.Diachi = ListNhanVien.Instance.Listnhanvien[indexx].Diachi;
             Const.NewNhanVien.Trinhdo = ListNhanVien.Instance.Listnhanvien[indexx].Trinhdo;
-            Const.NewNhanVien.Chucvu = ListNhanVien.Instance.Listnhanvien[indexx].Chucvu;
+            Const.NewNhanVien.Loainhansu = ListNhanVien.Instance.Listnhanvien[indexx].Loainhansu;
             Const.NewNhanVien.Congviec = ListNhanVien.Instance.Listnhanvien[indexx].Congviec;
             Const.NewNhanVien.Phong = ListNhanVien.Instance.Listnhanvien[indexx].Phong;
         }
@@ -175,7 +175,7 @@ namespace DoAnCNTT
             Const.NewQuanLy.Gioitinh = ListQuanLy.Instance.Listquanly[indexx].Gioitinh;
             Const.NewQuanLy.Diachi = ListQuanLy.Instance.Listquanly[indexx].Diachi;
             Const.NewQuanLy.Trinhdo = ListQuanLy.Instance.Listquanly[indexx].Trinhdo;
-            Const.NewQuanLy.Chucvu = ListQuanLy.Instance.Listquanly[indexx].Chucvu;
+            Const.NewQuanLy.Loainhansu = ListQuanLy.Instance.Listquanly[indexx].Loainhansu;
         }
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -184,7 +184,7 @@ namespace DoAnCNTT
                 MessageBox.Show("Bạn chưa chọn nhân viên để xem.");
                 return;
             }
-            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+            switch (ListNhanSu.Instance.Listnhansu[index].Loainhansu)
             {
                 case "Quản lý":
                     LoadFormQuanLy();
@@ -228,7 +228,7 @@ namespace DoAnCNTT
                 MessageBox.Show("Bạn chưa chọn nhân viên để xem.");
                 return;
             }
-            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+            switch (ListNhanSu.Instance.Listnhansu[index].Loainhansu)
             {
                 case "Quản lý":
                     LoadFormQuanLy();
@@ -253,7 +253,7 @@ namespace DoAnCNTT
                 return;
             }
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này ?", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+                switch (ListNhanSu.Instance.Listnhansu[index].Loainhansu)
                 {
                     case "Quản lý":
                         XoaQL();
@@ -278,7 +278,7 @@ namespace DoAnCNTT
                 return;
             }
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa nhân viên này ?", "Cảnh Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) 
-                switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+                switch (ListNhanSu.Instance.Listnhansu[index].Loainhansu)
                 {
                     case "Quản lý":
                         XoaQL();
@@ -341,7 +341,7 @@ namespace DoAnCNTT
                 MessageBox.Show("Bạn chưa chọn nhân viên để sửa.");
                 return;
             }
-            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+            switch (ListNhanSu.Instance.Listnhansu[index].Loainhansu)
             {
                 case "Quản lý":
                     LoadSuaQL();
@@ -440,7 +440,7 @@ namespace DoAnCNTT
                 MessageBox.Show("Bạn chưa chọn nhân viên để sửa.");
                 return;
             }
-            switch (ListNhanSu.Instance.Listnhansu[index].Chucvu)
+            switch (ListNhanSu.Instance.Listnhansu[index].Loainhansu)
             {
                 case "Quản lý":
                     LoadSuaQL();
@@ -582,7 +582,7 @@ namespace DoAnCNTT
             cl6.ColumnWidth = 12.0;
 
             Microsoft.Office.Interop.Excel.Range cl7 = oSheet.get_Range("G3", "G3");
-            cl7.Value2 = "Chức vụ";
+            cl7.Value2 = "Loại nhân sự";
             cl7.ColumnWidth = 18.0;
 
             Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "G3");
@@ -625,7 +625,7 @@ namespace DoAnCNTT
             DataColumn col4 = new DataColumn("Giới tính");
             DataColumn col5 = new DataColumn("Địa chỉ");
             DataColumn col6 = new DataColumn("Trình độ");
-            DataColumn col7 = new DataColumn("Chức vụ");
+            DataColumn col7 = new DataColumn("Loại nhân sự");
 
             dataTable.Columns.Add(col1);
             dataTable.Columns.Add(col2);
@@ -676,7 +676,7 @@ namespace DoAnCNTT
             DataColumn col4 = new DataColumn("Giới tính");
             DataColumn col5 = new DataColumn("Địa chỉ");
             DataColumn col6 = new DataColumn("Trình độ");
-            DataColumn col7 = new DataColumn("Chức vụ");
+            DataColumn col7 = new DataColumn("Loại nhân sự");
 
             dataTable.Columns.Add(col1);
             dataTable.Columns.Add(col2);
@@ -717,7 +717,7 @@ namespace DoAnCNTT
                 excelWorksheet.Cells[1, 4] = "Giới tính";
                 excelWorksheet.Cells[1, 5] = "Địa chỉ";
                 excelWorksheet.Cells[1, 6] = "Trình độ";
-                excelWorksheet.Cells[1, 7] = "Chức vụ";
+                excelWorksheet.Cells[1, 7] = "Loại nhân sự";
                 excelWorksheet.Cells[1, 8] = "Bậc";
                 excelWorksheet.Cells[1, 9] = "Tổ";
                 excelWorksheet.Cells[1, 10] = "Nhóm";
@@ -742,7 +742,7 @@ namespace DoAnCNTT
                     excelWorksheet.Cells[i + 2, 5] = cn.Diachi;
                     ((Excel.Range)excelWorksheet.Cells[i + 2, 6]).NumberFormat = "@";
                     excelWorksheet.Cells[i + 2, 6] = cn.Trinhdo.ToString();
-                    excelWorksheet.Cells[i + 2, 7] = cn.Chucvu;
+                    excelWorksheet.Cells[i + 2, 7] = cn.Loainhansu;
                     excelWorksheet.Cells[i + 2, 8] = cn.Bac;
                     excelWorksheet.Cells[i + 2, 9] = cn.To;
                     excelWorksheet.Cells[i + 2, 10] = cn.Nhom;
@@ -766,7 +766,7 @@ namespace DoAnCNTT
                 excelWorksheet.Cells[1, 4] = "Giới tính";
                 excelWorksheet.Cells[1, 5] = "Địa chỉ";
                 excelWorksheet.Cells[1, 6] = "Trình độ";
-                excelWorksheet.Cells[1, 7] = "Chức vụ";
+                excelWorksheet.Cells[1, 7] = "Loại nhân sự";
                 excelWorksheet.Cells[1, 8] = "Công việc";
                 excelWorksheet.Cells[1, 9] = "Phòng";
 
@@ -789,7 +789,7 @@ namespace DoAnCNTT
                     excelWorksheet.Cells[i + 2, 5] = nv.Diachi;
                     ((Excel.Range)excelWorksheet.Cells[i + 2, 6]).NumberFormat = "@";
                     excelWorksheet.Cells[i + 2, 6] = nv.Trinhdo.ToString();
-                    excelWorksheet.Cells[i + 2, 7] = nv.Chucvu;
+                    excelWorksheet.Cells[i + 2, 7] = nv.Loainhansu;
                     excelWorksheet.Cells[i + 2, 8] = nv.Congviec;
                     excelWorksheet.Cells[i + 2, 9] = nv.Phong;
                 }
@@ -812,7 +812,7 @@ namespace DoAnCNTT
                 excelWorksheet.Cells[1, 4] = "Giới tính";
                 excelWorksheet.Cells[1, 5] = "Địa chỉ";
                 excelWorksheet.Cells[1, 6] = "Trình độ";
-                excelWorksheet.Cells[1, 7] = "Chức vụ";
+                excelWorksheet.Cells[1, 7] = "Loại nhân sự";
                 excelWorksheet.Cells[1, 8] = "Ngành đào tạo";
                 excelWorksheet.Cells[1, 9] = "Bộ phận";
 
@@ -835,7 +835,7 @@ namespace DoAnCNTT
                     excelWorksheet.Cells[i + 2, 5] = ks.Diachi;
                     ((Excel.Range)excelWorksheet.Cells[i + 2, 6]).NumberFormat = "@";
                     excelWorksheet.Cells[i + 2, 6] = ks.Trinhdo.ToString();
-                    excelWorksheet.Cells[i + 2, 7] = ks.Chucvu;
+                    excelWorksheet.Cells[i + 2, 7] = ks.Loainhansu;
                     excelWorksheet.Cells[i + 2, 8] = ks.Nganhdaotao;
                     excelWorksheet.Cells[i + 2, 9] = ks.Bophan;
                 }
@@ -858,7 +858,7 @@ namespace DoAnCNTT
                 excelWorksheet.Cells[1, 4] = "Giới tính";
                 excelWorksheet.Cells[1, 5] = "Địa chỉ";
                 excelWorksheet.Cells[1, 6] = "Trình độ";
-                excelWorksheet.Cells[1, 7] = "Chức vụ";
+                excelWorksheet.Cells[1, 7] = "Loại nhân sự";
 
 
                 ((Excel.Range)excelWorksheet.Columns[1]).ColumnWidth = 12;
@@ -879,7 +879,7 @@ namespace DoAnCNTT
                     excelWorksheet.Cells[i + 2, 5] = ql.Diachi;
                     ((Excel.Range)excelWorksheet.Cells[i + 2, 6]).NumberFormat = "@";
                     excelWorksheet.Cells[i + 2, 6] = ql.Trinhdo.ToString();
-                    excelWorksheet.Cells[i + 2, 7] = ql.Chucvu;
+                    excelWorksheet.Cells[i + 2, 7] = ql.Loainhansu;
                 }
                 excelApp.Visible = true;
             }
@@ -895,13 +895,13 @@ namespace DoAnCNTT
                     (string.IsNullOrEmpty(tbDiaChi.Text) || ns.Diachi == tbDiaChi.Text) &&
                     (string.IsNullOrEmpty(tbGioiTinh.Text) || ns.Gioitinh == tbGioiTinh.Text) &&
                     (string.IsNullOrEmpty(tbTrinhDo.Text) || ns.Trinhdo == tbTrinhDo.Text) &&
-                    (string.IsNullOrEmpty(tbChucVu.Text) || ns.Chucvu == tbChucVu.Text))
+                    (string.IsNullOrEmpty(tbChucVu.Text) || ns.Loainhansu == tbChucVu.Text))
                     ListNhanSuTim.Add(ns);
             if (ListNhanSuTim.Count > 0)
                 foreach (var item in ListNhanSuTim)
                 {
                     dataGridView1.Rows.Clear();
-                    dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Chucvu);
+                    dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Loainhansu);
                 }
             else
                 MessageBox.Show("Bạn nhập dữ liệu không đúng hoặc không có nhân sự có thông tin như thê strong hệ thống", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);

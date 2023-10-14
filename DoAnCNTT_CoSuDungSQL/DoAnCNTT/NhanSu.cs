@@ -16,7 +16,7 @@ namespace DoAnCNTT
         private string gioitinh;
         private string diachi;
         private string trinhdo;
-        private string chucvu;
+        private string loainhansu;
 
 
 
@@ -26,7 +26,7 @@ namespace DoAnCNTT
         public string Gioitinh { get => gioitinh; set => gioitinh = value; }
         public string Diachi { get => diachi; set => diachi = value; }
         public string Trinhdo { get => trinhdo; set => trinhdo = value; }
-        public string Chucvu { get => chucvu; set => chucvu = value; }
+        public string Loainhansu { get => loainhansu; set => loainhansu = value; }
 
 
         public NhanSu ()
@@ -37,9 +37,10 @@ namespace DoAnCNTT
             gioitinh = "";
             diachi = "";
             trinhdo = "";
-            chucvu = "";
+            loainhansu = "";
         }
-        public NhanSu(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Chucvu)
+        public NhanSu(string Manhansu, string Hoten, DateTime Ngaysinh, string Gioitinh, string Diachi, string Trinhdo, string Loainhansu
+            )
         {
             this.manhansu = Manhansu;
             this.hoten = Hoten;
@@ -47,7 +48,7 @@ namespace DoAnCNTT
             this.gioitinh = Gioitinh;
             this.diachi = Diachi;
             this.trinhdo = Trinhdo;
-            this.chucvu = Chucvu;
+            this.loainhansu = Loainhansu;
         } 
     }
 }

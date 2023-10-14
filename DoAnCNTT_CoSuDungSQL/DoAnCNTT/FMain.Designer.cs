@@ -72,6 +72,7 @@
             this.tbHoTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             this.Colmanhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colhoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,7 +80,6 @@
             this.Coldiachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coltrinhdo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colcongviec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -393,11 +393,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(415, 125);
+            this.label8.Location = new System.Drawing.Point(392, 125);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 27);
+            this.label8.Size = new System.Drawing.Size(137, 27);
             this.label8.TabIndex = 29;
-            this.label8.Text = "Công việc";
+            this.label8.Text = "Loại nhân sự";
             // 
             // ButtonTimkiem
             // 
@@ -414,7 +414,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(415, 74);
+            this.label7.Location = new System.Drawing.Point(392, 74);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(93, 27);
             this.label7.TabIndex = 28;
@@ -424,7 +424,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(415, 25);
+            this.label6.Location = new System.Drawing.Point(392, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(81, 27);
             this.label6.TabIndex = 27;
@@ -510,6 +510,16 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(215, 274);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(355, 35);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Danh sách nhân sự công ty";
+            // 
             // Colmanhanvien
             // 
             this.Colmanhanvien.DataPropertyName = "Manhansu";
@@ -555,19 +565,9 @@
             // Colcongviec
             // 
             this.Colcongviec.DataPropertyName = "Chucvu";
-            this.Colcongviec.HeaderText = "Chức vụ";
+            this.Colcongviec.HeaderText = "Loại nhân sự";
             this.Colcongviec.Name = "Colcongviec";
             this.Colcongviec.ReadOnly = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(215, 274);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(355, 35);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Danh sách nhân sự công ty";
             // 
             // FMain
             // 
@@ -630,13 +630,6 @@
         private System.Windows.Forms.TextBox tbDiaChi;
         private System.Windows.Forms.TextBox tbMaNhanVien;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Colmanhanvien;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Colhoten;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Colngaysinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Colgioitinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coldiachi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coltrinhdo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Colcongviec;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem thêmQuảnLýToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thêmNhânViênToolStripMenuItem;
@@ -650,5 +643,12 @@
         private System.Windows.Forms.ComboBox tbTrinhDo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colmanhanvien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colhoten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colngaysinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colgioitinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coldiachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coltrinhdo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Colcongviec;
     }
 }
