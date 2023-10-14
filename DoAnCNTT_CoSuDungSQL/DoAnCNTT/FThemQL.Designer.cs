@@ -253,7 +253,7 @@
             this.Controls.Add(this.thoat);
             this.Controls.Add(this.groupBox2);
             this.Name = "FThemQL";
-            this.Text = "FThemQL";
+            this.Text = "Thêm quản lý";
             this.Load += new System.EventHandler(this.FThemQL_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

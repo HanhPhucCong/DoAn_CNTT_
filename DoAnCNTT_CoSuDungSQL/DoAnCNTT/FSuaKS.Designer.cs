@@ -299,7 +299,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Name = "FSuaKS";
-            this.Text = "FSuaKySu";
+            this.Text = "Sửa kỹ sư";
             this.Load += new System.EventHandler(this.FSuaKS_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

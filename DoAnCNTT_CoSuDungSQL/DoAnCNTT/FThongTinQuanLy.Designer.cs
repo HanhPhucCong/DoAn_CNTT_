@@ -243,7 +243,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Name = "FThongTinQuanLy";
-            this.Text = "FThongTin";
+            this.Text = "Thông tin quản lý";
             this.Load += new System.EventHandler(this.FThongTin_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

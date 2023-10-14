@@ -322,7 +322,7 @@
             this.Controls.Add(this.thoat);
             this.Controls.Add(this.groupBox2);
             this.Name = "FSuaCN";
-            this.Text = "FSuaCongNhan";
+            this.Text = "Sửa công nhân";
             this.Load += new System.EventHandler(this.FSuaCN_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -315,7 +315,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Name = "FThongTinCongNhan";
-            this.Text = "FThongTinCongNhan";
+            this.Text = "Thông tin công nhân";
             this.Load += new System.EventHandler(this.FThongTinCongNhan_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -5,7 +5,7 @@ CREATE TABLE NhanSu (
     gioitinh nvarchar(25),
     diachi nvarchar(50),
     trinhdo nvarchar(25),
-    chucvu nvarchar(35),
+    loainhansu nvarchar(35),
 	PRIMARY KEY (manhansu)
 );
 CREATE TABLE QuanLy (
@@ -15,7 +15,7 @@ CREATE TABLE QuanLy (
     gioitinh nvarchar(25),
     diachi nvarchar(50),
     trinhdo nvarchar(25),
-    chucvu nvarchar(35),
+    loainhansu nvarchar(35),
 	PRIMARY KEY (manhansu)
 );
 CREATE TABLE KySu (
@@ -25,7 +25,7 @@ CREATE TABLE KySu (
     gioitinh nvarchar(25),
     diachi nvarchar(50),
     trinhdo nvarchar(25),
-    chucvu nvarchar(35),
+    loainhansu nvarchar(35),
 	nganhdaotao nvarchar(35),
 	bophan nvarchar(35),
 	PRIMARY KEY (manhansu)
@@ -37,7 +37,7 @@ CREATE TABLE CongNhan (
     gioitinh nvarchar(25),
     diachi nvarchar(50),
     trinhdo nvarchar(25),
-    chucvu nvarchar(35),
+    loainhansu nvarchar(35),
 	bac nvarchar(15),
 	loaito nvarchar(15),
 	nhom nvarchar(15),
@@ -50,7 +50,7 @@ CREATE TABLE NhanVien (
     gioitinh nvarchar(25),
     diachi nvarchar(50),
     trinhdo nvarchar(25),
-    chucvu nvarchar(35),
+    loainhansu nvarchar(35),
 	congviec nvarchar(35),
 	phong nvarchar(35),
 	PRIMARY KEY (manhansu)

@@ -5,29 +5,4 @@
     <Pass>28122003</Pass>
     <Loai>Quan ly</Loai>
   </User>
-  <User>
-    <Name>hanhphucong1</Name>
-    <Pass>28122003</Pass>
-    <Loai>Ky su</Loai>
-  </User>
-  <User>
-    <Name>hanhphucong2</Name>
-    <Pass>28122003</Pass>
-    <Loai>Nhan vien</Loai>
-  </User>
-  <User>
-    <Name>hanhphucong3</Name>
-    <Pass>28122003</Pass>
-    <Loai>Cong nhan</Loai>
-  </User>
-  <User>
-    <Name>hanhphucong5</Name>
-    <Pass>28122003</Pass>
-    <Loai>Quan ly</Loai>
-  </User>
-  <User>
-    <Name>hanhphucong4</Name>
-    <Pass>28122003</Pass>
-    <Loai>Quan ly</Loai>
-  </User>
 </ArrayOfUser>

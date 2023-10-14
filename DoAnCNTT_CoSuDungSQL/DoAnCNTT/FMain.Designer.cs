@@ -72,7 +72,6 @@
             this.tbHoTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.Colmanhanvien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colhoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,6 +79,7 @@
             this.Coldiachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coltrinhdo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Colcongviec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -510,16 +510,6 @@
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(215, 274);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(355, 35);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Danh sách nhân sự công ty";
-            // 
             // Colmanhanvien
             // 
             this.Colmanhanvien.DataPropertyName = "Manhansu";
@@ -569,6 +559,16 @@
             this.Colcongviec.Name = "Colcongviec";
             this.Colcongviec.ReadOnly = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(215, 274);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(355, 35);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Danh sách nhân sự công ty";
+            // 
             // FMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -581,7 +581,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FMain";
-            this.Text = "FMain";
+            this.Text = "Trang chủ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FMain_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FMain_FormClosed);
             this.Load += new System.EventHandler(this.FMain_Load);

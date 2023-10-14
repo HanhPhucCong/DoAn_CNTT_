@@ -971,11 +971,11 @@ namespace DoAnCNTT
                     (string.IsNullOrEmpty(tbChucVu.Text) || ns.Loainhansu == tbChucVu.Text))
                     ListNhanSuTim.Add(ns);
             if (ListNhanSuTim.Count > 0)
+            {
+                dataGridView1.Rows.Clear();
                 foreach (var item in ListNhanSuTim)
-                {
-                    dataGridView1.Rows.Clear();
                     dataGridView1.Rows.Add(item.Manhansu, item.Hoten, item.Ngaysinh.ToShortDateString(), item.Gioitinh, item.Diachi, item.Trinhdo, item.Loainhansu);
-                }
+            }
             else
                 MessageBox.Show("Bạn nhập dữ liệu không đúng hoặc không có nhân sự có thông tin như thê strong hệ thống", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }

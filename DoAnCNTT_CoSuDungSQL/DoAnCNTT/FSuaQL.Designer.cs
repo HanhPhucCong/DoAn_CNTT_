@@ -94,7 +94,7 @@
             // 
             this.tbTrinhDo.Font = new System.Drawing.Font("Times New Roman", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTrinhDo.FormattingEnabled = true;
-            this.tbTrinhDo.Location = new System.Drawing.Point(570, 94);
+            this.tbTrinhDo.Location = new System.Drawing.Point(591, 94);
             this.tbTrinhDo.Name = "tbTrinhDo";
             this.tbTrinhDo.Size = new System.Drawing.Size(276, 43);
             this.tbTrinhDo.TabIndex = 30;
@@ -113,7 +113,7 @@
             // tbDiaChi
             // 
             this.tbDiaChi.Font = new System.Drawing.Font("Times New Roman", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDiaChi.Location = new System.Drawing.Point(570, 25);
+            this.tbDiaChi.Location = new System.Drawing.Point(591, 25);
             this.tbDiaChi.Multiline = true;
             this.tbDiaChi.Name = "tbDiaChi";
             this.tbDiaChi.Size = new System.Drawing.Size(276, 44);
@@ -226,7 +226,7 @@
             // tbChucVu
             // 
             this.tbChucVu.Font = new System.Drawing.Font("Times New Roman", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbChucVu.Location = new System.Drawing.Point(570, 47);
+            this.tbChucVu.Location = new System.Drawing.Point(591, 47);
             this.tbChucVu.Multiline = true;
             this.tbChucVu.Name = "tbChucVu";
             this.tbChucVu.ReadOnly = true;
@@ -253,7 +253,7 @@
             this.Controls.Add(this.thoat);
             this.Controls.Add(this.groupBox2);
             this.Name = "FSuaQL";
-            this.Text = "FSuaQL";
+            this.Text = "Sửa quản lý";
             this.Load += new System.EventHandler(this.FSuaQL_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

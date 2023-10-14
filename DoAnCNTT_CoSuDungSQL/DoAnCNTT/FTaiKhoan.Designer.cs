@@ -180,7 +180,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FTaiKhoan";
-            this.Text = "FTaiKhoan";
+            this.Text = "Tài khoản";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FTaiKhoan_FormClosed);
             this.Load += new System.EventHandler(this.FTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
