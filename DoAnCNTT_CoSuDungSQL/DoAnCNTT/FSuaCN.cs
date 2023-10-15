@@ -44,6 +44,11 @@ namespace DoAnCNTT
         private void sua_Click(object sender, EventArgs e)
         {
             int indexx = -1;
+            if (string.IsNullOrEmpty(tbTen.Text) || dtNgaySinh.Value == null || string.IsNullOrEmpty(tbGioiTinh.Text) || string.IsNullOrEmpty(tbDiaChi.Text) || string.IsNullOrEmpty(tbTrinhDo.Text) || string.IsNullOrEmpty(tbBac.Text) || string.IsNullOrEmpty(tbTo.Text) || string.IsNullOrEmpty(tbNhom.Text))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                return;
+            }
             for (int i = 0; i < ListCongNhan.Instance.Listcongnhan.Count; i++)
                 if (ListCongNhan.Instance.Listcongnhan[i].Manhansu == Const.NewCongNhan.Manhansu)
                     indexx = i;

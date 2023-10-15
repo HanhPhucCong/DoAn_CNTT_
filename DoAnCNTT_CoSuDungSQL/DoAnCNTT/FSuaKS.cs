@@ -21,6 +21,11 @@ namespace DoAnCNTT
         private void sua_Click(object sender, EventArgs e)
         {
             int indexx = -1;
+            if (string.IsNullOrEmpty(tbTen.Text) || dtNgaySinh.Value == null || string.IsNullOrEmpty(tbGioiTinh.Text) || string.IsNullOrEmpty(tbDiaChi.Text) || string.IsNullOrEmpty(tbTrinhDo.Text) || string.IsNullOrEmpty(tbBoPhan.Text) || string.IsNullOrEmpty(tbNganhDaoTao.Text))
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                return;
+            }
             for (int i = 0; i < ListKySu.Instance.Listkysu.Count; i++)
                 if (ListKySu.Instance.Listkysu[i].Manhansu == Const.NewKySu.Manhansu)
                     indexx = i;
