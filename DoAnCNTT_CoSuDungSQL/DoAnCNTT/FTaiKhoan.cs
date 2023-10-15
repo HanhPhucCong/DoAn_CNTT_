@@ -80,34 +80,19 @@ namespace DoAnCNTT
                 loaitaikhoan.Focus();
                 return;
             }
-
+            for (int i = 0; i < Listuser.Instance.listAccout.Count; i++)
+            {
+                if (Listuser.Instance.listAccout[i].Name == tentaikhoan.Text && Listuser.Instance.listAccout[i].Pass == matkhau.Text)
+                    return;
+            }
             string name = tentaikhoan.Text;
             string pass = matkhau.Text;
-            string loai = layLoaitaikhoan();
+            string loai = loaitaikhoan.Text;
             Listuser.Instance.listAccout.Add(new User (name, pass, loai));
+            tentaikhoan.Text = "";
+            matkhau.Text = "";
             loadDanhSach();
         }
-        string layLoaitaikhoan()
-        {
-            string loaiTK = "";
-            switch (loaitaikhoan.Text)
-            {
-                case "Quan ly":
-                    loaiTK = "Quan ly";
-                    break;
-                case "Ky su":
-                    loaiTK = "Ky su";
-                    break;
-                case "Nhan vien":
-                    loaiTK = "Nhan vien";
-                    break;
-                case "Cong nhan":
-                    loaiTK = "Cong nhan";
-                    break;
-            }
-            return loaiTK;
-        }
-
         private void sua_Click(object sender, EventArgs e)
         {
             if (index < 0)
@@ -115,13 +100,19 @@ namespace DoAnCNTT
                 MessageBox.Show("Vui lòng chọn một User trước khi sử dụng.", "Cảnh Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            for (int i = 0; i < Listuser.Instance.listAccout.Count; i++)
+            {
+                if (Listuser.Instance.listAccout[i].Name == tentaikhoan.Text && Listuser.Instance.listAccout[i].Pass == matkhau.Text)
+                    return;
+            }
             string name = tentaikhoan.Text;
             string pass = matkhau.Text;
-            string loai = layLoaitaikhoan();
+            string loai = loaitaikhoan.Text;
             Listuser.Instance.listAccout[index].Name = name;
             Listuser.Instance.listAccout[index].Pass = pass;
             Listuser.Instance.listAccout[index].Loai = loai;
+            tentaikhoan.Text = "";
+            matkhau.Text = "";
             loadDanhSach();
         }
 
@@ -133,6 +124,8 @@ namespace DoAnCNTT
                 return;
             }
             Listuser.Instance.listAccout.RemoveAt(index);
+            tentaikhoan.Text = "";
+            matkhau.Text = "";
             loadDanhSach();
         }
 

@@ -222,7 +222,7 @@
             // 
             this.thêmQuảnLýToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.thêmQuảnLýToolStripMenuItem.Name = "thêmQuảnLýToolStripMenuItem";
-            this.thêmQuảnLýToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
+            this.thêmQuảnLýToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.thêmQuảnLýToolStripMenuItem.Text = "Thêm quản lý";
             this.thêmQuảnLýToolStripMenuItem.Click += new System.EventHandler(this.thêmQuảnLýToolStripMenuItem_Click);
             // 
@@ -230,7 +230,7 @@
             // 
             this.thêmNhânViênToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.thêmNhânViênToolStripMenuItem.Name = "thêmNhânViênToolStripMenuItem";
-            this.thêmNhânViênToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
+            this.thêmNhânViênToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.thêmNhânViênToolStripMenuItem.Text = "Thêm nhân viên";
             this.thêmNhânViênToolStripMenuItem.Click += new System.EventHandler(this.thêmNhânViênToolStripMenuItem_Click);
             // 
@@ -238,7 +238,7 @@
             // 
             this.thêmKỹSưToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.thêmKỹSưToolStripMenuItem.Name = "thêmKỹSưToolStripMenuItem";
-            this.thêmKỹSưToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
+            this.thêmKỹSưToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.thêmKỹSưToolStripMenuItem.Text = "Thêm kỹ sư";
             this.thêmKỹSưToolStripMenuItem.Click += new System.EventHandler(this.thêmKỹSưToolStripMenuItem_Click);
             // 
@@ -246,7 +246,7 @@
             // 
             this.thêmCôngNhânToolStripMenuItem.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.thêmCôngNhânToolStripMenuItem.Name = "thêmCôngNhânToolStripMenuItem";
-            this.thêmCôngNhânToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
+            this.thêmCôngNhânToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.thêmCôngNhânToolStripMenuItem.Text = "Thêm công nhân";
             this.thêmCôngNhânToolStripMenuItem.Click += new System.EventHandler(this.thêmCôngNhânToolStripMenuItem_Click);
             // 
