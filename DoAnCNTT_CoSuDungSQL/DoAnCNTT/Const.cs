@@ -30,7 +30,7 @@ namespace DoAnCNTT
         public static List<string> Listnhom = new List<string>() { "Nhóm 1", "Nhóm 2", "Nhóm 3", "Nhóm 4", "Nhóm 5", "Nhóm 6", "Nhóm 7" };
 
 
-        public static List<string> Listbophan = new List<string>() { "Bộ phận xây dựng", "Bộ phận thiết kế", "Bộp phận công nghệ thông tin", "Bộp phận quản lý" };
+        public static List<string> Listbophan = new List<string>() { "Bộ phận xây dựng", "Bộ phận thiết kế", "Bộ phận công nghệ thông tin", "Bộ phận quản lý" };
         public static List<string> Listnganh = new List<string>() { "Ngành thiết kế", "Ngành công nghệ thông tin", "Ngành xây dựng", "Ngành kinh doanh" };
 
         public static void LuuDanhSachNguoiDung(List<User> danhSachNguoiDung)

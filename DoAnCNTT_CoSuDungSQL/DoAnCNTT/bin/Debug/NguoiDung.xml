@@ -5,4 +5,9 @@
     <Pass>28122003</Pass>
     <Loai>Quan ly</Loai>
   </User>
+  <User>
+    <Name>nhanvien</Name>
+    <Pass>nhanvien</Pass>
+    <Loai>Nhan Vien</Loai>
+  </User>
 </ArrayOfUser>
